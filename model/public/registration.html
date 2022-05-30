@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- =========== GOOGLE FONT ========== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- =========== LINKING CSS ========== -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/registration.css">
+
+    <!-- =========== TITLE ========== -->
+    <title>Flotila-Bolt</title>
+</head>
+<body>
+
+    <!-- ========== HEADER NAVIGATION ========== -->
+    <header>
+        <div class="wrapper">
+            <div class="wrapper_logo">
+                <img src="images/transparentlogo.png" alt="logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <li><button><a href="registration.html">Register now</a></button></li>
+                    <li><button><a href="change_fleet.html">Change fleet</a></button></li>
+                    <li>
+                        <label for="language"></label>
+                        <select name="language" id="language">
+                            <option value="English">English</option>
+                            <option value="Czech">Czech</option>
+                            
+                        </select>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+   <!-- ========== REGISTRATION OF DRIVER ========== -->
+
+   <div class="register_a_driver">
+        <h2>Registrace do flotily</h2>
+   </div>
+
+   <!-- ==========  FORM ========== -->
+   <form action="">
+       <div class="the_inputs">
+           <div class="inputs_left">
+                <label for="firstname">Jméno*</label>
+                <input type="text" name="firstname" id="firstname" placeholder="Jméno">
+           </div>
+           <div class="inputs_left">
+                <label for="lastname">Příjmení*</label>
+                <input type="text" name="lastname" id="lastname" placeholder="Příjmení">
+           </div>
+       </div>
+
+       <div class="the_inputs">
+            <div class="inputs_left">
+                <label for="email">Email*</label>
+                <input type="email" name="email" id="email" placeholder="Email">
+            </div>
+            <div class="input_mobile">
+                <label for="phone_number">Telefon*</label>               
+                <div class="write_number">
+                    <select name="choose_id_number" id="choose_id_number">
+                        <option value="+420">+420</option>
+                    </select>
+
+                    <input type="text" name="phone_number" id="phone_number" placeholder="Telefon">
+                </div>
+            </div>
+        </div>
+
+        <div class="the_inputs">
+            <div class="inputs_left">
+                <label for="age">Jste 18+ ?* </label>
+                <select name="age" id="age">
+                    <option value="yes">Ano</option>
+                    <option value="no">Ne</option>
+                </select>
+            </div>
+            <div class="inputs_left">
+                <label for="transportation">Dopravní prostředek*</label>
+                <select name="transportation" id="transportation">
+                    <option value="car">Auto</option>
+                    <option value="bike">Kolo</option>
+                    <option value="bicycle">Motorka</option>
+                    <option value="bicycle">Elektrická koloběžka</option>
+                </select>
+            </div>
+           
+        </div>
+
+        <div class="the_inputs">
+            
+            <div class="inputs_left">
+                <label for="transportation">Město*</label>
+                <select name="transportation" id="transportation">
+                    <option value="Prague">Praha</option>
+                    <option value="Brno">Brno</option>
+                    <option value="Ostrava">Ostrava</option>
+                    <option value="Olomouc">Olomouc</option>
+                    <option value="Plzeň">Plzeň</option>
+                    <option value="Hradec-Králové">Hradec Králové</option>
+                    <option value="Českých Budějovicích">České Budějovice</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="important_info">
+            <h6>Upozornění:
+                <br>
+                Dle ustanovení nových podmínek společnosti BOLT FOOD s účinností od 15.11.2021 platí pro všechny nově registrované kurýry povinnost zaplatit v hotovosti částku 1.000 Kč (bude vystaven příjmový doklad) jako vratnou zálohu na termobox BOLT FOOD. Vratná záloha bude kurýrovi zaslána zpět na bankovní účet po vrácení termoboxu.</h6>
+        </div>
+
+        <div class="inputs_textarea">
+            <br><br><br>
+            <label for="textarea">Zpráva</label>
+            <div class="text_area">
+                
+                <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+            </div>
+            <div>
+                <input type="checkbox" name="checkbox" id="checkbox">
+                <label for="checkbox">Souhlasím se zpracováním osobních údajů</label>
+
+            </div>
+                <br>
+            <div>
+                <input type="checkbox" name="checkbox" id="checkbox">
+                <label for="checkbox">Souhlasím s tím, že při převzetí termoboxu zaplatím v hotovosti vratnou zálohu ve výši 1.000 Kč </label><br>
+                <small>Vratná záloha bude kurýrovi zaslána zpět na bankovní účet po vrácení termoboxu.</small>
+
+            </div>
+
+        </div>
+        <br><br>
+        <div class="inputs_left">
+            <button type="submit" name="submit">Odeslat</button>
+        </div>
+   </form>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div class="footerr">
+            <div class="footer_all">
+                <div class="footer_all_img">
+                    <img src="images/transparentlogo.png" alt="logo">
+                    <br><br>
+                    <h6>We mediate at work in several popular companies that enable work and billing through mobile applications, such as Uber, Bolt, Uber Eats, Glovo, Bolt Food, FreeNow, and others.</h6>
+                </div>
+            </div>
+    
+            <div class="footer_all_text">
+                <div class="footer_all_text_h">
+                    <h4>Quick Links</h4>
+                </div>
+                <div class="footer_all_text_conternt">
+                  <h6><a href="index.html">Home</a></h6>
+                  <h6><a href="index.html">Contact</a></h6>
+                  <h6><a href="index.html">Register now</a></h6>          
+                </div>
+            </div>
+    
+            <div class="footer_all_text">
+                <div class="footer_all_text_h">
+                    <h4>Contact Us</h4>
+                </div>
+                <div class="footer_all_text_conternt">
+                  <h6>Email: info@kristinakams.com</h6>
+                  <h6>Open: 9AM - 6PM(Mon - Sun)</h6>
+                </div>
+            </div>
+        </div>
+        <div class="footer_line">
+            <div class="footer_line_left">
+                <h6>Created by <span><a href="https://webizy.cz/">WEBIZY</a></span></h6>
+            </div>
+            <div class="footer_line_right">
+               <ul>
+                <li>KRISTINA & KAMS COMPANY s.r.o</li>
+                <li>ICO: 10688226 </li>
+               </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

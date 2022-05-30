@@ -1,0 +1,172 @@
+/* ========== REGISTRATION OF DRIVER ========== */
+.register_a_driver{
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+/* ========== FORM ========== */
+
+form{
+    /* background-color: rgba(0, 0, 0, 0.178); */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 95%;
+}
+
+.the_inputs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    width: 700px;
+}
+
+.inputs_left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.inputs_left label{
+    margin-top: 10px;
+    margin-left: 10px;
+    
+}
+
+.inputs_left input{
+    width: 300px;
+    padding: 9px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.281);    
+    margin-top: 15px;
+    margin-bottom: 5px;
+    outline: none;
+    background-color: transparent;
+}
+
+.inputs_left select{
+    width: 320px;
+    padding: 9px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.281);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    outline: none;
+    background-color: transparent;
+}
+
+.input_mobile{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} 
+
+.input_mobile label{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.input_mobile .write_number select{
+    
+    padding: 9px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.281);
+    
+}
+
+.input_mobile .write_number input{
+    width: 230px;
+    padding: 9px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.281);    
+    margin-top: 15px;
+    margin-bottom: 5px;
+    outline: none;
+    background-color: transparent;
+}
+
+.important_info{
+    margin: auto;
+    width: 65%;
+}
+
+.important_info h6{
+    margin-top: 30px;
+    font-size: 15px;
+    color: red;
+    
+}
+
+ .text_area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+textarea{
+    width: 800px;    
+    border: 0.5px solid rgba(0, 0, 0, 0.26);    
+    margin-top: 15px;
+    margin-bottom: 15px;
+    outline: none;
+    background-color: transparent;
+}
+
+
+
+button{
+    background-color: var(--button);
+    font-size: 16px;
+    font-weight: 300;
+    list-style: 24px;
+    border: none;
+    padding: 15px 65px;
+    border-radius: 35px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 15px;
+    
+}
+
+small{
+    font-size: 11px;
+}
+
+/* ========== MEDIA QUERIES REGISTRATION========== */
+
+/* ========== MEDIA QUERIES ON  LAPTOPS ========== */
+
+@media screen and (max-width:855px){
+   
+   
+   .the_inputs{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       
+    }
+
+    .inputs_textarea{
+        width:95%;
+        margin: auto;
+    }
+
+    textarea{
+        width:95%;
+        margin: auto;    
+        
+    }
+
+
+
+
+}
+
+

@@ -1,0 +1,228 @@
+/* ========== HEADER NAVIGATION  ========== */
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact h2{
+    margin: 100px 0 0px 0;
+}
+
+.contact_all{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 800px;
+    margin: 50px 0;
+}
+
+/* ========== BOLT PICKING UP BAG  ========== */
+.pick_bag {
+    margin: auto;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.pick_bag h2{
+    margin: 50px;
+    text-align: center;
+}
+
+.pick_bag_al{
+    margin-top: 50px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;  
+    gap: 20px 20px;
+}
+
+.prague{
+    width: 300px;
+    height: 100px;
+    
+    margin: 10px 0;
+   
+}
+
+/* ========== MEDIA QUERIES CONTACT PAGE  ============ */
+
+/*========== MEDIA QUERIES ON SMALL LAPTOPS ========== */
+
+@media screen and (max-width:1300px){
+    /* ========== IMAGE HEADEAR ========== */
+
+  
+    .main_image{
+    
+        width: 365px;
+        height: 465px;
+        border-radius: 15px;
+        margin-top: 150px;
+    }
+    
+    .main_image img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+        
+    }
+     
+}
+
+@media screen and (max-width:1200px){
+    /* ========== IMAGE HEADEAR ========== */
+  
+    /* ========== HEADER NAVIGATION */
+
+    .wrapper{
+        display: none;
+    }
+
+
+    /* ========== HIDDEN HEADER NAVIGATION ========== */
+
+    .hidden_menu{
+    margin: auto;
+    display: block;
+    width: 95%;    
+    position: relative;
+  
+    }
+    .hidden_menu .hidden_menu_all{
+        display: flex;
+    }
+    .hidden_menu .hidden_menu_all .hidden_logo img{
+        width: 150px;
+    }
+
+    .hidden_menu .hidden_menu_all{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* ========== HIDDEDN SECOND NAV */
+
+    .hidden_navigation{
+        display: none;
+        background-color: #34d185;
+    
+    }
+
+    .hidden_navigation nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hidden_navigation nav ul{
+        display: inline-block;
+        
+    }
+
+    .hidden_navigation nav ul li a{
+        color: white;
+    }
+
+    .hidden_nagivation_close{
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+    
+    /* ==========  ========== */
+
+
+
+}
+
+
+/* ========== MEDIA QUERIES ON TABLET ========== */
+@media screen and (max-width:998px){
+    /* ========== HOWS IT WORKS CONTENTS ========== */
+  
+   
+
+    /* ========== PICK BAG ========== */
+    .pick_bag{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .pick_bag_al{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 26px 26px ;
+    }
+  /* ========== FOOTER ========== */
+
+    .footerr{
+        display: block;
+        margin-top: 200px;
+        margin: 10px;
+        
+    }
+
+    .footer_all{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    }
+
+    footer_all_img img{
+        width: 100%;
+        display: flex;
+    justify-content: center;
+    }
+
+    .footer_all_text{
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+   
+}
+
+
+/* ============= MEDIA QUERIES FOR MOBILES */
+@media screen and (max-width:758px){
+  
+
+   /* ==========CONTACT ========== */
+   .contact_all{
+       width: 95%;
+   }
+
+   /* ========== PICK THE BAG========== */
+   .pick_bag_al{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+}
+    /* ========= FOOTER ========= */
+    footer{
+       margin-top: 40px;
+   }
+
+
+}
+
+
+
+ 
+
+
