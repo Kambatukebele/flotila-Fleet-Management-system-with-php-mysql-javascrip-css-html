@@ -1,3 +1,5 @@
+<?php include '../controller/controller_registration.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
     <?php include '../model/includes/head/head.php'; ?>
@@ -14,7 +16,7 @@
    </div>
 
    <!-- ==========  FORM ========== -->
-   <form action="">
+   <form action="" method="POST">
        <div class="the_inputs">
            <div class="inputs_left">
                 <label for="firstname">Jméno*</label>
