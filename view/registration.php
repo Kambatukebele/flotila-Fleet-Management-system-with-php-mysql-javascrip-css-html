@@ -14,27 +14,59 @@
    <div class="register_a_driver">
         <h2>Registrace do flotily</h2>
    </div>
-
+  
    <!-- ==========  FORM ========== -->
    <form action="" method="POST">
        <div class="the_inputs">
            <div class="inputs_left">
-                <label for="firstname">Jméno*</label>
+           <?php 
+                if (!isset($firstNameErrorMsg))
+                    {
+                        echo '<label for="firstname">Jméno*</label>';
+                    }else{
+                        echo $firstNameErrorMsg;
+                    }
+            ?>
+               
                 <input type="text" name="firstname" id="firstname" placeholder="Jméno">
            </div>
            <div class="inputs_left">
-                <label for="lastname">Příjmení*</label>
+           <?php 
+                if (!isset($lastNameErrorMsg))
+                    {
+                        echo '<label for="lastname">Příjmení*</label>';
+                    }else{
+                        echo $lastNameErrorMsg;
+                    }
+            ?>
+                
                 <input type="text" name="lastname" id="lastname" placeholder="Příjmení">
            </div>
        </div>
 
        <div class="the_inputs">
             <div class="inputs_left">
-                <label for="email">Email*</label>
+            <?php 
+                if (!isset($emailErrorMsg))
+                    {
+                        echo '<label for="email">Email*</label>';
+                    }else{
+                        echo $emailErrorMsg;
+                    }
+            ?>
+                
                 <input type="email" name="email" id="email" placeholder="Email">
             </div>
             <div class="input_mobile">
-                <label for="phone_number">Telefon*</label>               
+            <?php 
+                if (!isset($phoneNumberErrorMsg))
+                    {
+                        echo '<label for="phone_number">Telefon*</label>';
+                    }else{
+                        echo $phoneNumberErrorMsg;
+                    }
+            ?>
+                              
                 <div class="write_number">
                     <select name="choose_id_number" id="choose_id_number">
                         <option value="+420">+420</option>
@@ -49,6 +81,7 @@
             <div class="inputs_left">
                 <label for="age">Jste 18+ ?* </label>
                 <select name="age" id="age">
+                    <option value="none" selected disabled hidden>Vybrat</option>
                     <option value="yes">Ano</option>
                     <option value="no">Ne</option>
                 </select>
@@ -56,10 +89,11 @@
             <div class="inputs_left">
                 <label for="transportation">Dopravní prostředek*</label>
                 <select name="transportation" id="transportation">
+                    <option value="none" selected disabled hidden>Vybrat</option>
                     <option value="car">Auto</option>
                     <option value="bike">Kolo</option>
                     <option value="bicycle">Motorka</option>
-                    <option value="bicycle">Elektrická koloběžka</option>
+                    <option value="electric-bike">Elektrická koloběžka</option>
                 </select>
             </div>
            
@@ -68,8 +102,9 @@
         <div class="the_inputs">
             
             <div class="inputs_left">
-                <label for="transportation">Město*</label>
-                <select name="transportation" id="transportation">
+                <label for="city">Město*</label>
+                <select name="city" id="city">
+                    <option value="none" selected disabled hidden>Vybrat</option>
                     <option value="Prague">Praha</option>
                     <option value="Brno">Brno</option>
                     <option value="Ostrava">Ostrava</option>
@@ -101,7 +136,7 @@
             </div>
                 <br>
             <div>
-                <input type="checkbox" name="checkbox" id="checkbox">
+                <input type="checkbox" name="checkbox_second" id="checkbox">
                 <label for="checkbox">Souhlasím s tím, že při převzetí termoboxu zaplatím v hotovosti vratnou zálohu ve výši 1.000 Kč </label><br>
                 <small>Vratná záloha bude kurýrovi zaslána zpět na bankovní účet po vrácení termoboxu.</small>
 
