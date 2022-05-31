@@ -1,16 +1,24 @@
-// CREATING VARIABLES
-$server_host = 'localhost';
-$user_name = 'root';
-$password = 'Charleskamba11';
-$db_name = 'registration_new_driver';
+<?php 
+        // CREATING VARIABLES
+    $server_host = 'localhost';
+    $user_name = 'root';
+    $password = 'Charleskamba11';
+    $db_name = 'flotila';
 
-//CONNECT TO THE DATABASE USING PD0
-$conn = new PDO("mysql:host=$server_host;dbname=$db_name", $user_name, $password);
+    //CONNECT TO THE DATABASE USING PD0
+    try
+    {
+        $conn = new PDO("mysql:host=$server_host;dbname=$db_name", $user_name, $password);
 
-// CHECK IF THE CONNECTION IS WORKING 
+        // SET THE PDO ERROR MODE TO EXCEPTION
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-if($conn){
-    echo "Connected successfully";
-}else{
-    echo "Connection failed";
-}
+        // CHECK IF THE CONNECTION IS WORKING 
+
+        if($conn)
+        {
+            echo "Connected successfully";
+        }
+    }catch(PDOException $e) {
+        echo "Connection failed: " . $e->getMessage();
+    }
