@@ -1,0 +1,6 @@
+  //CHECKING ALL
+        if (empty($firstNameErrorMsg) || empty ($lastName) || empty($email) || empty($phone_number) || empty($age) || empty($transportation) || empty($city) || empty($checkbox) || empty($checkbox_second)){
+            header("Location:registration.php");
+        }elseif (!preg_match("/^[a-zA-Z-' ]*$/", $firstName) || !preg_match("/^[a-zA-Z-' ]*$/", $lastName) || !filter_var($email, FILTER_VALIDATE_EMAIL) || preg_match ("/^[0-9]*$/", $phone_number)){
+            header("Location:registration.php");
+        }

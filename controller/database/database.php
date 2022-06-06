@@ -17,10 +17,10 @@
 
         // CHECK IF THE CONNECTION IS WORKING 
 
-        if($conn)
-        {
-            echo "Connected successfully";
-        }
+        // if($conn)
+        // {
+        //     echo "Connected successfully";
+        // }
     }catch(PDOException $e) {
         echo "Connection failed: " . $e->getMessage();
     }

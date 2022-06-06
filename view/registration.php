@@ -13,8 +13,9 @@
 
    <div class="register_a_driver">
         <h2>Registrace do flotily</h2>
+     
    </div>
-  
+       
    <!-- ==========  FORM ========== -->
    <form action="" method="POST">
        <div class="the_inputs">
@@ -79,17 +80,35 @@
 
         <div class="the_inputs">
             <div class="inputs_left">
-                <label for="age">Jste 18+ ?* </label>
-                <select name="age" id="age">
-                    <option value="none" selected disabled hidden>Vybrat</option>
-                    <option value="yes">Ano</option>
+            <?php 
+                if (!isset($ageErrorMsg))
+                    {
+                        echo '<label for="age">Jste 18+ ?* </label>';
+                        
+                    }else{
+                        echo $ageErrorMsg;
+                    }
+          
+            ?>                
+                <select id="age" name="age">
+                    <option value="none">Vybrat</option>
+                    <option  value="yes">Ano</option>
                     <option value="no">Ne</option>
                 </select>
             </div>
             <div class="inputs_left">
-                <label for="transportation">Dopravní prostředek*</label>
+            <?php 
+                if (!isset($transportationErrorMsg))
+                    {
+                        echo '<label for="transportation">Dopravní prostředek*</label>';
+                    }else{
+                        echo $transportationErrorMsg;
+                    }
+          
+            ?> 
+                
                 <select name="transportation" id="transportation">
-                    <option value="none" selected disabled hidden>Vybrat</option>
+                    <option value="none">Vybrat</option>
                     <option value="car">Auto</option>
                     <option value="bike">Kolo</option>
                     <option value="bicycle">Motorka</option>
@@ -102,9 +121,18 @@
         <div class="the_inputs">
             
             <div class="inputs_left">
-                <label for="city">Město*</label>
+            <?php 
+                if (!isset($cityErrorMsg))
+                    {
+                        echo '<label for="city">Město*</label>';
+                    }else{
+                        echo $cityErrorMsg;
+                    }
+          
+            ?> 
+                
                 <select name="city" id="city">
-                    <option value="none" selected disabled hidden>Vybrat</option>
+                    <option value="none">Vybrat</option>
                     <option value="Prague">Praha</option>
                     <option value="Brno">Brno</option>
                     <option value="Ostrava">Ostrava</option>
@@ -130,14 +158,31 @@
                 <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
             </div>
             <div>
-                <input type="checkbox" name="checkbox" id="checkbox">
-                <label for="checkbox">Souhlasím se zpracováním osobních údajů</label>
-
+                <input type="hidden" name="checkbox" id="checkbox" value="unchecked">
+                <input type="checkbox" name="checkbox" id="checkbox" value="checked">
+                <?php 
+                    
+                    if (!isset($checkboxErrorMsg))
+                        {
+                            echo '<label for="checkbox">Souhlasím se zpracováním osobních údajů</label>';
+                        }else{
+                            echo $checkboxErrorMsg;
+                        }
+          
+                ?> 
             </div>
                 <br>
             <div>
-                <input type="checkbox" name="checkbox_second" id="checkbox">
-                <label for="checkbox">Souhlasím s tím, že při převzetí termoboxu zaplatím v hotovosti vratnou zálohu ve výši 1.000 Kč </label><br>
+                <input type="hidden" name="checkbox_second" id="checkbox" value="unchecked_second">
+                <input type="checkbox" name="checkbox_second" id="checkbox" value="checked_second">
+                <?php 
+                    if (!isset($checkboxSecondErrorMsg))
+                        {
+                            echo '<label for="checkbox">Souhlasím s tím, že při převzetí termoboxu zaplatím v hotovosti vratnou zálohu ve výši 1.000 Kč </label><br>';
+                        }else{
+                            echo $checkboxSecondErrorMsg;
+                        }
+                ?> 
                 <small>Vratná záloha bude kurýrovi zaslána zpět na bankovní účet po vrácení termoboxu.</small>
 
             </div>
