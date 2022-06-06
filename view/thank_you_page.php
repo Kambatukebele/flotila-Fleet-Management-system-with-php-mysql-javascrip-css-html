@@ -12,7 +12,7 @@
      
     </div>
 
-    <h1>Thank you for your registration</h1>
+    <h1>Děkujeme Vám za registraci</h1>
     <!-- ========== FOOTER ========== -->
     <?php include '../model/includes/footer/footer.php';?>
 </body>
