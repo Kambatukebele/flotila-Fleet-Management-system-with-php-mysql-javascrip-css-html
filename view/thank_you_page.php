@@ -8,11 +8,12 @@
      <!-- ========== END OF HIDDEN HEADER NAVIGATION ========== -->
     
     <div class="register_a_driver">
-        <h2>Thank you for your registration</h2>
+        <h2>Děkujeme Vám za registraci</h2>
+        <h3>We will be contacting you within a day via phone call or whatsupp message</h3>
      
     </div>
 
-    <h1>Děkujeme Vám za registraci</h1>
+   
     <!-- ========== FOOTER ========== -->
     <?php include '../model/includes/footer/footer.php';?>
 </body>
