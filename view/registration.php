@@ -20,100 +20,87 @@
    <form action="" method="POST">
        <div class="the_inputs">
            <div class="inputs_left">
-           <?php 
-                if (!isset($firstNameErrorMsg))
-                    {
-                        echo '<label for="firstname">Jméno*</label>';
-                    }else{
+           
+                <label for="firstname">Jméno*</label>
+                <input type="text" name="firstname" id="firstname" placeholder="Jméno" value="<?php if(isset($firstName)) echo $firstName;?>">
+                <?php
+                    if (isset($firstNameErrorMsg)){
                         echo $firstNameErrorMsg;
                     }
-            ?>
-               
-                <input type="text" name="firstname" id="firstname" placeholder="Jméno">
+                ?>
            </div>
            <div class="inputs_left">
-           <?php 
-                if (!isset($lastNameErrorMsg))
-                    {
-                        echo '<label for="lastname">Příjmení*</label>';
-                    }else{
+          
+                <label for="lastname">Příjmení*</label>
+                <input type="text" name="lastname" id="lastname" placeholder="Příjmení" value="<?php if(isset($lastName)) echo $lastName;?>">
+                <?php
+                    if (isset($lastNameErrorMsg)){
                         echo $lastNameErrorMsg;
                     }
-            ?>
-                
-                <input type="text" name="lastname" id="lastname" placeholder="Příjmení">
+                ?>
            </div>
        </div>
 
        <div class="the_inputs">
             <div class="inputs_left">
-            <?php 
-                if (!isset($emailErrorMsg))
-                    {
-                        echo '<label for="email">Email*</label>';
-                    }else{
+           
+                <label for="email">Email*</label>
+                <input type="email" name="email" id="email" placeholder="Email" value="<?php if(isset($email)) echo $email;?>">
+                <?php
+                    if (isset($emailErrorMsg)){
                         echo $emailErrorMsg;
                     }
-            ?>
-                
-                <input type="email" name="email" id="email" placeholder="Email">
+                ?>
             </div>
             <div class="input_mobile">
-            <?php 
-                if (!isset($phoneNumberErrorMsg))
-                    {
-                        echo '<label for="phone_number">Telefon*</label>';
-                    }else{
-                        echo $phoneNumberErrorMsg;
-                    }
-            ?>
-                              
+        
+                <label for="phone_number">Telefon*</label>             
                 <div class="write_number">
                     <select name="choose_id_number" id="choose_id_number">
                         <option value="+420">+420</option>
                     </select>
 
-                    <input type="text" name="phone_number" id="phone_number" placeholder="Telefon">
+                    <input type="text" name="phone_number" id="phone_number" placeholder="Telefon" value="<?php if(isset($phone_number)) echo $phone_number;?>">
+                    <?php
+                    if (isset($phoneNumberErrorMsg)){
+                        echo $phoneNumberErrorMsg;
+                    }
+                    ?>
                 </div>
             </div>
         </div>
 
         <div class="the_inputs">
             <div class="inputs_left">
-            <?php 
-                if (!isset($ageErrorMsg))
-                    {
-                        echo '<label for="age">Jste 18+ ?* </label>';
-                        
-                    }else{
-                        echo $ageErrorMsg;
-                    }
-          
-            ?>                
-                <select id="age" name="age">
-                    <option value="none">Vybrat</option>
+                <label for="age">Jste 18+ ?* </label>           
+                <select id="age" name="age">                   
                     <option  value="yes">Ano</option>
                     <option value="no">Ne</option>
                 </select>
+                <?php
+ 
+                   
+                    if (isset($ageErrorMsg)){
+                        echo $ageErrorMsg;
+                    }
+                    ?>
+
             </div>
             <div class="inputs_left">
-            <?php 
-                if (!isset($transportationErrorMsg))
-                    {
-                        echo '<label for="transportation">Dopravní prostředek*</label>';
-                    }else{
-                        echo $transportationErrorMsg;
-                    }
-          
-            ?> 
-                
+        
+                <label for="transportation">Dopravní prostředek*</label>
                 <select name="transportation" id="transportation">
-                    <option value="none">Vybrat</option>
+                    <option value="none" hidden>Vybrat</option>
                     <option value="car">Auto</option>
                     <option value="bike">Kolo</option>
                     <option value="bicycle">Motorka</option>
                     <option value="electric-bike">Elektrická koloběžka</option>
                 </select>
+                <?php
+                    if (isset($transportationErrorMsg)){
+                        echo $transportationErrorMsg;
+                    }
+                    ?>
             </div>
            
         </div>
@@ -121,18 +108,10 @@
         <div class="the_inputs">
             
             <div class="inputs_left">
-            <?php 
-                if (!isset($cityErrorMsg))
-                    {
-                        echo '<label for="city">Město*</label>';
-                    }else{
-                        echo $cityErrorMsg;
-                    }
-          
-            ?> 
-                
+           
+                <label for="city">Město*</label>
                 <select name="city" id="city">
-                    <option value="none">Vybrat</option>
+                    <option value="none" hidden>Vybrat</option>
                     <option value="Prague">Praha</option>
                     <option value="Brno">Brno</option>
                     <option value="Ostrava">Ostrava</option>
@@ -141,6 +120,11 @@
                     <option value="Hradec-Králové">Hradec Králové</option>
                     <option value="Českých Budějovicích">České Budějovice</option>
                 </select>
+                <?php
+                    if (isset($cityErrorMsg)){
+                        echo $cityErrorMsg;
+                    }
+                    ?>
             </div>
         </div>
 
@@ -160,29 +144,23 @@
             <div>
                 <input type="hidden" name="checkbox" id="checkbox" value="unchecked">
                 <input type="checkbox" name="checkbox" id="checkbox" value="checked">
-                <?php 
-                    
-                    if (!isset($checkboxErrorMsg))
-                        {
-                            echo '<label for="checkbox">Souhlasím se zpracováním osobních údajů</label>';
-                        }else{
-                            echo $checkboxErrorMsg;
-                        }
-          
-                ?> 
+                <label for="checkbox">Souhlasím se zpracováním osobních údajů</label>
+                <?php
+                    if (isset($checkboxErrorMsg)){
+                        echo $checkboxErrorMsg;
+                    }
+                    ?>
             </div>
                 <br>
             <div>
                 <input type="hidden" name="checkbox_second" id="checkbox" value="unchecked_second">
                 <input type="checkbox" name="checkbox_second" id="checkbox" value="checked_second">
-                <?php 
-                    if (!isset($checkboxSecondErrorMsg))
-                        {
-                            echo '<label for="checkbox">Souhlasím s tím, že při převzetí termoboxu zaplatím v hotovosti vratnou zálohu ve výši 1.000 Kč </label><br>';
-                        }else{
-                            echo $checkboxSecondErrorMsg;
-                        }
-                ?> 
+                <label for="checkbox">Souhlasím s tím, že při převzetí termoboxu zaplatím v hotovosti vratnou zálohu ve výši 1.000 Kč </label>
+                <?php
+                    if (isset($checkboxSecondErrorMsg)){
+                        echo $checkboxSecondErrorMsg;
+                    }
+                    ?><br>
                 <small>Vratná záloha bude kurýrovi zaslána zpět na bankovní účet po vrácení termoboxu.</small>
 
             </div>

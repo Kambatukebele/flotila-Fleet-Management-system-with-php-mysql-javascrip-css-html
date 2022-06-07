@@ -8,8 +8,8 @@
      <!-- ========== END OF HIDDEN HEADER NAVIGATION ========== -->
     
     <div class="register_a_driver">
-        <h2>Děkujeme Vám za registraci</h2>
-        <h3>We will be contacting you within a day via phone call or whatsupp message</h3>
+        <h2>Děkujeme Vám za registraci!</h2>
+        <h3>V nejbližší době Vás budeme kontaktovat</h3>
      
     </div>
 
