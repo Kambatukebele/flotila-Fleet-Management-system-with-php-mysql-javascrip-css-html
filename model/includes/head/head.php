@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../model/public/css/contact.css">
     <link rel="stylesheet" href="../model/public/css/instructions_material.css">
     <link rel="stylesheet" href="../model/public/css/bonus.css">
+    <link rel="stylesheet" href="../model/public/css/list_registered_new_driver.css">
 
     <!-- ========== FONT AWESOME ========== -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />

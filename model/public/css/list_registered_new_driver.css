@@ -1,0 +1,102 @@
+/* ==========  CREATING ROOT COLOR ========== */
+
+:root{
+    --button : #34D186;
+    --background : #27B973;
+    --color_heading: #2F313F;
+    --white:white;    
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+h1{
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 56px;
+    color: var(--white);
+}
+h2{
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    color: var(--color_heading);    
+}
+h3{
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 36px;
+    color: var(--color_heading);    
+}
+h4{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--white);    
+}
+h5{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--color_heading);
+    
+}
+h6{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color_heading);
+    
+}
+
+/* ========== LIST DRIVER TABLE ========== */
+.list_new_driver{
+    margin: auto;
+    width: 95%;
+   
+}
+
+.list_new_drivers_title {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0 50px 0;
+}
+
+.list_new_driver_table{
+    background-color: rgba(0, 0, 0, 0.055);
+    width: 100%;
+    
+}
+
+.list_new_driver_table table{
+    
+    width: 100%;
+    border: 1px solid black;
+}
+
+.list_new_driver_table table tr{
+    /* width: 100%; */
+    border: 1px solid black;
+    
+ 
+}
+
+.list_new_driver_table table tr th{
+    /* width: 100%; */
+    border: 1px solid black;
+    width: 100px;
+    padding: 5px;
+    background-color: var(--background);
+    color: white;
+ 
+}
+
+.list_new_driver_table table tr td{
+    /* width: 100%; */
+    border: 1px solid black;
+    width: 100px;
+    padding: 5px;
+    text-align: center;
+ 
+}
