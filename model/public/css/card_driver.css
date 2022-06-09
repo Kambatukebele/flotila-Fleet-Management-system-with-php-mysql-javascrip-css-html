@@ -84,7 +84,9 @@ body{
 
 .card_driver_payment_details{
     border: 1px solid black;
-    margin-top: 50px;
+    max-width: 900px;
+    margin: auto;
+    
     
 }
 
@@ -108,4 +110,63 @@ body{
 .date_selection select{
     background-color: red;
     color: white;
+}
+
+
+/* ========== MEDIA QUERIES ========== */
+@media screen and (max-width:510px){
+    body{
+        width: 95%;
+        margin: auto;
+    }
+
+    .update_delete .update{
+        margin: 0 10px;
+        background-color: #34D186;
+        font-size: 13px;
+        font-weight: 300;
+        list-style: 24px;
+        border: none;
+        padding: 10px 15px;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: 'Poppins', sans-serif;
+        margin-top: -3px;
+    }
+    
+    .update_delete .delete{
+        margin: 0 10px;
+        background-color: red;
+        font-size: 13px;
+        font-weight: 300;
+        list-style: 24px;
+        border: none;
+        padding: 10px 15px;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: 'Poppins', sans-serif;
+        margin-top: -3px;
+    }
+    
+    .update_delete .modify{
+        margin: 0 10px;
+        background-color: blue;
+        font-size: 13px;
+        font-weight: 300;
+        list-style: 24px;
+        border: none;
+        padding: 10px 15px;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: 'Poppins', sans-serif;
+        margin-top: -3px;
+    }
+
+    .card_driver_payment_details{
+        width: 100px;
+
+    }
 }
