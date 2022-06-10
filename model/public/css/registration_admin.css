@@ -1,0 +1,111 @@
+.registration_admin{
+    width: 100vw;
+    height: 100vh;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.registration_admin_all{
+    width: 900px;
+   
+}
+/* .registration_admin_left{ 
+    
+    background-color: green;
+} */
+
+.registration_admin_title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0px 20px 0 ;
+}
+
+ form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+form input{
+    width: 300px;
+    /* height: 30px; */
+    outline: none;
+    border: rgba(128, 128, 128, 0.589);
+    margin: 10px 0;
+    background-color: rgba(128, 128, 128, 0.322);
+    border-radius: 5px;
+    -webkit-box-shadow: 7px 2px 15px -1px #0000001a; 
+    box-shadow: 7px 2px 15px -1px #0000002d;
+    padding: 9px;
+}
+
+form button{
+    width: 310px;
+    padding: 10px 0;
+    background-color:#34D186;
+    border: none;
+    color: white;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+}
+form button:hover{
+    -webkit-box-shadow: 5px 5px 15px 5px #0000006e; 
+    box-shadow: 5px 5px 15px 5px #00000056;
+}
+
+.registration_admin_btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.registration_admin_btn small{
+    margin: 10px;
+}
+
+
+.registration_admin_btn  a .first_btn {
+    width: 310px;
+    padding: 10px 0;
+    background-color: #4267B2;
+    border: none;
+    color: white;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    /* color: ; */
+}
+
+.registration_admin_btn a .last_btn{
+    width: 310px;
+    padding: 10px 0;
+    background-color: #E83A33;
+    border: none;
+    color: white;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+
+    
+}
+
+.registration_admin_btn  a .first_btn:hover {
+    -webkit-box-shadow: 5px 5px 15px 5px #0000006e; 
+    box-shadow: 5px 5px 15px 5px #00000056;
+}
+
+.registration_admin_btn a .last_btn:hover{
+    -webkit-box-shadow: 5px 5px 15px 5px #0000006e; 
+    box-shadow: 5px 5px 15px 5px #00000056;
+
+    
+}
+
