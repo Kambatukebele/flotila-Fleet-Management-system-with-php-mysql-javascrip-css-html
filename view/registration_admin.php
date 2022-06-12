@@ -1,7 +1,7 @@
 <?php include '../controller/controller_registration_admin.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
-    <?php include '../model/includes/head/head.php'; ?>
+    <link rel="stylesheet" href="../model/public/css/registration_admin.css">
     <body>
         <div class="registration_admin">
             <div class="registration_admin_all">
@@ -10,7 +10,7 @@
                         <img src="../model/public/images/logo.png" alt="">
                     </div>
                     <!-- ========== THIS IS A FORM REGISTRY -->
-                    <form action="" method="POST">
+                    <form action="" method="POST" class="form_admin">
                         <input type="text" placeholder="Enter Your Full Name" name="fullName">
                         <?php
                             if (isset($fullNameErrMsg)){
