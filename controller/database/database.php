@@ -14,7 +14,7 @@
 
         // SET THE PDO ERROR MODE TO EXCEPTION
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        // echo "connected";
+        echo "connected";
         // CHECK IF THE CONNECTION IS WORKING 
 
     }catch(PDOException $e) {

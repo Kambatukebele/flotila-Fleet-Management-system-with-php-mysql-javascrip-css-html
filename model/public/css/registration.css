@@ -3,14 +3,11 @@
     text-align: center;
     margin-top: 100px;
     margin-bottom: 100px;
-    /* position: relative; */
-
 }
 
 /* ========== FORM ========== */
 
-form{
-    /* background-color: rgba(0, 0, 0, 0.178); */
+form{    
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -39,7 +36,6 @@ form{
     margin-left: 10px;
     
 }
-
 .inputs_left input{
     width: 300px;
     padding: 9px;
@@ -141,38 +137,6 @@ small{
     font-size: 11px;
 }
 
-/* ========== THANK YOU ========== */
-/* .thank_you{
-    
-    position: fixed;
-    top: 0;
-    left: 0;   
-    z-index: 100;    
-    background-color: black;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-
-} */
-
-/* .thank_you_box{    
-    background-color: #27B973;
-    height: 200px;
-    width: 500px;
-    padding: 35px;
-}
-
-.thank_you_box h1, .thank_you_box h4{
-    text-align: center;
-    margin: 5px;
-
-} */
-
-
-
 /* ========== MEDIA QUERIES REGISTRATION========== */
 
 /* ========== MEDIA QUERIES ON  LAPTOPS ========== */
@@ -197,9 +161,6 @@ small{
         margin: auto;    
         
     }
-
-
-
 
 }
 
