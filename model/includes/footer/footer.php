@@ -18,7 +18,8 @@
                   <h6><a href="registration.php">Zaregistrace</a></h6> 
                   <h6><a href="change_fleet.php">Změna flotily</a></h6> 
                   <h6><a href="instruction_material.php">Školící soubory</a></h6> 
-                  <h6><a href="bonus.php">Bonus</a></h6>        
+                  <h6><a href="bonus.php">Bonus</a></h6>
+                  <h6><a href="login_admin.php">Login</a></h6>        
                 </div>
             </div>
     
