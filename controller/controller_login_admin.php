@@ -30,6 +30,7 @@
             foreach ($result as $results){
                 $emailResult = $results['email'];
                 $passwordResult = $results['passwordCheck'];
+                $_SESSION['fullName'] = $results['fullname'];
             }
         }
 
@@ -38,7 +39,7 @@
         }
 
         if (password_verify($password, $passwordResult)){
-            header("Location:index.php");
+            header("Location:dashboard.php");
         }
 
       

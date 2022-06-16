@@ -16,6 +16,18 @@
 
    <!-- ==========  FORM ========== -->
    <form action="" method="POST">
+        <div class="the_inputs">
+            <div class="inputs_left">
+                
+                <select hidden name="kind-of-registration" id="kind-of-registration">
+                    <option value="new_courier">new courier</option>
+                    <option value="Changed_fleet" selected>changed fleet</option>
+                </select>
+            </div>
+            <div class="inputs_left">
+                        
+            </div>
+        </div>
        <div class="the_inputs">
            <div class="inputs_left">
                 <label for="firstname">Jméno*</label>
@@ -100,6 +112,28 @@
                     ?>
             </div>
            
+        </div>
+
+         <!-- INVISIBLE DATA -->
+         <div class="the_inputs">
+            
+            <div class="inputs_left">
+           
+                <!-- <label for="city">TEST INPUT*</label> -->
+                <input type="hidden" name="checkbox_second" id="checkbox" value="checked_second">
+                <select id="age" name="age" hidden>                   
+                    <option  value="yes">Ano</option>
+                </select>
+                <input type="hidden" name="bank-account" id="bank-account" placeholder="bank-account">
+                <input type="hidden" name="registered-to-bolt" id="registered to bolt" placeholder="registered to bolt?">
+                <input type="hidden" name="approved" id="approved" placeholder="approved?">
+                <input type="hidden" name="pick_the_bag" id="picked-the-bag" placeholder="picked-the-bag">
+                <input type="hidden" name="signed" id="signed" placeholder="signed?">
+                <input type="hidden" name="starting-date" id="starting-date" placeholder="starting-date">
+               
+                <input type="hidden" name="return-deposit" id="return-deposit" placeholder="return-deposit">
+              
+            </div>
         </div>
 
         <div class="inputs_textarea">

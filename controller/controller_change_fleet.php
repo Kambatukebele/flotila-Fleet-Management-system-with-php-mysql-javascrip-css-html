@@ -7,7 +7,7 @@
     if (isset($_POST['submit']))
 
     {
-         $firstName = $lastName = $email = $phone_number = $transportation = $city = $textarea = $checkbox = "";
+        $firstName = $lastName = $email = $phone_number = $age = $transportation = $city = $textarea = $checkbox = $checkbox_second = $bank_account = $registeredToBolt = $approved = $pick_the_bag = $signed = $startingDate =$returnDeposit = "";
 
         //CREATING VARIABLE FOR ALL INPUTS FIELDS
 
@@ -15,11 +15,20 @@
          $lastName = htmlspecialchars(stripslashes(trim(strtolower($_POST['lastname']))));
          $email = htmlspecialchars(stripslashes(trim(strtolower($_POST['email']))));
          $phone_number = htmlspecialchars(stripslashes(trim($_POST['phone_number'])));
-         
+         $age = htmlspecialchars(stripslashes(trim($_POST['age'])));
          $transportation = htmlspecialchars(stripslashes(trim($_POST['transportation'])));
          $city = htmlspecialchars(stripslashes(trim($_POST['city'])));
          $textarea = htmlspecialchars(stripslashes(strtolower($_POST['textarea'])));
          $checkbox= htmlspecialchars(stripslashes(trim($_POST['checkbox'])));
+         $checkbox_second = htmlspecialchars(stripslashes(trim($_POST['checkbox_second'])));
+         $kindOfRegistration = htmlspecialchars(stripslashes(trim(strtolower($_POST['kind-of-registration']))));
+         $bank_account = htmlspecialchars(stripslashes(trim($_POST['bank-account'])));
+         $registeredToBolt = htmlspecialchars(stripslashes(trim($_POST['registered-to-bolt'])));
+         $approved = htmlspecialchars(stripslashes(trim($_POST['approved'])));
+         $pick_the_bag = htmlspecialchars(stripslashes(trim($_POST['pick_the_bag'])));
+         $signed = htmlspecialchars(stripslashes(trim($_POST['signed'])));
+         $startingDate = htmlspecialchars(stripslashes(trim($_POST['starting-date'])));
+         $returnDeposit = htmlspecialchars(stripslashes(trim($_POST['return-deposit'])));
         
 
         //VALIDATE FIRST NAME
@@ -125,24 +134,77 @@
         }
         
         //INSERT DATA TO THE DATABASE
-            $sql = $conn->prepare("INSERT INTO change_flotila (first_name, last_name, email, phone_number, transportation, city, textplace, gppr)VALUES (:first_name, :last_name, :email, :phone_number, :transportation, :city, :textplace, :gppr)");
+            // $sql = $conn->prepare("INSERT INTO change_flotila (first_name, last_name, email, phone_number, transportation, city, textplace, gppr)VALUES (:first_name, :last_name, :email, :phone_number, :transportation, :city, :textplace, :gppr)");
         
-            $sql->bindParam(':first_name', $firstName);
-            $sql->bindParam(':last_name', $lastName);
-            $sql->bindParam(':email', $email);
-            $sql->bindParam(':phone_number', $phone_number);           
-            $sql->bindParam(':transportation', $transportation);
-            $sql->bindParam(':city', $city);
-            $sql->bindParam(':textplace', $textarea);
-            $sql->bindParam(':gppr', $checkbox);
+            // $sql->bindParam(':first_name', $firstName);
+            // $sql->bindParam(':last_name', $lastName);
+            // $sql->bindParam(':email', $email);
+            // $sql->bindParam(':phone_number', $phone_number);           
+            // $sql->bindParam(':transportation', $transportation);
+            // $sql->bindParam(':city', $city);
+            // $sql->bindParam(':textplace', $textarea);
+            // $sql->bindParam(':gppr', $checkbox);
             
     
+            // $sql->execute();
+
+            // $result = $sql->execute();
+            // if ($result == true){
+            //     header("Location:thank_you_page.php");
+            // }
+
+
+        $sql = $conn->prepare
+        (
+            "INSERT INTO `registration_new_driver` 
+        (
+            `first_name`, `last_name`, `email`, `phone_number`, `age`, `transportation`, `city`, `textplace`, `gppr`, `deposit`, `kind-of-registration`, `bank-account`, `approved`, `pick_the_bag`, `signed`, `starting_date`, `return_deposit`, `registered_to_bolt`
+        ) 
+        VALUES 
+        (
+            :firstName, 
+            :lastName, 
+            :email, 
+            :phone_number, 
+            :age, 
+            :transportation,
+            :city, 
+            :textarea, 
+            :checkbox, 
+            :checkbox_second, 
+            :kindOfRegistration, 
+            :bank_account, 
+            :approved, 
+            :pick_the_bag, 
+            :signed, 
+            :startingDate, 
+            :returnDeposit,
+            :registeredToBolt 
+            
+           
+        )");
+        
+            $sql->bindParam(':firstName', $firstName);
+            $sql->bindParam(':lastName', $lastName);
+            $sql->bindParam(':email', $email);
+            $sql->bindParam(':phone_number', $phone_number);
+            $sql->bindParam(':age', $age);
+            $sql->bindParam(':transportation', $transportation);
+            $sql->bindParam(':city', $city);
+            $sql->bindParam(':textarea', $textarea);
+            $sql->bindParam(':checkbox', $checkbox);
+            $sql->bindParam(':checkbox_second', $checkbox_second);
+            $sql->bindParam(':kindOfRegistration', $kindOfRegistration);
+            $sql->bindParam(':bank_account', $bank_account);
+            $sql->bindParam(':approved', $approved);
+            $sql->bindParam(':pick_the_bag', $pick_the_bag);
+            $sql->bindParam(':signed', $signed);
+            $sql->bindParam(':startingDate', $startingDate);
+            $sql->bindParam(':returnDeposit', $returnDeposit);
+            $sql->bindParam(':registeredToBolt', $registeredToBolt);
+
             $sql->execute();
 
-            $result = $sql->execute();
-            if ($result == true){
-                header("Location:thank_you_page.php");
-            }
 
     }
    

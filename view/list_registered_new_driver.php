@@ -29,14 +29,14 @@
 
                     <?php
 
-                        foreach($result as  $list => $newDriver){
-                            $driverFirstName = $newDriver["first_name"];
-                            $driverlastName = $newDriver["last_name"];
-                            $driverEmail = $newDriver["email"];
-                            $driverPhoneNumber = $newDriver["phone_number"];
-                            $driverTransportation = $newDriver["transportation"];
-                            $driverCity = $newDriver["city"];
-                            $driverTextPlace= $newDriver["textplace"];
+                        foreach($result as $newDriver){
+                         $_SESSION['firstname']=$driverFirstName = $newDriver["first_name"];
+                         $_SESSION['lastname']=$driverlastName = $newDriver["last_name"];
+                         $_SESSION['email']=$driverEmail = $newDriver["email"];
+                         $_SESSION['phoneNumber']=$driverPhoneNumber = $newDriver["phone_number"];
+                         $_SESSION['transportation']=$driverTransportation = $newDriver["transportation"];
+                         $_SESSION['city']=$driverCity = $newDriver["city"];
+                         $_SESSION['textplace']=$driverTextPlace= $newDriver["textplace"];
                        
 
                             echo "<tr>".

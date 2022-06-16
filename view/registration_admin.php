@@ -1,7 +1,7 @@
 <?php include '../controller/controller_registration_admin.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="../model/public/css/registration_admin.css">
+    <?php include '../model/includes/head_admin/head_registration_admin.php' ?>
     <body>
         <div class="registration_admin">
             <div class="registration_admin_all">

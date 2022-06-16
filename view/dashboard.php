@@ -1,35 +1,38 @@
+<?php include_once '../controller/controller_dashboard.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
-    <?php include '../model/includes/head_admin/admin_dashboard.php'; ?>
-<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp"> -->
+    <?php include '../model/includes/head_dashboard/admin_dashboard.php'; ?>
+
 <body>
+               
+    
     <div class="container">
         <aside>
             <div class="top">
                 <div class="logo">
-                    <img src="images/logo.png" alt="">
-                    <h2>K & <span class="danger">K</span></h2>
+                    <img src="../model/public/admin/images/logo.png" alt="">
+                    <h2>KRISTINA & <span class="danger">KAMS</span></h2>
                 </div>
                 <div class="close" id="close-btn">
                     <span class="material-symbols-sharp">close</span>
                 </div>
             </div>
             <div class="sidebar">
-                <a href="#">
+                <a href="dashboard.php">
                     <span class="material-symbols-sharp">grid_view</span>
                     <h3>Dashboard</h3>
                 </a> 
                 <a href="#" class="active">
                     <span class="material-symbols-sharp">person</span>
-                    <h3>Customers</h3>
+                    <h3>Drivers</h3>
                 </a> 
                 <a href="#">
                     <span class="material-symbols-sharp">receipt_long</span>
-                    <h3>Orders</h3>
+                    <h3>Registered Driver List</h3>
                 </a>
                 <a href="#">
                     <span class="material-symbols-sharp">insights</span>
-                    <h3>Analytics</h3>
+                    <h3>Changed Fleet List</h3>
                 </a> 
                 <a href="#">
                     <span class="material-symbols-sharp">mail</span>
@@ -38,11 +41,11 @@
                 </a> 
                 <a href="#">
                     <span class="material-symbols-sharp">inventory</span>
-                    <h3>Products</h3>
+                    <h3>All drivers</h3>
                 </a> 
                 <a href="#">
                     <span class="material-symbols-sharp">report</span>
-                    <h3>Reports</h3>
+                    <h3>Payment Drivers</h3>
                 </a> 
                 <a href="#">
                     <span class="material-symbols-sharp">settings</span>
@@ -50,7 +53,7 @@
                 </a> 
                 <a href="#">
                     <span class="material-symbols-sharp">add</span>
-                    <h3>Add Product</h3>
+                    <h3>Add Driver</h3>
                 </a> 
                 <a href="#">
                     <span class="material-symbols-sharp">logout</span>
@@ -65,7 +68,12 @@
             <h1>Dashboard</h1>
 
             <div class="date">
-                <input type="date" name="" id="">
+                <?php
+                    echo "Today is: ";
+                    if(isset($actualDate)){
+                        echo $actualDate;
+                    }
+                ?>
             </div>
 
             <div class="insights">
@@ -194,50 +202,116 @@
                 </div>
                 <div class="profile">
                     <div class="info">
-                        <p>Hey, <b>Kamba</b></p>
+                        <p>Hey, <b><?php if(isset($_SESSION['fullName'])) echo $_SESSION['fullName'];?></b></p>
                         <small class="text-muted">Admin</small>
                     </div>
                     <div class="profile-photo">
-                        <img src="images/picture1.jpeg" alt="">
+                        <img src="../model/public/admin/images/picture1.jpeg" alt="">
                     </div>
                 </div>
             </div>
             <!-- ========== END OF TOP ========== -->
             <div class="recent-updates">
-                <h2>Recent Updates</h2>
+                <h2>Recent Registration</h2>
                 <div class="updates">
-                    <div class="update">
+                    <?php
+                        foreach($result as $key => $value){
+                            $_SESSION['id_registeredDriver'] = $value['id'];
+                            $_SESSION['first_name'] = $value['first_name'];
+                            $_SESSION['last_name'] = $value['last_name'];
+                            $_SESSION['registered_date'] = $value['registered_date'];
+
+                            // $_SESSION['id_registeredDriver'] = $value['id'];
+                            // $_SESSION['id_registeredDriver'] = $value['id'];
+                            // $_SESSION['id_registeredDriver'] = $value['id'];
+
+                            // $_SESSION['first_name'] = $value['first_name']."<br>";
+
+                           echo
+                            '<div class="update">'.
+                                '<div class="profile-photo">'.
+                                    '<img src="../model/public/admin/images/pic2.jpg" alt="">'.
+                                '</div>'.
+                                '<div class="message">'.
+                                    '<p>'.'<b>'.$_SESSION["first_name"].' '.$_SESSION["last_name"].'</b>'.' has just registered'.'</p>';
+                                    echo '<small class="text-muted">'.$_SESSION['registered_date']. ' min ago'.'
+                                </div>'.'
+                            </div>';
+                            
+                        }  
+                    
+                    
+                    ?>
+                  
+                    <!-- <div class="update">
                         <div class="profile-photo">
-                            <img src="images/picture2.jpeg" alt="">
-                        </div>
-                        <div class="message">
-                            <p><b>Kristina Kabatova</b> receive her order of phone</p>
-                            <small class="text-muted">2 minutes Ago</small>
-                        </div>
-                    </div>
-                    <div class="update">
-                        <div class="profile-photo">
-                            <img src="images/picture1.jpeg" alt="">
+                            <img src="../model/public/admin/images/picture1.jpeg" alt="">
                         </div>
                         <div class="message">
                             <p><b>Kamba Tukebele</b> receive her order of phone</p>
                             <small class="text-muted">2 minutes Ago</small>
                         </div>
-                    </div>
-                    <div class="update">
+                    </div> -->
+                    <!-- <div class="update">
                         <div class="profile-photo">
-                            <img src="images/picture2.jpeg" alt="">
+                            <img src="../model/public/admin/images/picture2.jpeg" alt="">
                         </div>
                         <div class="message">
                             <p><b>Kristina Kabatova</b> receive her order of phone</p>
                             <small class="text-muted">2 minutes Ago</small>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <!-- ========== END OF RECENT UPDATES -->
+            <div class="recent-updates">
+                <h2>Changed Fleet Driver</h2>
+                <div class="updates">
+                    <?php
+                        foreach($resultChange as $keys => $changedFlotila){
+                            $_SESSION['id_registeredDriver'] = $changedFlotila['id'];
+                            $_SESSION['first_name'] = $changedFlotila['first_name'];
+                            $_SESSION['last_name'] = $changedFlotila['last_name'];
+                            $_SESSION['registered_date'] = $changedFlotila['registered_date'];
+
+                           echo
+                            '<div class="update">'.
+                                '<div class="profile-photo">'.
+                                    '<img src="../model/public/admin/images/pic1.jpg" alt="">'.
+                                '</div>'.
+                                '<div class="message">'.
+                                    '<p>'.'<b>'.$_SESSION["first_name"].' '.$_SESSION["last_name"].'</b>'.' has just registered'.'</p>';
+                                    echo '<small class="text-muted">'.$_SESSION['registered_date']. ' min ago'.'
+                                </div>'.'
+                            </div>';
+                            
+                        }  
+                    
+                    
+                    ?>
+                  
+                    <!-- <div class="update">
+                        <div class="profile-photo">
+                            <img src="../model/public/admin/images/picture1.jpeg" alt="">
+                        </div>
+                        <div class="message">
+                            <p><b>Kamba Tukebele</b> receive her order of phone</p>
+                            <small class="text-muted">2 minutes Ago</small>
+                        </div>
+                    </div> -->
+                    <!-- <div class="update">
+                        <div class="profile-photo">
+                            <img src="../model/public/admin/images/picture2.jpeg" alt="">
+                        </div>
+                        <div class="message">
+                            <p><b>Kristina Kabatova</b> receive her order of phone</p>
+                            <small class="text-muted">2 minutes Ago</small>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
             <div class="sales-analytics">
-                <h2>Sales Analytics</h2>
+                <!-- <h2>Changed Fleet</h2>
                 <div class="item online">
                     <div class="icon">
                         <span class="material-symbols-sharp">shopping_cart</span>
@@ -276,17 +350,17 @@
                         <h5 class="success">+25%</h5>
                         <h3>868</h3>
                     </div>
-                </div>
+                </div> -->
                 <div class="item add-product">
                     <div>
                         <span class="material-symbols-sharp">add</span>
-                        <h3>Add Product</h3>
+                        <h3>Add Driver</h3>
                     </div>
                 </div>
                 
             </div>
         </div>
     </div>
-    <script src="index.js"></script>
+    <script src="../model/public/admin/index.js"></script>
 </body>
 </html>
