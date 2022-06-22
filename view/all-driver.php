@@ -1,125 +1,59 @@
 <?php include '../controller/controller_all-driver.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        table {
-          font-family: arial, sans-serif;
-          border-collapse: collapse;
-          width: 100%;
-        }
-        
-        td, th {
-          border: 1px solid #dddddd;
-          text-align: left;
-          padding: 8px;
-        }
-        
-        tr:nth-child(even) {
-          background-color: #dddddd;
-        }
-    </style>
-    <title>All drivers</title>
-</head>
+    <?php include "../model/includes/head_drivers/head_drivers.php"; ?>
 <body>
-    <h2>All drivers</h2>
 
-    <table>
-        <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Bank-account</th>
-            <th>Email</th>
-            <th>Registration</th>
-            <th>Approved</th>
-            <th>Picked the Bag</th>
-            <th>Signed</th>
-            <th>Starting date</th>
-            <th>Deposit</th>
-            <th>Return Deposit</th>
-
-        </tr>
-        <tr>
-            <td>Alfreds Futterkiste</td>
-            <td>Maria Anders</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-        </tr>
-        <tr>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Mexico</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-        </tr>
-        <tr>
-            <td>Ernst Handel</td>
-            <td>Roland Mendel</td>
-            <td>Austria</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-        </tr>
-        <tr>
-            <td>Island Trading</td>
-            <td>Helen Bennett</td>
-            <td>UK</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-        </tr>
-        <tr>
-            <td>Laughing Bacchus Winecellars</td>
-            <td>Yoshi Tannamuri</td>
-            <td>Canada</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-        </tr>
-        <tr>
-            <td>Magazzini Alimentari Riuniti</td>
-            <td>Giovanni Rovelli</td>
-            <td>Italy</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-            <td>Germany</td>
-        </tr>
-    </table>
+    <!-- ========== TABLE USERS========== -->
+    <div class="driver_list">
+        <div class="driver_list_all">
+            <table class="drivers">
+                <tr>
+                  <th>Jméno</th>
+                  <th>Příjmení</th>
+                  <th>City</th>
+                  <th>Type</th>
+                  <th>Date</th>
+                  <th>completed?</th>
+                  <th>Action</th>
+                </tr>
+                <?php
+                   foreach($stmt as $all_driver){
+                         $id = $all_driver['id'];
+                         $all_driver['first_name'];
+                         $all_driver['last_name'];
+                         $all_driver['email'];
+                         $all_driver['phone_number'];
+                         $all_driver['transportation'];
+                         $all_driver['city'];
+                         $all_driver['textplace'];
+                         $all_driver['kind-of-registration'];
+                         $all_driver['bank-account'];
+                         $all_driver['approved'];
+                         $all_driver['pick_the_bag'];
+                         $all_driver['signed'];
+                         $all_driver['starting_date'];
+                         $all_driver['return_deposit'];
+                         $all_driver['registered_to_bolt'];
+                                               
+                       
+                        echo "<tr>";
+                        echo "<td>".$all_driver['first_name']."</td>";
+                        echo "<td>".$all_driver['last_name']."</td>";
+                        echo     "<td>".$all_driver['city']."</td>";
+                       echo      "<td>".$all_driver['kind-of-registration']."</td>";
+                        echo    "<td>".$all_driver['date_of_submission']."</td>";
+                       echo     "<td>"."yes"."</td>";
+                        echo    "<td>";
+                        echo '<button class="upd">'.'<a href="updatedriver.php?updateid='.$id.'">'.'Update'.'</a>'."</button>";
+                         echo  '<button class="del">'.'<a href="deletedriver.php=">'.'Delete'.'</a>'."</button>";
+                         echo   "</td>";
+                        echo "</tr>";
+                   }                
+                ?>
+              </table>
+        </div>
+    </div>
 </body>
 </html>
+

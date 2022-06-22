@@ -1,16 +1,24 @@
 const driverList = document.querySelector(".driver_list");
 const extraInfo = document.querySelector(".extra_info");
 const closeBtn = document.querySelector(".material-symbols-sharp");
-const updateBtn = document.querySelector(".upd");
+const updateBtn = document.getElementsByClassName("upd");
 
 // ON CLICK EVENT LISTENER ON UPDATE BTN
 
-updateBtn.addEventListener("click", ()=>{
-    driverList.style.display = "none";
-    extraInfo.style.display = "flex";
-})
+// console.log(updateBtn);
 
-//CLOSE BTN ICON
+function openerBtn (){
+        for (let i = 0; i < updateBtn.length; i++){ 
+            updateBtn[i].addEventListener("click", ()=>{
+            driverList.style.display = "none";
+            extraInfo.style.display = "flex";
+        })
+    }
+}
+
+openerBtn();
+
+// //CLOSE BTN ICON
 
 closeBtn.addEventListener("click", ()=>{
     extraInfo.style.display = "none";
