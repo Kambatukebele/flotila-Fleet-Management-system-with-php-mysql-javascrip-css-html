@@ -4,8 +4,6 @@
     <?php include '../model/includes/head_dashboard/admin_dashboard.php'; ?>
 
 <body>
-               
-    
     <div class="container">
         <aside>
             <div class="top">
@@ -119,7 +117,7 @@
                     <span class="material-symbols-sharp">stacked_line_chart</span>
                     <div class="middle">
                         <div class="left">
-                            <h3>Totaal Income</h3>
+                            <h3>Total Income</h3>
                             <h1>$10,624</h1>
                         </div><div class="progress">
                             <svg>
@@ -137,7 +135,7 @@
                 <!-- ========== END OF INSIGHTS ========== -->
 
             <div class="recent-orders">
-                <h2>Recent Orders</h2>
+                <h2>List of All drivers</h2>
                 <table>
                     <thead>
                         <tr>
@@ -219,48 +217,25 @@
                             $_SESSION['id_registeredDriver'] = $value['id'];
                             $_SESSION['first_name'] = $value['first_name'];
                             $_SESSION['last_name'] = $value['last_name'];
-                            $_SESSION['registered_date'] = $value['registered_date'];
-
-                            // $_SESSION['id_registeredDriver'] = $value['id'];
-                            // $_SESSION['id_registeredDriver'] = $value['id'];
-                            // $_SESSION['id_registeredDriver'] = $value['id'];
-
-                            // $_SESSION['first_name'] = $value['first_name']."<br>";
-
-                           echo
-                            '<div class="update">'.
-                                '<div class="profile-photo">'.
-                                    '<img src="../model/public/admin/images/pic2.jpg" alt="">'.
-                                '</div>'.
-                                '<div class="message">'.
-                                    '<p>'.'<b>'.$_SESSION["first_name"].' '.$_SESSION["last_name"].'</b>'.' has just registered'.'</p>';
-                                    echo '<small class="text-muted">'.$_SESSION['registered_date']. ' min ago'.'
-                                </div>'.'
-                            </div>';
-                            
-                        }  
-                    
-                    
+                            $_SESSION['registered_date'] = $value['date_of_submission'];
+                            $value['kind-of-registration'];
+                            if($value['kind-of-registration'] === "new_courier"){
+                               
+                                // echo $newCourier = $value['first_name'] . $value['last_name'];
+                                // return true;
+                                echo
+                                '<div class="update">'.
+                                    '<div class="profile-photo">'.
+                                        '<img src="../model/public/admin/images/pic2.jpg" alt="">'.
+                                    '</div>'.
+                                    '<div class="message">'.
+                                        '<p>'.'<b>'.$_SESSION["first_name"].' '.$_SESSION["last_name"].'</b>'.' has just registered'.'</p>';
+                                        echo '<small class="text-muted">'.$_SESSION['registered_date']. '
+                                    </div>'.'
+                                </div>';
+                            }                          
+                        }                    
                     ?>
-                  
-                    <!-- <div class="update">
-                        <div class="profile-photo">
-                            <img src="../model/public/admin/images/picture1.jpeg" alt="">
-                        </div>
-                        <div class="message">
-                            <p><b>Kamba Tukebele</b> receive her order of phone</p>
-                            <small class="text-muted">2 minutes Ago</small>
-                        </div>
-                    </div> -->
-                    <!-- <div class="update">
-                        <div class="profile-photo">
-                            <img src="../model/public/admin/images/picture2.jpeg" alt="">
-                        </div>
-                        <div class="message">
-                            <p><b>Kristina Kabatova</b> receive her order of phone</p>
-                            <small class="text-muted">2 minutes Ago</small>
-                        </div>
-                    </div> -->
                 </div>
             </div>
             <!-- ========== END OF RECENT UPDATES -->
@@ -268,46 +243,29 @@
                 <h2>Changed Fleet Driver</h2>
                 <div class="updates">
                     <?php
-                        foreach($resultChange as $keys => $changedFlotila){
-                            $_SESSION['id_registeredDriver'] = $changedFlotila['id'];
-                            $_SESSION['first_name'] = $changedFlotila['first_name'];
-                            $_SESSION['last_name'] = $changedFlotila['last_name'];
-                            $_SESSION['registered_date'] = $changedFlotila['registered_date'];
-
-                           echo
-                            '<div class="update">'.
-                                '<div class="profile-photo">'.
-                                    '<img src="../model/public/admin/images/pic1.jpg" alt="">'.
-                                '</div>'.
-                                '<div class="message">'.
-                                    '<p>'.'<b>'.$_SESSION["first_name"].' '.$_SESSION["last_name"].'</b>'.' has just registered'.'</p>';
-                                    echo '<small class="text-muted">'.$_SESSION['registered_date']. ' min ago'.'
-                                </div>'.'
-                            </div>';
+                        foreach($result as $key => $value){
+                            $_SESSION['id_registeredDriver'] = $value['id'];
+                            $_SESSION['first_name'] = $value['first_name'];
+                            $_SESSION['last_name'] = $value['last_name'];
+                            $_SESSION['registered_date'] = $value['date_of_submission'];
+                            $value['kind-of-registration'];
+                            if($value['kind-of-registration'] === "changed_fleet"){
                             
-                        }  
-                    
-                    
+                                // echo $newCourier = $value['first_name'] . $value['last_name'];
+                                // return true;
+                                echo
+                                '<div class="update">'.
+                                    '<div class="profile-photo">'.
+                                        '<img src="../model/public/admin/images/pic2.jpg" alt="">'.
+                                    '</div>'.
+                                    '<div class="message">'.
+                                        '<p>'.'<b>'.$_SESSION["first_name"].' '.$_SESSION["last_name"].'</b>'.' has just registered'.'</p>';
+                                        echo '<small class="text-muted">'.$_SESSION['registered_date']. '
+                                    </div>'.'
+                                </div>';
+                            }
+                        }
                     ?>
-                  
-                    <!-- <div class="update">
-                        <div class="profile-photo">
-                            <img src="../model/public/admin/images/picture1.jpeg" alt="">
-                        </div>
-                        <div class="message">
-                            <p><b>Kamba Tukebele</b> receive her order of phone</p>
-                            <small class="text-muted">2 minutes Ago</small>
-                        </div>
-                    </div> -->
-                    <!-- <div class="update">
-                        <div class="profile-photo">
-                            <img src="../model/public/admin/images/picture2.jpeg" alt="">
-                        </div>
-                        <div class="message">
-                            <p><b>Kristina Kabatova</b> receive her order of phone</p>
-                            <small class="text-muted">2 minutes Ago</small>
-                        </div>
-                    </div> -->
                 </div>
             </div>
             <div class="sales-analytics">
