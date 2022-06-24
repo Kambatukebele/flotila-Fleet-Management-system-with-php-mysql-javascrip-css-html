@@ -24,13 +24,13 @@
                     <span class="material-symbols-sharp">person</span>
                     <h3>Drivers</h3>
                 </a> 
-                <a href="#">
+                <a href="all-driver.php">
                     <span class="material-symbols-sharp">receipt_long</span>
                     <h3>Registered Driver List</h3>
                 </a>
-                <a href="#">
+                <a href="list_active_driver.php">
                     <span class="material-symbols-sharp">insights</span>
-                    <h3>Changed Fleet List</h3>
+                    <h3>All active driver</h3>
                 </a> 
                 <a href="#">
                     <span class="material-symbols-sharp">mail</span>
@@ -135,57 +135,61 @@
                 <!-- ========== END OF INSIGHTS ========== -->
 
             <div class="recent-orders">
-                <h2>List of All drivers</h2>
+                <h2>List of active drivers</h2>
+                <!-- SELECT ALL DATA FROM `registration_new_driver` -->
+            
                 <table>
                     <thead>
                         <tr>
-                            <th>Product Name</th>
-                            <th>Product Number</th>
-                            <th>Payment</th>
-                            <th>Status</th>
-                            <th></th>
+                            <th>Full Name</th>
+                            <th>Tel </th>
+                            <th>Email</th>
+                            <th>Account</th>
+                            <th>City</th>
                         </tr>
                     </thead>
 
                     <tbody>
-                        <tr>
-                            <td>Foldable Mini Drone</td>
-                            <td>2345</td>
-                            <td>Due</td>
-                            <td class="warning">Pending</td>
-                            <td class="primary">Details</td>
-                        </tr>
-                        <tr>
-                            <td>Foldable Mini Drone</td>
-                            <td>2345</td>
-                            <td>Due</td>
-                            <td class="warning">Pending</td>
-                            <td class="primary">Details</td>
-                        </tr>
-                        <tr>
-                            <td>Foldable Mini Drone</td>
-                            <td>2345</td>
-                            <td>Due</td>
-                            <td class="warning">Pending</td>
-                            <td class="primary">Details</td>
-                        </tr>
-                        <tr>
-                            <td>Foldable Mini Drone</td>
-                            <td>2345</td>
-                            <td>Due</td>
-                            <td class="warning">Pending</td>
-                            <td class="primary">Details</td>
-                        </tr>
-                        <tr>
-                            <td>Foldable Mini Drone</td>
-                            <td>2345</td>
-                            <td>Due</td>
-                            <td class="warning">Pending</td>
-                            <td class="primary">Details</td>
-                        </tr>
+                    <?php
+                     $sql = $conn->query("SELECT * FROM registration_new_driver");
+                     $stmt = $sql->fetchAll();
+                    foreach($stmt as $all_driver){
+                        $all_driver['id'];
+                        $first_name = $all_driver['first_name'];
+                        $lastName = $all_driver['last_name'];
+                        $emailD = $all_driver['email'];
+                        $phoneNumber = $all_driver['phone_number'];
+                        $transportation = $all_driver['transportation'];
+                        $city = $all_driver['city'];
+                        $textPlace = $all_driver['textplace'];
+                        $kindOfRegistration  = $all_driver['kind-of-registration'];
+                        $bankAccount  = $all_driver['bank-account'];
+                        $approved = $all_driver['approved'];
+                        $pickTheBag = $all_driver['pick_the_bag'];
+                        $signed = $all_driver['signed'];
+                        $startingDate = $all_driver['starting_date'];
+                        $returnDeposit = $all_driver['return_deposit'];
+                        $registeredToBolt = $all_driver['registered_to_bolt'];
+
+                        if (!empty($startingDate) && !empty($first_name) && !empty($lastName) && !empty($emailD) && !empty($phoneNumber) && !empty($transportation) && !empty($bankAccount) && !empty($approved) && !empty($pickTheBag) && !empty($signed) && !empty($registeredToBolt)){
+                          echo '<tr>'.
+                            '<td>'.$all_driver["first_name"].' '. $all_driver["last_name"].'</td>'.
+                            '<td>'.$all_driver["phone_number"].'</td>'.
+                            '<td>'.$all_driver["email"].'</td>'.
+                            '<td>'.$all_driver["bank-account"].'</td>'.   
+                            '<td>'.$all_driver["city"].'</td>'.                          
+                            
+                        '</tr>';
+                        }
+                       
+                    }
+
+               ?>
+                       
+                       
                     </tbody>
                 </table>
-                <a href="#">Show All</a>
+                <a href="list_active_driver.php">Show All</a>
             </div>    
         </main>
         <!-- ========== END OF MAIN ========== -->
@@ -259,7 +263,7 @@
                                         '<img src="../model/public/admin/images/pic2.jpg" alt="">'.
                                     '</div>'.
                                     '<div class="message">'.
-                                        '<p>'.'<b>'.$_SESSION["first_name"].' '.$_SESSION["last_name"].'</b>'.' has just registered'.'</p>';
+                                        '<p>'.'<b>'.$_SESSION["first_name"].' '.$_SESSION["last_name"].'</b>'.' wants to change fleet'.'</p>';
                                         echo '<small class="text-muted">'.$_SESSION['registered_date']. '
                                     </div>'.'
                                 </div>';
@@ -309,12 +313,14 @@
                         <h3>868</h3>
                     </div>
                 </div> -->
-                <div class="item add-product">
-                    <div>
-                        <span class="material-symbols-sharp">add</span>
-                        <h3>Add Driver</h3>
+               <a href="registration.php">
+                    <div class="item add-product">
+                        <div>
+                            <span class="material-symbols-sharp">add</span>
+                            <h3>Add Driver</h3>
+                        </div>
                     </div>
-                </div>
+               </a>
                 
             </div>
         </div>

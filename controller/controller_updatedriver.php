@@ -10,7 +10,7 @@
     $stmt = $sql->fetchAll();
     
     foreach($stmt as $all_driver){
-       $all_driver['id'];
+      $all_driver['id'];
       $first_name = $all_driver['first_name'];
       $lastName = $all_driver['last_name'];
       $emailD = $all_driver['email'];
@@ -28,9 +28,6 @@
       $registeredToBolt = $all_driver['registered_to_bolt'];
 
   }
-
-
-
   if(isset($_POST['upgradeDriver'])){
   
     //CREATING VARIABLE FOR ALL INPUTS FIELDS
