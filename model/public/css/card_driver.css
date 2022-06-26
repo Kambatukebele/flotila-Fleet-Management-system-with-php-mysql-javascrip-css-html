@@ -1,172 +1,120 @@
 body{
-    margin: auto;
-    width: 90%;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(0, 0, 0, 0.021);
 }
-    /* TABLE CARD DRIVER */
 .card_driver{
-    height: 100vh;
-    width: 100%;
     
-}
-
-.card_driver_name_details{
-    border: 1px solid black;
-    
-    
-    
-}
-
-
-.card_driver_name_details tr th, td{
-    
-   
-    border: 1px solid black;
-    width:180px;
-    text-align: center;
-    background-color: #0083A3;
-    color: white;
-}
-
-/* ========== BUTTONS UPDATE AND DELETE ========== */
-.update_delete{
-    margin: 50px auto;
-    display: flex;
-    
-    justify-content: center;
-}
-
-.update_delete .update{
-    margin: 0 10px;
-    background-color: #34D186;
-    font-size: 16px;
-    font-weight: 300;
-    list-style: 24px;
-    border: none;
-    padding: 10px 25px;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-    margin-top: -3px;
-}
-
-.update_delete .delete{
-    margin: 0 10px;
-    background-color: red;
-    font-size: 16px;
-    font-weight: 300;
-    list-style: 24px;
-    border: none;
-    padding: 10px 25px;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-    margin-top: -3px;
-}
-
-.update_delete .modify{
-    margin: 0 10px;
-    background-color: blue;
-    font-size: 16px;
-    font-weight: 300;
-    list-style: 24px;
-    border: none;
-    padding: 10px 25px;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-    margin-top: -3px;
-}
-
-/* ========== TABLE PAYMENT DRIVER ==========  */
-
-.card_driver_payment_details{
-    border: 1px solid black;
-    max-width: 900px;
+    width: 90%;
     margin: auto;
+    height: 100vh;
+}
+
+.card_driver_details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.card_driver_details .card_driver_name {
+    margin: 50px 0;
+}
+
+.card_driver_name h2{
     
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 40px;
+         
     
 }
 
-.card_driver_payment_details tr th{
+.card_driver_details .card_driver_name_details{
+    
+    width: 30%;
     border: 1px solid black;
+    
+} 
+
+.card_driver_details .card_driver_name_details tr{
+ 
+    border: 1px solid black;
+    
+    
+} 
+
+.card_driver_details .card_driver_name_details tr th{
+   
+    border: 1px solid black;
+    width: 300px;
+    padding: 5px 0;
+}
+
+.card_driver_details .card_driver_name_details tr td{
+    
+    border: 1px solid black;
+    width: 300px;
+    text-align: center;
+    padding: 5px 0;
+}
+
+/* ========== PAYMENT PROCESS ==========  */
+.form_control{
+    margin: 50px 0;
+}
+form{
+    width: 900px;
+    margin: auto;
    
 }
-
-.date_selection{
-    background-color:transparent;
+.left_side{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
     
 }
+.left{
+   display: flex;
+   flex-direction: column;
 
-.date_selection input, select{
-    width:95%;  
-    background-color: transparent;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    
+ }
+
+ .left label, .right label{
+    margin: 5px;
+ }
+
+ .left input, .right input{
+    width: 240px;
+    padding: 6px;
+    margin: 0 5px;
+ }
+
+ .right select{
+    width: 260px;
+    padding: 6px;
+    margin: 0 5px;
+ }
+
+ .left_side button{
+    margin: 20px 0;
+    padding: 15px 35px;
     border: none;
-    padding: 3px;
-    outline: none;
-} 
-.date_selection select{
-    background-color: red;
+    background-color:  #34D186;
+    cursor: pointer;
     color: white;
+ }
+
+ .left_side button:hover{
+    -webkit-box-shadow: 2px 3px 12px 1px #27B973; 
+    box-shadow: 2px 3px 12px 1px #27B973;
+    background-color: red;
 }
+ 
 
-
-/* ========== MEDIA QUERIES ========== */
-@media screen and (max-width:510px){
-    body{
-        width: 95%;
-        margin: auto;
-    }
-
-    .update_delete .update{
-        margin: 0 10px;
-        background-color: #34D186;
-        font-size: 13px;
-        font-weight: 300;
-        list-style: 24px;
-        border: none;
-        padding: 10px 15px;
-        color: white;
-        border-radius: 5px;
-        cursor: pointer;
-        font-family: 'Poppins', sans-serif;
-        margin-top: -3px;
-    }
-    
-    .update_delete .delete{
-        margin: 0 10px;
-        background-color: red;
-        font-size: 13px;
-        font-weight: 300;
-        list-style: 24px;
-        border: none;
-        padding: 10px 15px;
-        color: white;
-        border-radius: 5px;
-        cursor: pointer;
-        font-family: 'Poppins', sans-serif;
-        margin-top: -3px;
-    }
-    
-    .update_delete .modify{
-        margin: 0 10px;
-        background-color: blue;
-        font-size: 13px;
-        font-weight: 300;
-        list-style: 24px;
-        border: none;
-        padding: 10px 15px;
-        color: white;
-        border-radius: 5px;
-        cursor: pointer;
-        font-family: 'Poppins', sans-serif;
-        margin-top: -3px;
-    }
-
-    .card_driver_payment_details{
-        width: 100px;
-
-    }
-}

@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/card_driver.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
     <title>card driver</title>
 </head>
 <body>
     <div class="card_driver">
         <div class="card_driver_all">
             <div class="card_driver_details">
-                <div class="card_driver_name"><h2>Card of (php data goes here)</b></h2></div>
+                <div class="card_driver_name">
+                    <h2>Payment for (php data goes here)</h2>
+                </div>
                 <table class="card_driver_name_details">
                     <tr>
                         <th>CITY</th>
@@ -50,15 +53,15 @@
                 </table>
 
                  <!-- ========== BUTTONS UPDATE AND DELETE ========== -->
-                <div class="update_delete">
+                <!-- <div class="update_delete">
                     <button class="update" type="submit">UPDATE</button>
                     <button class="delete" type="submit">DELETE</button>
                     <button class="modify" type="submit">MODIFY</button>
-                </div>
+                </div> -->
                  
 
                 <!-- ========== TABLE PAYMENT DRIVER ========== -->
-
+<!-- 
                 <table class="card_driver_payment_details">
                     <tr>
                         <th>DATES</th>
@@ -94,7 +97,50 @@
                         </td>
                         
                     </tr>
-                </table>
+                </table> -->
+                <!-- ========== PAYMENT PROCESS ========== -->
+               <div class="form_control">
+                <form action="" method="POST">
+                    <div class="left_side">
+                         <div class="left">
+                             <label for="period_of">Period From</label>
+                             <input type="text" name="periodFrom" placeholder="Period of?">
+                         </div>
+                         <div class="right">
+                             <label for="receid">Received From Bolt</label>
+                             <input type="text" name="received" id="" placeholder="Received from Bolt">
+                         </div>
+                    </div>
+                    <div class="left_side">
+                         <div class="left">
+                             <label for="sendToDriver">Send to Driver</label>
+                             <input type="text" name="sendToDriver" placeholder="Send to Driver">
+                         </div>
+                         <div class="right">
+                             <label for="commission">Commission</label>
+                             <input type="text" name="commission" id="" placeholder="Our Commission">
+                         </div>
+                    </div>
+                    <div class="left_side">
+                         <div class="left">
+                             <label for="comment">Comment</label>
+                             <input type="text" name="comment" id="" placeholder="Leave some comments">
+                         </div>
+                         <div class="right">
+                             <label for="satus">Status</label>
+                             <select name="status_payment" id="">
+                                 <option value="none" selected disabled>Choose</option>
+                                 <option value="paid">PAID</option>
+                                 <option value="not_working">NOT WORKING</option>
+                                 <option value="quit">QUIT</option>
+                             </select>
+                         </div>
+                    </div>
+                     <div class="left_side">
+                         <button type="submit">Save Payment</button>
+                     </div>
+                 </form>
+               </div>
             </div>
         </div>
     </div>
