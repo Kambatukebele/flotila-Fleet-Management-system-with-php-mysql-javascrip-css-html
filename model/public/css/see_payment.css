@@ -1,0 +1,81 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(0, 0, 0, 0.021);
+}
+.card_driver{
+    
+    width: 90%;
+    margin: auto;
+    height: 100vh;
+}
+
+.card_driver_details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.card_driver_details .card_driver_name {
+    margin: 50px 0;
+}
+
+.card_driver_name h2{
+    
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 40px;
+         
+    
+}
+
+.card_driver_details .card_driver_name_details{
+    
+    width: 30%;
+    border: 1px solid black;
+    
+} 
+
+.card_driver_details .card_driver_name_details tr{
+ 
+    border: 1px solid black;
+    
+    
+} 
+
+.card_driver_details .card_driver_name_details tr th{
+   
+    border: 1px solid black;
+    width: 300px;
+    padding: 5px 0;
+}
+
+.card_driver_details .card_driver_name_details tr td{
+    
+    border: 1px solid black;
+    width: 300px;
+    text-align: center;
+    padding: 5px 0;
+}
+
+/*  ========== TABLE PAYMENT DRIVER ========== */
+.card_driver_payment_details{
+    
+    max-width: 1000px;
+    margin: 50px 0;
+}
+.card_driver_payment_details tr{
+   border: 1px black solid;
+}
+.card_driver_payment_details tr th{
+    border: 1px black solid;
+    padding: 6px;
+    width: 190px;
+ }
+
+ .card_driver_payment_details tr td{
+    border: 1px black solid;
+    padding: 6px;
+    text-align: center;
+ }
