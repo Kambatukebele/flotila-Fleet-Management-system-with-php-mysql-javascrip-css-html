@@ -1,4 +1,7 @@
-<?php include_once '../controller/controller_dashboard.php'; ?>
+<?php
+    include_once '../controller/controller_dashboard.php';
+    
+?>
 <!DOCTYPE html>
 <html lang="en">
     <?php include '../model/includes/head_dashboard/admin_dashboard.php'; ?>
@@ -41,7 +44,7 @@
                     <span class="material-symbols-sharp">inventory</span>
                     <h3>All drivers</h3>
                 </a> 
-                <a href="#">
+                <a href="card_payment_driver.php">
                     <span class="material-symbols-sharp">report</span>
                     <h3>Payment Drivers</h3>
                 </a> 
@@ -144,17 +147,22 @@
                             <th>Full Name</th>
                             <th>Tel </th>
                             <th>Email</th>
-                            <th>Account</th>
-                            <th>City</th>
+                            <th>View payment</th>
+                            <th>Pay</th>
                         </tr>
                     </thead>
 
                     <tbody>
                     <?php
-                     $sql = $conn->query("SELECT * FROM registration_new_driver");
-                     $stmt = $sql->fetchAll();
+                        // GET DATA FROM CARD PAYMENT DRIVER URL
+                        // $id = $_GET['payId'];
+                        // echo $id;
+                    
+                    // SELECT DATA
+                    //  $sql = $conn->query("SELECT * FROM registration_new_driver");
+                    //  $stmt = $sql->fetchAll();
                     foreach($stmt as $all_driver){
-                        $all_driver['id'];
+                        $id = $all_driver['id'];
                         $first_name = $all_driver['first_name'];
                         $lastName = $all_driver['last_name'];
                         $emailD = $all_driver['email'];
@@ -172,12 +180,14 @@
                         $registeredToBolt = $all_driver['registered_to_bolt'];
 
                         if (!empty($startingDate) && !empty($first_name) && !empty($lastName) && !empty($emailD) && !empty($phoneNumber) && !empty($transportation) && !empty($bankAccount) && !empty($approved) && !empty($pickTheBag) && !empty($signed) && !empty($registeredToBolt)){
-                          echo '<tr>'.
+                          echo
+                        '<tr>'.
                             '<td>'.$all_driver["first_name"].' '. $all_driver["last_name"].'</td>'.
                             '<td>'.$all_driver["phone_number"].'</td>'.
                             '<td>'.$all_driver["email"].'</td>'.
-                            '<td>'.$all_driver["bank-account"].'</td>'.   
-                            '<td>'.$all_driver["city"].'</td>'.                          
+                            '<td>'.'<a href="card_payment_driver.php?payId=$id">'.'Details'.'</a>'.'</td>'.   
+                            '<td>'.'<a href="card_payment_driver.php?payId=$id">'.'Pay Now!'.'</a>'.
+                            '</td>'.                          
                             
                         '</tr>';
                         }

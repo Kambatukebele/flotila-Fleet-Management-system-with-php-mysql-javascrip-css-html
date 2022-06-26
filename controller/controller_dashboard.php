@@ -22,10 +22,13 @@
 
      //FETCH DATA FROM change_flotila
 
-     $sqlChange = "SELECT * FROM `change_flotila` ORDER BY `id` DESC LIMIT 3";
-     $stmtChange = $conn->query($sqlChange);  
+   //   $sqlChange = "SELECT * FROM `change_flotila` ORDER BY `id` DESC LIMIT 3";
+   //   $stmtChange = $conn->query($sqlChange);  
  
-     //SET THE RESULTING ARRAY TO ASSOCIATIVE
+   //   //SET THE RESULTING ARRAY TO ASSOCIATIVE
  
-     $resultChange = $stmtChange->fetchAll();
-      
+   //   $resultChange = $stmtChange->fetchAll();
+
+   $driverActive = $conn->query("SELECT * FROM registration_new_driver");
+    $stmt = $driverActive->fetchAll();
+    
