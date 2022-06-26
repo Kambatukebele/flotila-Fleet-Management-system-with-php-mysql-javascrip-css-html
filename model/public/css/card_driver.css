@@ -2,6 +2,51 @@ body{
     font-family: 'Poppins', sans-serif;
     background-color: rgba(0, 0, 0, 0.021);
 }
+/* ========== TABLE USERS========== */
+.driver_list{
+    
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.drivers{
+    width: 900px;
+    border: 1px solid black;
+}
+
+.drivers tr{
+    border: 1px solid black;
+    
+}
+.drivers tr th{
+    border: 1px solid black;
+    padding: 5px;
+    
+}
+.drivers tr td{
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+    
+}
+
+.drivers tr td .upd{
+    background-color: #27B973;
+    border: none;
+    padding: 5px 7px;
+    color: white;
+    
+}
+
+.drivers tr td .upd a{
+   
+    color: white;
+    
+}
+/* ========== TABLE USERS========== */
+
 .card_driver{
     
     width: 90%;
