@@ -1,3 +1,4 @@
+<?php include '../controller/controller_card_payment_driver.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +32,7 @@
                   <td>12-05-22</td>
                   <td>yes</td>
                   <td>
-                    <button class="upd"><a href="">Payment</a></button>                    
+                    <button class="upd"><a href="card_payment_driver.php?payId=$id">Payment</a></button>                    
                   </td>
                 </tr>
               </table>
