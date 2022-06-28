@@ -12,23 +12,9 @@
         echo $_SESSION['fullName'];
      }
 
-     //RECENT REGISTRATION
-    $sql = "SELECT * FROM `registration_new_driver` ORDER BY `id` DESC LIMIT 3";
-    $stmt = $conn->query($sql);  
+      // FOR ACTIVE DRIVERS LIST
+   $activeDriver = "SELECT * FROM `registration_new_driver` ORDER BY `id` DESC LIMIT 3";
+   $stmt = $conn->prepare($activeDriver);
+   $stmt->execute();
 
-    //SET THE RESULTING ARRAY TO ASSOCIATIVE
-
-    $result = $stmt->fetchAll();
-
-     //FETCH DATA FROM change_flotila
-
-   //   $sqlChange = "SELECT * FROM `change_flotila` ORDER BY `id` DESC LIMIT 3";
-   //   $stmtChange = $conn->query($sqlChange);  
- 
-   //   //SET THE RESULTING ARRAY TO ASSOCIATIVE
- 
-   //   $resultChange = $stmtChange->fetchAll();
-
-   $driverActive = $conn->query("SELECT * FROM registration_new_driver");
-    $stmt = $driverActive->fetchAll();
-    
+   $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);

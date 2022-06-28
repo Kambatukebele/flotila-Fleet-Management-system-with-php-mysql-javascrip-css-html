@@ -154,47 +154,39 @@
 
                     <tbody>
                     <?php
-                        // GET DATA FROM CARD PAYMENT DRIVER URL
-                        // $id = $_GET['payId'];
-                        // echo $id;
-                    
-                    // SELECT DATA
-                    //  $sql = $conn->query("SELECT * FROM registration_new_driver");
-                    //  $stmt = $sql->fetchAll();
-                    foreach($stmt as $all_driver){
-                        $id = $all_driver['id'];
-                        $first_name = $all_driver['first_name'];
-                        $lastName = $all_driver['last_name'];
-                        $emailD = $all_driver['email'];
-                        $phoneNumber = $all_driver['phone_number'];
-                        $transportation = $all_driver['transportation'];
-                        $city = $all_driver['city'];
-                        $textPlace = $all_driver['textplace'];
-                        $kindOfRegistration  = $all_driver['kind-of-registration'];
-                        $bankAccount  = $all_driver['bank-account'];
-                        $approved = $all_driver['approved'];
-                        $pickTheBag = $all_driver['pick_the_bag'];
-                        $signed = $all_driver['signed'];
-                        $startingDate = $all_driver['starting_date'];
-                        $returnDeposit = $all_driver['return_deposit'];
-                        $registeredToBolt = $all_driver['registered_to_bolt'];
+                                   
+                        // SELECT DATA
+                        foreach($stmt->fetchAll() as $driver=>$row){
+                            $idDriver = $row['id'];
+                            $firstNameD = $row['first_name'];
+                            $lastNameD = $row['last_name'];
+                            $emailD = $row['email'];
+                            $phoneNumberD = $row['phone_number'];
+                            $cityD = $row['city'];
+                            $typeOfD = $row['kind-of-registration'];
+                            $startDrivingD = $row['starting_date'];
+                            $transportationD = $row['transportation'];
+                            $bankAccountD = $row['bank-account'];
+                            $approvedD = $row['approved'];
+                            $pickTheBagD = $row['pick_the_bag'];
+                            $signedD = $row['signed'];
+                            $registrationBoltD = $row['registered_to_bolt'];
+                            $dateSubmit = $row['date_of_submission'];
 
-                        if (!empty($startingDate) && !empty($first_name) && !empty($lastName) && !empty($emailD) && !empty($phoneNumber) && !empty($transportation) && !empty($bankAccount) && !empty($approved) && !empty($pickTheBag) && !empty($signed) && !empty($registeredToBolt)){
-                          echo
-                        '<tr>'.
-                            '<td>'.$all_driver["first_name"].' '. $all_driver["last_name"].'</td>'.
-                            '<td>'.$all_driver["phone_number"].'</td>'.
-                            '<td>'.$all_driver["email"].'</td>'.
-                            '<td>'.'<a href="card_payment_driver.php?payId=$id">'.'Details'.'</a>'.'</td>'.   
-                            '<td>'.'<a href="card_payment_driver.php?payId=$id">'.'Pay Now!'.'</a>'.
-                            '</td>'.                          
-                            
-                        '</tr>';
+                            if(!empty($firstNameD) && !empty($lastNameD) && !empty($emailD) && !empty($phoneNumberD) && !empty($cityD) && !empty($startDrivingD) && !empty($bankAccountD) && !empty($approvedD) && !empty($pickTheBagD) && !empty($signedD)){
+                                echo
+                            '<tr>'.
+                                '<td>'.$firstNameD.' '. $lastNameD.'</td>'.
+                                '<td>'.$phoneNumberD.'</td>'.
+                                '<td>'.$emailD.'</td>'.
+                                '<td>'.'<a href="card_payment_driver.php?payId=$id">'.'Details'.'</a>'.'</td>'.   
+                                '<td>'.'<a href="card_payment_driver.php?payId='.$idDriver.'">'.'Pay Now!'.'</a>'.
+                                '</td>'.                          
+                                
+                            '</tr>';
+                            }                       
                         }
-                       
-                    }
-
-               ?>
+                    ?>
                        
                        
                     </tbody>
@@ -227,28 +219,31 @@
                 <h2>Recent Registration</h2>
                 <div class="updates">
                     <?php
-                        foreach($result as $key => $value){
-                            $_SESSION['id_registeredDriver'] = $value['id'];
-                            $_SESSION['first_name'] = $value['first_name'];
-                            $_SESSION['last_name'] = $value['last_name'];
-                            $_SESSION['registered_date'] = $value['date_of_submission'];
-                            $value['kind-of-registration'];
-                            if($value['kind-of-registration'] === "new_courier"){
-                               
-                                // echo $newCourier = $value['first_name'] . $value['last_name'];
-                                // return true;
+                        $sql = "SELECT * FROM  `registration_new_driver` ORDER BY `id` DESC LIMIT 3";
+                        $ret = $conn->prepare($sql);
+                        $ret->execute();
+
+                        $feedBack = $ret->fetchAll();
+                        foreach($feedBack as $key=>$value){
+                           
+                            $ft = $value['first_name'];
+                            $lt = $value['last_name'];
+                            $tf = $value['kind-of-registration'];
+                            $dateOfSubmission = $value['date_of_submission'];
+
+                            if(isset($tf) && $tf === "new_courier"){
+                            
                                 echo
                                 '<div class="update">'.
                                     '<div class="profile-photo">'.
                                         '<img src="../model/public/admin/images/pic2.jpg" alt="">'.
                                     '</div>'.
                                     '<div class="message">'.
-                                        '<p>'.'<b>'.$_SESSION["first_name"].' '.$_SESSION["last_name"].'</b>'.' has just registered'.'</p>';
-                                        echo '<small class="text-muted">'.$_SESSION['registered_date']. '
+                                        '<p>'.'<b>'.$ft.' '.$lt.'</b>'.' has just registered on'.'</p>'.'<small class="text-muted">'.$dateOfSubmission. '
                                     </div>'.'
                                 </div>';
-                            }                          
-                        }                    
+                            }
+                        }
                     ?>
                 </div>
             </div>
@@ -257,24 +252,28 @@
                 <h2>Changed Fleet Driver</h2>
                 <div class="updates">
                     <?php
-                        foreach($result as $key => $value){
-                            $_SESSION['id_registeredDriver'] = $value['id'];
-                            $_SESSION['first_name'] = $value['first_name'];
-                            $_SESSION['last_name'] = $value['last_name'];
-                            $_SESSION['registered_date'] = $value['date_of_submission'];
-                            $value['kind-of-registration'];
-                            if($value['kind-of-registration'] === "changed_fleet"){
+
+                        $query = "SELECT * FROM  `registration_new_driver` ORDER BY `id` DESC LIMIT 3";
+                        $feedR = $conn->prepare($query);
+                        $feedR->execute();
+
+                        $resultFeedR = $feedR->fetchAll();
+                        foreach($resultFeedR as $change=>$changed){
+                        
+                            $ftChanged = $changed['first_name'];
+                            $ltChanged = $changed['last_name'];
+                            $tfChanged = $changed['kind-of-registration'];
+                            $dateOfSubmissionChanged = $changed['date_of_submission'];
+                            if(isset($tfChanged) && $tfChanged === "changed_fleet"){
                             
-                                // echo $newCourier = $value['first_name'] . $value['last_name'];
-                                // return true;
                                 echo
                                 '<div class="update">'.
                                     '<div class="profile-photo">'.
                                         '<img src="../model/public/admin/images/pic2.jpg" alt="">'.
                                     '</div>'.
                                     '<div class="message">'.
-                                        '<p>'.'<b>'.$_SESSION["first_name"].' '.$_SESSION["last_name"].'</b>'.' wants to change fleet'.'</p>';
-                                        echo '<small class="text-muted">'.$_SESSION['registered_date']. '
+                                        '<p>'.'<b>'.$ftChanged.' '.$ltChanged.'</b>'.'wants to change fleet'.'</p>'
+                                    .'<small class="text-muted">'.$dateOfSubmissionChanged.'
                                     </div>'.'
                                 </div>';
                             }
