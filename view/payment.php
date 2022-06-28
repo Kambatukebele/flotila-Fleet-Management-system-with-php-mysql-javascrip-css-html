@@ -1,4 +1,4 @@
-<?php include '../controller/controller_card_payment_driver.php'; ?>
+<?php include '../controller/controller_payment.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +11,7 @@
     <title>card driver</title>
 </head>
 <body>
+
     <!-- ========== TABLE USERS========== -->
     <div class="driver_list">
         <div class="driver_list_all">
@@ -18,23 +19,42 @@
                 <tr>
                   <th>Jméno</th>
                   <th>Příjmení</th>
+                  <th>Email</th>
+                  <th>Phone</th>
                   <th>City</th>
                   <th>Type</th>
-                  <th>Date</th>
-                  <th>completed?</th>
                   <th>Action</th>
                 </tr>
-                <tr>
-                  <td>Alfreds</td>
-                  <td>Maria </td>
-                  <td>Germany</td>
-                  <td>New Courier</td>
-                  <td>12-05-22</td>
-                  <td>yes</td>
-                  <td>
-                    <button class="upd"><a href="card_payment_driver.php?payId=$id">Payment</a></button>                    
-                  </td>
-                </tr>
+                <?php
+                     foreach($stmt->fetchAll() as $driver=>$row){
+                       $idDriver = $row['id'];
+                       $firstNameD = $row['first_name'];
+                       $lastNameD = $row['last_name'];
+                       $emailD = $row['email'];
+                       $phoneNumberD = $row['phone_number'];
+                       $cityD = $row['city'];
+                       $typeOfD = $row['kind-of-registration'];
+                       $startDrivingD = $row['starting_date'];
+
+                    echo
+                        '<tr>'.
+                          '<td>'.$firstNameD.'</td>'.
+                          '<td>'.$lastNameD.'</td>'.
+                          '<td>'.$emailD.'</td>'.
+                          '<td>'.$phoneNumberD.'</td>'.
+                          '<td>'.$cityD.'</td>'.
+                          '<td>'.$typeOfD.'</td>'.
+                          '<td>'.
+                            '<button class="upd">'.'<a href="card_payment_driver.php?payId='.$idDriver.'">'.'Payment'.'</a>'.'</button>'.                    
+                          '</td>'.
+                        '</tr>';
+
+                  }
+
+                  
+                
+                ?>
+                
               </table>
         </div>
     </div>  

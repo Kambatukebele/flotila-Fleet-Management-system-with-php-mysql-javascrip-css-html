@@ -11,6 +11,11 @@
     <title>card driver</title>
 </head>
 <body>
+    <?php           
+
+        // $id = $_GET['payId']. "<br>";
+        // echo $id;
+    ?>
     <div class="card_driver">
         <div class="card_driver_all">
             <div class="card_driver_details">
@@ -98,7 +103,7 @@
                          </div>
                     </div>
                      <div class="left_side">
-                         <button type="submit">Save Payment</button>
+                         <button type="submit" name="save_payment">Save Payment</button>
                      </div>
                  </form>
                </div>
