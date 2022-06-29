@@ -102,6 +102,15 @@
                              </select>
                          </div>
                     </div>
+                    <div class="left_side">
+                         <div class="left">
+                             <!-- <label for="Driver Id">Driver Id</label> -->
+                             <input type="hidden" name="paymentID" id="" placeholder="Driver Id">
+                         </div>
+                         <div class="right">
+                            
+                         </div>
+                    </div>
                      <div class="left_side">
                          <button type="submit" name="save_payment">Save Payment</button>
                      </div>
