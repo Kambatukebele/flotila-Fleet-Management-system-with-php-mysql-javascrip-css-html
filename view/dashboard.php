@@ -179,7 +179,7 @@
                                 '<td>'.$firstNameD.' '. $lastNameD.'</td>'.
                                 '<td>'.$phoneNumberD.'</td>'.
                                 '<td>'.$emailD.'</td>'.
-                                '<td>'.'<a href="card_payment_driver.php?payId=$id">'.'Details'.'</a>'.'</td>'.   
+                                '<td>'.'<a href="payment_details.php?detailsId='.$idDriver.'">'.'Details'.'</a>'.'</td>'.   
                                 '<td>'.'<a href="card_payment_driver.php?payId='.$idDriver.'">'.'Pay Now!'.'</a>'.
                                 '</td>'.                          
                                 
