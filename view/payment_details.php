@@ -48,14 +48,14 @@
                         $send = $details['send_to_driver'];
                         $commission = $details['commission'];
                         $statusPay = $details['status_payment'];
-                        $comment = $details['comment'];
+                        $comment = $details['comment'];                        
                         echo   
                         '<tr>'.
                           '<td>'.$periodDetails.'</td>'.
                           '<td>'.$received.'</td>'.
                           '<td>'.$send.'</td>'.
                           '<td>'.$commission.'</td>'.
-                          '<td>'.$statusPay.'</td>'.
+                          '<td class="colors">'.$statusPay.'</td>'.
                           '<td>'.$comment.'</td>'.
                        '</tr>';  
                     }
@@ -65,5 +65,6 @@
               </table>
         </div>
     </div>  
+    
 </body>
 </html>

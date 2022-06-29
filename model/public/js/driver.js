@@ -24,3 +24,4 @@ closeBtn.addEventListener("click", ()=>{
     extraInfo.style.display = "none";
     driverList.style.display = "flex";
 })
+
