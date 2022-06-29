@@ -28,7 +28,7 @@
     <!-- ========== TABLE USERS========== -->
     <div class="driver_list">
         <div class="driver_list_all">
-            <h5>Payment for KAMBA TUBELE</h4>
+            <h5>Payment for <?php echo $first_name. ' ' . $last_name; ?></h4>
             <br>
             <table class="drivers">
                 <tr>
@@ -38,17 +38,30 @@
                   <th>Commission</th>
                   <th>Status</th>
                   <th>Comment</th>
-                  <th>Action</th>
+                  <!-- <th>Action</th> -->
                 </tr>
-                <tr>
-                  <td>Alfreds</td>
-                  <td>Maria </td>
-                  <td>Germany</td>
-                  <td>New Courier</td>
-                  <td>12-05-22</td>
-                  <td>yes</td>
-                  <td>yes</td>
-                </tr>              
+                <?php
+                      foreach($paymentStmtResult as $details){
+                        $detailsId = $details['paymentID'];
+                        $periodDetails = $details['period_of_date'];
+                        $received = $details['received'];
+                        $send = $details['send_to_driver'];
+                        $commission = $details['commission'];
+                        $statusPay = $details['status_payment'];
+                        $comment = $details['comment'];
+                        echo   
+                        '<tr>'.
+                          '<td>'.$periodDetails.'</td>'.
+                          '<td>'.$received.'</td>'.
+                          '<td>'.$send.'</td>'.
+                          '<td>'.$commission.'</td>'.
+                          '<td>'.$statusPay.'</td>'.
+                          '<td>'.$comment.'</td>'.
+                       '</tr>';  
+                    }
+                
+                ?>
+                          
               </table>
         </div>
     </div>  
