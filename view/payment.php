@@ -45,14 +45,11 @@
                           '<td>'.$cityD.'</td>'.
                           '<td>'.$typeOfD.'</td>'.
                           '<td>'.
+                            '<button class="del" style="background-color:red;padding: 3px 7px;margin-right: 9px;">'.'<a style="color:white;" href="card_payment_driver.php?payId='.$idDriver.'">'.'Details'.'</a>'.'</button>'.
                             '<button class="upd">'.'<a href="card_payment_driver.php?payId='.$idDriver.'">'.'Payment'.'</a>'.'</button>'.                    
                           '</td>'.
                         '</tr>';
-
-                  }
-
-                  
-                
+                   }
                 ?>
                 
               </table>
