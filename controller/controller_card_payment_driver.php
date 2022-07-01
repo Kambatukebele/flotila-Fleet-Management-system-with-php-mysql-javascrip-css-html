@@ -59,7 +59,7 @@
             echo '<button class="upd" style="background-color:green; border:none; padding: 7px 9px;">'.'<a href="dashboard.php" style="color: white; text-decoration:none;">'.'Back to dashboard'.'</a>'.'</button>'.
             '<br>'.'<br>';
             echo "or".'<br>'.'<br>';
-            echo '<button class="upd" style="background-color:green; border:none; padding: 7px 9px;">'.'<a href="dashboard.php" style="color: white; text-decoration:none;">'.'List'.'</a>'.'</button>'.
+            echo '<button class="upd" style="background-color:green; border:none; padding: 7px 9px;">'.'<a href="dashboard.php" style="color: white; text-decoration:none;">'.'All Payment List'.'</a>'.'</button>'.
             '<br>'.'<br>';
         }
     }
