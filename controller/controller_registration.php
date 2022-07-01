@@ -211,10 +211,10 @@
                 // $conn->exec($sql);
 
             // $conn->query($sql);
-            // $result = $sql->execute();
-            // if ($result == true){
-            //     header("Location:thank_you_page.php");
-            // }
+            $result = $sql->execute();
+            if ($result == true){
+                header("Location:thank_you_page.php");
+            }
 
     }
    

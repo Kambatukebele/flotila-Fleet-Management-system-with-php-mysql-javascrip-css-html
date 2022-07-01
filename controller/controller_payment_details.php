@@ -1,5 +1,6 @@
 <?php 
     include 'database/database.php';
+    include 'security/security.php';
 
        // //GET THE DATA IN THE URL 
     $idDriver = $_GET['detailsId'];

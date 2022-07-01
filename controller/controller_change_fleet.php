@@ -205,6 +205,11 @@
 
             $sql->execute();
 
+            $result = $sql->execute();
+            if ($result == true){
+                header("Location:thank_you_page.php");
+            }
+
 
     }
    

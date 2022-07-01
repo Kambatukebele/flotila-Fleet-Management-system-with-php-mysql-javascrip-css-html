@@ -1,5 +1,6 @@
 <?php 
     include 'database/database.php';
+    include 'security/security.php';
 
     $idDriver = $_GET['payId'];
     echo $idDriver;

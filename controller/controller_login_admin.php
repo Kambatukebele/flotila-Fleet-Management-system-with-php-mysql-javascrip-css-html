@@ -1,6 +1,7 @@
 <?php 
     //LINK THE DATABASE CONNECTION
     include 'database/database.php';
+    
 
     // CONNECT ADMIN VALIDATION
 
