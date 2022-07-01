@@ -28,8 +28,8 @@
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
         if(isset($result)){
             foreach ($result as $results){
-                $emailResult = $results['email'];
-                $passwordResult = $results['passwordCheck'];
+                $_SESSION['email'] = $emailResult = $results['email'];
+                $_SESSION['password'] = $passwordResult = $results['passwordCheck'];
                 $_SESSION['fullName'] = $results['fullname'];
             }
         }
