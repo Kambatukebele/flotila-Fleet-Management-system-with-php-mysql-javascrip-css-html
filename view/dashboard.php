@@ -44,7 +44,7 @@
                     <span class="material-symbols-sharp">inventory</span>
                     <h3>All drivers</h3>
                 </a> 
-                <a href="card_payment_driver.php">
+                <a href="payment.php">
                     <span class="material-symbols-sharp">report</span>
                     <h3>Payment Drivers</h3>
                 </a> 
