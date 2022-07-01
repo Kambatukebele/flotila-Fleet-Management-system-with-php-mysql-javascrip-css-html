@@ -50,7 +50,10 @@
                          $all_driver['return_deposit'];
                          $registeredToBolt = $all_driver['registered_to_bolt'];
 
-                         if (!empty($startingDate) && !empty($first_name) && !empty($lastName) && !empty($emailD) && !empty($phoneNumber) && !empty($transportation) && !empty($bankAccount) && !empty($approved) && !empty($pickTheBag) && !empty($signed) && !empty($registeredToBolt)){
+
+                        //  if(!empty($firstNameD) && !empty($lastNameD) && !empty($emailD) && !empty($phoneNumberD) && !empty($cityD) && !empty($startDrivingD) && !empty($bankAccountD) && $approvedD =="YES" || $approvedD =="yes" && $pickTheBagD ==="YES" || $pickTheBagD ==="yes" && !empty($registrationBoltD ==="YES" || $registrationBoltD ==="yes")){
+
+                         if (!empty($startingDate) && !empty($first_name) && !empty($lastName) && !empty($emailD) && !empty($phoneNumber) && !empty($transportation) && !empty($bankAccount) && $approved =="YES" || $approved =="yes" && $pickTheBag ==="YES" || $pickTheBag ==="yes" && !empty($registrationBolt ==="YES" || $registrationBolt ==="yes")){
                             echo "<tr>";
                                 echo "<td>".$all_driver['first_name']."</td>";
                                 echo "<td>".$all_driver['last_name']."</td>";
