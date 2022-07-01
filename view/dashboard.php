@@ -173,7 +173,7 @@
                             $registrationBoltD = $row['registered_to_bolt'];
                             $dateSubmit = $row['date_of_submission'];
 
-                            if(!empty($firstNameD) && !empty($lastNameD) && !empty($emailD) && !empty($phoneNumberD) && !empty($cityD) && !empty($startDrivingD) && !empty($bankAccountD) && !empty($approvedD) && !empty($pickTheBagD) && !empty($signedD)){
+                            if(!empty($firstNameD) && !empty($lastNameD) && !empty($emailD) && !empty($phoneNumberD) && !empty($cityD) && !empty($startDrivingD) && !empty($bankAccountD) && $approvedD =="YES" || $approvedD =="yes" && $pickTheBagD ==="YES" || $pickTheBagD ==="yes" && !empty($registrationBoltD ==="YES" || $registrationBoltD ==="yes")){
                                 echo
                             '<tr>'.
                                 '<td>'.$firstNameD.' '. $lastNameD.'</td>'.
