@@ -27,9 +27,13 @@
 
     <!-- ========== TABLE USERS========== -->
     <div class="driver_list">
+      
         <div class="driver_list_all">
             <h5>Payment for <?php echo $first_name. ' ' . $last_name; ?></h4>
             <br>
+
+            <button class="upd" style="background-color:green; border:none; padding: 7px 9px;"><a href="dashboard.php" style="color: white; text-decoration:none;">Back to dashboard</a></button>
+            <br><br>
             <table class="drivers">
                 <tr>
                   <th>Date</th>
