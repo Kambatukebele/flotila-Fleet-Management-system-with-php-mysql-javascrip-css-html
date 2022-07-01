@@ -55,6 +55,11 @@
         );
 
         if($dataPay ==true){
-            echo "<p style='color:green;'>". $success = $first_name. ' '. $last_name." has been payed successfully";
+            echo "<p style='color:green; text-align:center; font-size:16px'>". $success = $first_name. ' '. $last_name." has been payed successfully".'<br>'.'<br>';
+            echo '<button class="upd" style="background-color:green; border:none; padding: 7px 9px;">'.'<a href="dashboard.php" style="color: white; text-decoration:none;">'.'Back to dashboard'.'</a>'.'</button>'.
+            '<br>'.'<br>';
+            echo "or".'<br>'.'<br>';
+            echo '<button class="upd" style="background-color:green; border:none; padding: 7px 9px;">'.'<a href="dashboard.php" style="color: white; text-decoration:none;">'.'List'.'</a>'.'</button>'.
+            '<br>'.'<br>';
         }
     }
