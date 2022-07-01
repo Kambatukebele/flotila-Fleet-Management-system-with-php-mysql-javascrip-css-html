@@ -29,7 +29,7 @@
                 </a> 
                 <a href="all-driver.php">
                     <span class="material-symbols-sharp">receipt_long</span>
-                    <h3>Registered Driver List</h3>
+                    <h3>All Drivers</h3>
                 </a>
                 <a href="list_active_driver.php">
                     <span class="material-symbols-sharp">insights</span>
