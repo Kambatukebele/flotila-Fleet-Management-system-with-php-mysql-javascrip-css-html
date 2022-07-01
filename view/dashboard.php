@@ -29,7 +29,7 @@
                 </a> 
                 <a href="all-driver.php">
                     <span class="material-symbols-sharp">receipt_long</span>
-                    <h3>All Drivers</h3>
+                    <h3>Edit</h3>
                 </a>
                 <a href="list_active_driver.php">
                     <span class="material-symbols-sharp">insights</span>
@@ -40,14 +40,15 @@
                     <h3>Messages</h3>
                     <span class="message-count">26</span>
                 </a> 
-                <a href="#">
-                    <span class="material-symbols-sharp">inventory</span>
-                    <h3>All drivers</h3>
-                </a> 
                 <a href="payment.php">
                     <span class="material-symbols-sharp">report</span>
                     <h3>Payment Drivers</h3>
                 </a> 
+                <a href="#">
+                    <span class="material-symbols-sharp">inventory</span>
+                    <h3>All drivers</h3>
+                </a> 
+               
                 <a href="#">
                     <span class="material-symbols-sharp">settings</span>
                     <h3>Settings</h3>
