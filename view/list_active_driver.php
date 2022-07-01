@@ -11,6 +11,8 @@
     <!-- ========== TABLE USERS========== -->
     <div class="driver_list">
         <div class="driver_list_all">
+        <button class="upd" style="background-color:green; border:none; padding: 7px 9px;"><a href="dashboard.php" style="color: white; text-decoration:none;">Back to dashboard</a></button>
+            <br><br>
             <table class="drivers" style="width: 1300px;">
                 <tr>
                   <th>Jméno</th>
