@@ -51,7 +51,7 @@
             if(!preg_match("/^[a-zA-Z-' ]*$/", $lastName))
             {
                 $lastNameErrorMsg = "<h6 style = 'color:red;font-size:14px;'> " . "Invalide Last Name" . "</h6>";
-                return false;                
+                return false;
             }
         }
         else
@@ -208,12 +208,14 @@
 
             $sql->execute();
 
-                // $conn->exec($sql);
+            // $conn->exec($sql);
 
             // $conn->query($sql);
             $result = $sql->execute();
             if ($result == true){
+
                 header("Location:thank_you_page.php");
+                exit;
             }
 
     }
