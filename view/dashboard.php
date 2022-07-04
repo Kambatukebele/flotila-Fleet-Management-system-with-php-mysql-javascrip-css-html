@@ -155,38 +155,42 @@
 
                     <tbody>
                     <?php
-                                   
+                                  
                         // SELECT DATA
                         foreach($stmt->fetchAll() as $driver=>$row){
                             $idDriver = $row['id'];
                             $firstNameD = $row['first_name'];
                             $lastNameD = $row['last_name'];
                             $emailD = $row['email'];
-                            $phoneNumberD = $row['phone_number'];
+                             $phoneNumberD = $row['phone_number'];
                             $cityD = $row['city'];
-                            $typeOfD = $row['kind-of-registration'];
-                            $startDrivingD = $row['starting_date'];
+                             $typeOfD = $row['kind-of-registration'];
+                             $startDrivingD = $row['starting_date'];
                             $transportationD = $row['transportation'];
                             $bankAccountD = $row['bank-account'];
-                            $approvedD = $row['approved'];
-                            $pickTheBagD = $row['pick_the_bag'];
-                            $signedD = $row['signed'];
+                             $approvedD = $row['approved'];
+                             $pickTheBagD = $row['pick_the_bag'];
                             $registrationBoltD = $row['registered_to_bolt'];
-                            $dateSubmit = $row['date_of_submission'];
-
-                            if(!empty($firstNameD) && !empty($lastNameD) && !empty($emailD) && !empty($phoneNumberD) && !empty($cityD) && !empty($startDrivingD) && !empty($bankAccountD) && $approvedD =="YES" || $approvedD =="yes" && $pickTheBagD ==="YES" || $pickTheBagD ==="yes" && !empty($registrationBoltD ==="YES" || $registrationBoltD ==="yes")){
-                                echo
-                            '<tr>'.
-                                '<td>'.$firstNameD.' '. $lastNameD.'</td>'.
-                                '<td>'.$phoneNumberD.'</td>'.
-                                '<td>'.$emailD.'</td>'.
-                                '<td>'.'<a href="payment_details.php?detailsId='.$idDriver.'">'.'Details'.'</a>'.'</td>'.   
-                                '<td>'.'<a href="card_payment_driver.php?payId='.$idDriver.'">'.'Pay Now!'.'</a>'.
-                                '</td>'.                          
+                             $dateSubmit = $row['date_of_submission'];
+                           
+                            if(!empty($startDrivingD)){
                                 
-                            '</tr>';
-                            }                       
-                        }
+                          
+                                echo
+                                '<tr>'.
+                                    '<td>'.$firstNameD.' '. $lastNameD.'</td>'.
+                                    '<td>'.$phoneNumberD.'</td>'.
+                                    '<td>'.$emailD.'</td>'.
+                                    '<td>'.'<a href="payment_details.php?detailsId='.$idDriver.'">'.'Details'.'</a>'.'</td>'.   
+                                    '<td>'.'<a href="card_payment_driver.php?payId='.$idDriver.'">'.'Pay Now!'.'</a>'.
+                                    '</td>'.
+                                    
+                                '</tr>';
+                               
+                                
+                               
+                            }
+                        }  
                     ?>
                        
                        
@@ -220,7 +224,7 @@
                 <h2>Recent Registration</h2>
                 <div class="updates">
                     <?php
-                        $sql = "SELECT * FROM  `registration_new_driver` ORDER BY `id` DESC LIMIT 3";
+                        $sql = "SELECT * FROM  `registration_new_driver` ORDER BY `id` DESC LIMIT 10";
                         $ret = $conn->prepare($sql);
                         $ret->execute();
 
@@ -240,7 +244,7 @@
                                         '<img src="../model/public/admin/images/pic2.jpg" alt="">'.
                                     '</div>'.
                                     '<div class="message">'.
-                                        '<p>'.'<b>'.$ft.' '.$lt.'</b>'.' has just registered on'.'</p>'.'<small class="text-muted">'.$dateOfSubmission. '
+                                        '<p>'.'<b>'.$ft.' '.$lt.'</b>'.' Type: '.$tf.'</p>'.'<small class="text-muted">'.$dateOfSubmission. '
                                     </div>'.'
                                 </div>';
                             }
@@ -249,39 +253,39 @@
                 </div>
             </div>
             <!-- ========== END OF RECENT UPDATES -->
-            <div class="recent-updates">
+            <!-- <div class="recent-updates">
                 <h2>Changed Fleet Driver</h2>
                 <div class="updates">
-                    <?php
+                    
 
-                        $query = "SELECT * FROM  `registration_new_driver` ORDER BY `id` DESC LIMIT 3";
-                        $feedR = $conn->prepare($query);
-                        $feedR->execute();
+                        // $query = "SELECT * FROM  `registration_new_driver` ORDER BY `id` DESC LIMIT 3";
+                        // $feedR = $conn->prepare($query);
+                        // $feedR->execute();
 
-                        $resultFeedR = $feedR->fetchAll();
-                        foreach($resultFeedR as $change=>$changed){
+                        // $resultFeedR = $feedR->fetchAll();
+                        // foreach($resultFeedR as $change=>$changed){
                         
-                            $ftChanged = $changed['first_name'];
-                            $ltChanged = $changed['last_name'];
-                            $tfChanged = $changed['kind-of-registration'];
-                            $dateOfSubmissionChanged = $changed['date_of_submission'];
-                            if(isset($tfChanged) && $tfChanged === "changed_fleet"){
+                        //     $ftChanged = $changed['first_name'];
+                        //     $ltChanged = $changed['last_name'];
+                        //     $tfChanged = $changed['kind-of-registration'];
+                        //     $dateOfSubmissionChanged = $changed['date_of_submission'];
+                        //     if(isset($tfChanged) && $tfChanged === "changed_fleet"){
                             
-                                echo
-                                '<div class="update">'.
-                                    '<div class="profile-photo">'.
-                                        '<img src="../model/public/admin/images/pic2.jpg" alt="">'.
-                                    '</div>'.
-                                    '<div class="message">'.
-                                        '<p>'.'<b>'.$ftChanged.' '.$ltChanged.'</b>'.'wants to change fleet'.'</p>'
-                                    .'<small class="text-muted">'.$dateOfSubmissionChanged.'
-                                    </div>'.'
-                                </div>';
-                            }
-                        }
-                    ?>
+                        //         echo
+                        //         '<div class="update">'.
+                        //             '<div class="profile-photo">'.
+                        //                 '<img src="../model/public/admin/images/pic2.jpg" alt="">'.
+                        //             '</div>'.
+                        //             '<div class="message">'.
+                        //                 '<p>'.'<b>'.$ftChanged.' '.$ltChanged.'</b>'.'wants to change fleet'.'</p>'
+                        //             .'<small class="text-muted">'.$dateOfSubmissionChanged.'
+                        //             </div>'.'
+                        //         </div>';
+                        //     }
+                        // }
+                
                 </div>
-            </div>
+            </div> -->
             <div class="sales-analytics">
                 <!-- <h2>Changed Fleet</h2>
                 <div class="item online">

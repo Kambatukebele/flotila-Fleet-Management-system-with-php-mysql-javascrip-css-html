@@ -14,8 +14,11 @@
      }
 
       // FOR ACTIVE DRIVERS LIST
-   $activeDriver = "SELECT * FROM `registration_new_driver` ORDER BY `id` DESC LIMIT 3";
+   $activeDriver = "SELECT * FROM `registration_new_driver` ORDER BY `starting_date` DESC LIMIT 3";
    $stmt = $conn->prepare($activeDriver);
    $stmt->execute();
 
    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+   
+
+ 
