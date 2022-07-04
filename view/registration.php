@@ -128,8 +128,8 @@
                     <option value="Ostrava">Ostrava</option>
                     <option value="Olomouc">Olomouc</option>
                     <option value="Plzeň">Plzeň</option>
-                    <option value="Hradec-Králové">Hradec Králové</option>
-                    <option value="Českých Budějovicích">České Budějovice</option>
+                    <option value="H.K">Hradec Králové</option>
+                    <option value="Č.B">České Budějovice</option>
                 </select>
                 <?php
                     if (isset($cityErrorMsg)){

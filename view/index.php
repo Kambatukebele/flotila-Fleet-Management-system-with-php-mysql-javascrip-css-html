@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php include '../model/includes/head/head.php'; ?>
+    <?php 
+        include '../controller/controller_choose_lg.php';
+        include '../model/includes/head/head.php';
+     ?>
 <body>
 
     <!-- ========== HEADER NAVIGATION ========== -->
