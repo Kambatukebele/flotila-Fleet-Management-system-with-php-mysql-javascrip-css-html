@@ -84,7 +84,7 @@
                     <div class="middle">
                         <div class="left">
                             <h3>Received</h3>
-                            <h1>Kč 25,024</h1>
+                            <h1>Kč <?php echo $receivedValue; ?></h1>
                         </div><div class="progress">
                             <svg>
                                 <circle cx="38" cy="38" r="36"></circle>
@@ -96,6 +96,7 @@
                     </div>
                     <small class="text-muted">Last 24 Hours</small>
                 </div>
+                
                 <!-- ========== END OF SALES ========== -->
 
                 <div class="expenses">
@@ -103,7 +104,7 @@
                     <div class="middle">
                         <div class="left">
                             <h3>Send</h3>
-                            <h1>Kč 14,124</h1>
+                            <h1>Kč <?php echo $sendValue; ?></h1>
                         </div><div class="progress">
                             <svg>
                                 <circle cx="38" cy="38" r="36"></circle>
@@ -122,7 +123,7 @@
                     <div class="middle">
                         <div class="left">
                             <h3>Commission</h3>
-                            <h1>Kč 10,624</h1>
+                            <h1>Kč <?php echo $commissionValue; ?></h1>
                         </div><div class="progress">
                             <svg>
                                 <circle cx="38" cy="38" r="36"></circle>
