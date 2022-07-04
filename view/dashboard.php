@@ -12,7 +12,7 @@
             <div class="top">
                 <div class="logo">
                     <img src="../model/public/admin/images/logo.png" alt="">
-                    <h2>KRISTINA & <span class="danger">KAMS</span></h2>
+                    <h2>K& <span class="danger">K</span></h2>
                 </div>
                 <div class="close" id="close-btn">
                     <span class="material-symbols-sharp">close</span>
@@ -178,7 +178,7 @@
                                 
                           
                                 echo
-                                '<tr>'.
+                                '<tr style="font-size:15px;">'.
                                     '<td>'.$firstNameD.' '. $lastNameD.'</td>'.
                                     '<td>'.$phoneNumberD.'</td>'.
                                     '<td>'.$emailD.'</td>'.
@@ -216,7 +216,17 @@
                         <small class="text-muted">Admin</small>
                     </div>
                     <div class="profile-photo">
-                        <img src="../model/public/admin/images/picture1.jpeg" alt="">
+                        <?php
+                            if($_SESSION['fullName'] == "kristina kabatova"){
+                                echo '<img src="../model/public/admin/images/picture2.jpeg" alt="">';
+                            }else{
+                               echo '<img src="../model/public/admin/images/picture1.jpeg" alt="">';
+                            }
+
+                            
+                        ?>
+                        
+                        
                     </div>
                 </div>
             </div>
@@ -225,7 +235,7 @@
                 <h2>Recent Registration</h2>
                 <div class="updates">
                     <?php
-                        $sql = "SELECT * FROM  `registration_new_driver` ORDER BY `id` DESC LIMIT 10";
+                        $sql = "SELECT * FROM  `registration_new_driver` ORDER BY `id` DESC LIMIT 6";
                         $ret = $conn->prepare($sql);
                         $ret->execute();
 
@@ -237,7 +247,7 @@
                             $tf = $value['kind-of-registration'];
                             $dateOfSubmission = $value['date_of_submission'];
 
-                            if(isset($tf) && $tf === "new_courier"){
+                           
                             
                                 echo
                                 '<div class="update">'.
@@ -245,10 +255,10 @@
                                         '<img src="../model/public/admin/images/pic2.jpg" alt="">'.
                                     '</div>'.
                                     '<div class="message">'.
-                                        '<p>'.'<b>'.$ft.' '.$lt.'</b>'.' Type: '.$tf.'</p>'.'<small class="text-muted">'.$dateOfSubmission. '
+                                        '<p>'.'<b>'.$ft.' '.$lt.'</b>'.' Type:  '.'<b>'.$tf.'</p>'.'<small class="text-muted">'.$dateOfSubmission. '
                                     </div>'.'
                                 </div>';
-                            }
+                            
                         }
                     ?>
                 </div>
