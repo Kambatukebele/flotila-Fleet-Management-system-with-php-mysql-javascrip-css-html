@@ -32,7 +32,7 @@
             <h5>Payment for <?php echo $first_name. ' ' . $last_name; ?></h4>
             <br>
 
-            <button class="upd" style="background-color:green; border:none; padding: 7px 9px;"><a href="dashboard.php" style="color: white; text-decoration:none;">Back to dashboard</a></button>
+            <button class="upd" style="background-color:green; border:none; padding: 7px 9px;"><a href="payment.php" style="color: white; text-decoration:none;">Back to Payment list</a></button>
             <br><br>
             <table class="drivers">
                 <tr>
