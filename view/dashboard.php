@@ -35,25 +35,25 @@
                     <span class="material-symbols-sharp">insights</span>
                     <h3>All active driver</h3>
                 </a> 
-                <a href="#">
+                <!-- <a href="#">
                     <span class="material-symbols-sharp">mail</span>
                     <h3>Messages</h3>
                     <span class="message-count">26</span>
-                </a> 
+                </a>  -->
                 <a href="payment.php">
                     <span class="material-symbols-sharp">report</span>
                     <h3>Payment Drivers</h3>
                 </a> 
-                <a href="#">
+                <!-- <a href="#">
                     <span class="material-symbols-sharp">inventory</span>
                     <h3>All drivers</h3>
-                </a> 
+                </a>  -->
                
-                <a href="#">
+                <!-- <a href="#">
                     <span class="material-symbols-sharp">settings</span>
                     <h3>Settings</h3>
-                </a> 
-                <a href="#">
+                </a>  -->
+                <a href="registration.php">
                     <span class="material-symbols-sharp">add</span>
                     <h3>Add Driver</h3>
                 </a> 
