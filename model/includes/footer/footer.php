@@ -13,12 +13,12 @@
                     <h4></h4>
                 </div>
                 <div class="footer_all_text_conternt">
-                  <h6><a href="index.php">Úvod</a></h6>
-                  <h6><a href="contact.php">Kontakt</a></h6>
-                  <h6><a href="registration.php">Zaregistrace</a></h6> 
-                  <h6><a href="change_fleet.php">Změna flotily</a></h6> 
-                  <h6><a href="instruction_material.php">Školící soubory</a></h6> 
-                  <h6><a href="bonus.php">Bonus</a></h6>
+                  <h6><a href="index.php"><?php echo $lang['menu_home']; ?></a></h6>
+                  <h6><a href="contact.php"><?php echo $lang['menu-contact']; ?></a></h6>
+                  <h6><a href="registration.php"><?php echo $lang['menu-registration-driver']; ?></a></h6> 
+                  <h6><a href="change_fleet.php"><?php echo $lang['menu_change-fleet']; ?></a></h6> 
+                  <h6><a href="instruction_material.php"><?php echo $lang['another-menu-title']; ?></a></h6> 
+                  <h6><a href="bonus.php">Bonus ?></a></h6>
                   <h6><a href="login_admin.php">Login</a></h6>        
                 </div>
             </div>

@@ -9,7 +9,7 @@
     <!-- ========== CONTACT PAGE  ========== -->
     <section class="contact">
        
-        <h2>Kontakt</h2>
+        <h2><?php echo $lang['kontakt-page-tile']; ?></h2>
         
         <div class="contact_all">
             <div class="contact_text">
@@ -28,7 +28,7 @@
     <!-- ========== BOLT PICKING UP BAG --> 
     <section class="pick_bag">
         
-        <h2>Kde si vyzvednout termobox?</h2>
+        <h2><?php echo $lang['kontakt-second-large-box-title'];?></h2>
         
         <div class="pick_bag_al">
             <div class="prague">

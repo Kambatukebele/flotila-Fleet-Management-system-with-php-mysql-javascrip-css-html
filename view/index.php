@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <?php 
-        include '../controller/controller_choose_lg.php';
+    //include '../controller/controller_choose_lg.php';
         include '../model/includes/head/head.php';
      ?>
 <body>
@@ -16,15 +16,15 @@
         <div class="main_all">
             <div class="main_text_heading">
                 <div class="main_text_title">
-                    <h1>Přidejte se k nám do týmu!</h1>
+                    <!-- Přidejte se k nám do týmu! -->
+                    <h1><?php echo $lang['home-page-title'] ?></h1>
                 </div>
                 <div class="main_text_sub_title">
-                    <h4>Jako kurýr budete mít flexibilní práci, brigádu nebo přivýdělek. Jezdíte pouze kdy chcete a jak dlouho chcete. Stačí si jen zapnout aplikaci v chytrém telefonu a vyděláváte! Registrovat se můžete v Praze, Plzni, Brně, Olomouci, Ostravě, Českých Budějovicích a Hradci Králové.     
-                    </h4>
+                    <h4><?php echo $lang['home-page-description']; ?></h4>
                 </div>
                 <div class="main_button">
-                    <a href="registration.php"><button class="btn_green">Zaregistruj se</button></a>
-                    <a href="contact.php"><button class="btn_white">Kontaktuj nás</button></a>
+                    <a href="registration.php"><button class="btn_green"><?php echo $lang['home-page-button-1'] ?></button></a>
+                    <a href="contact.php"><button class="btn_white"><?php echo $lang['home-page-button-2'] ?></button></a>
                 </div>
             </div>
     
@@ -39,7 +39,7 @@
     <!-- ========== HOWS IT WORKS ========== -->
     <section class="how_it_works">
         <div class="how_it_works_all">
-            <h2>Výhody rozvážení s BoltFood</h2>
+            <h2><?php echo $lang['home-page-second-large-box-title']; ?></h2>
             
         </div>
     </section>
@@ -49,24 +49,24 @@
     <section class="how_it_work_content">
         <div class="how_it_work_content_all">
             <div class="content">
-                <h3>Flexibilní pracovní doba</h3>
+                <h3><?php echo $lang['home-page-first-box-in-large-box-title']; ?></h3>
                 <br>
-                <h6>Kdy a jak dlouho pracujete záleží jenom na vás. V aplikaci se jedním kliknutím připojíte a můžete rozvážet. Kdykoliv chcete zkončit, z aplikace se zase jedním kliknutím odhlásíte. Žádné plánování směn.</h6>
+                <h6><?php echo $lang['home-page-first-box-in-large-box-description']; ?></h6>
             </div>
             <div class="content_dif">
-                <h3>Výdělek každý týden</h3>
+                <h3><?php echo $lang['home-page-second-box-in-large-box-title']; ?></h3>
                 <br>
-                <h6>Na svůj výdělej nečekáte celý měsíc. Vyplácíme každé úterý na Váš bankovní účet.</h6>
+                <h6><?php echo $lang['home-page-second-box-in-large-box-description'];?></h6>
             </div>
             <div class="content">
-                <h3>Co potřebujete?</h3>
+                <h3><?php echo $lang['home-page-third-box-in-large-box-title']; ?></h3>
                 <br>
-                <h6>Pouze chytrý telefon s internetem a dopravní prostředek. Rozvážet je možné s vlastním vozidlem, motorkou, na kole nebo koloběžce. <br> S mobilní aplikací Bolt Courier se můžete kdykoliv pustit do práce a přijímat zakázky. Termobox na jídlo si vyzvednete při registraci.</h6>
+                <h6><?php echo $lang['home-page-third-box-in-large-box-description'];?></h6>
             </div>
             <div class="content_dif">
-                <h3>Kde můžete rovážet?</h3>
+                <h3><?php echo $lang['home-page-fourth-box-in-large-box-title'];?></h3>
                 <br>
-                <h6>Registrovat se je možné v těchto městech: Praha, Plzeň, Brno, Olomouc, Ostrava, České Budějovice a Hradec Králové.</h6>
+                <h6><?php echo $lang['home-page-fourth-box-in-large-box-description'];?></h6>
             </div>
         </div>        
     </section>
@@ -74,27 +74,27 @@
     <!-- ========== PROCESS  ========== -->
     <section class="process">
         
-        <h2>Jaký je postup?</h2>
+        <h2><?php echo $lang['home-page-third-large-box-title'];?></h2>
         <div class="process_all">
             <div class="process_content">
                 <h1>1</h1>
                 <br>
-                <h6>Vyplňte a pošlete nám svou registraci</h6>
+                <h6><?php echo $lang['home-page-first-third-box-in-large-box-title'];?></h6>
             </div>
             <div class="process_content">
                 <h1>2</h1>
                 <br>
-                <h6>My se s Vámi obratem spojíme a doladíme detaily.</h6>
+                <h6><?php echo $lang['home-page-second-third-box-in-large-box-title'];?></h6>
             </div>
             <div class="process_content">
                 <h1>3</h1>
                 <br>
-                <h6>Vyzvedněte si Termobox a stáhněte si aplikaci Bolt Courier</h6>
+                <h6><?php echo $lang['home-page-third-third-box-in-large-box-title'];?></h6>
             </div>
             <div class="process_content">
                 <h1>4</h1>
                 <br>
-                <h6>Začněte rozvážet a vydělávat</h6>
+                <h6><?php echo $lang['home-page-fourth-third-box-in-large-box-title'];?></h6>
             </div>
         </div>
 
@@ -105,7 +105,7 @@
     <section class="work_now">
        <div class="work_now_all">
             <div class="work_now_button">
-                <a href="registration.php"><button>Zaregistruj se</button></a>
+                <a href="registration.php"><button><?php echo $lang['home-page-button-1'] ?></button></a>
             </div>
        </div>
     </section>
@@ -113,9 +113,9 @@
     <!-- ========== BONUS  ========== -->
     <section class="bonus">
         <div class="bonus_all">
-            <h2>Náborový bonus 2.000 Kč </h2>
-            <h6>Pro všechny nově registrované kurýry v ČESKÝCH BUDĚJOVICÍCH a HRADCI KRÁLOVÉ</h6>
-            <a href="bonus.php"><button>Více</button></a>
+            <h2><?php echo $lang['home-page-fourth-large-box-title'];?> 2.000 Kč </h2>
+            <h6><?php echo $lang['home-page-fourth-large-box-description'];?></h6>
+            <a href="bonus.php"><button><?php echo $lang['home-page-fourth-large-box-button']; ?></button></a>
         </div>
     </section>
 
@@ -124,7 +124,7 @@
         <div class="application_box">
             <div class="application_box_left">
                 <div class="application_all">
-                    <h2>Aplikace ke stažení</h2>
+                    <h2><?php echo $lang['home-page-fith-large-box-title'];?></h2>
                 </div>
                 <div class="application_dowload">
                     <div class="application_android">

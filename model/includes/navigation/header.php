@@ -1,3 +1,4 @@
+<?php require_once "../controller/controller_choose_lg.php"; ?>
 <header>
         <div class="wrapper">
             <div class="wrapper_logo">
@@ -5,16 +6,15 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.php">Úvod</a></li>
-                    <li><a href="contact.php">Kontakt</a></li>
-                    <li><button><a href="registration.php">Zaregistruj se</a></button></li>
-                    <li><button><a href="change_fleet.php">Změna flotily</a></button></li>
+                    <li><a href="index.php"><?php echo $lang['menu_home']; ?></a></li>
+                    <li><a href="contact.php"><?php echo $lang['menu-contact']; ?></a></li>
+                    <li><button><a href="registration.php"><?php echo $lang['menu-registration-driver']; ?></a></button></li>
+                    <li><button><a href="change_fleet.php"><?php echo $lang['menu_change-fleet']; ?></a></button></li>
                     <li>
                         <label for="language"></label>
                         <select name="language" id="language">
-                            <option value="English">EN</option>
-                            <option value="Czech">CZ</option>
-                            
+                            <option value="English"><?php echo $lang['lang_en'] ?></option>
+                            <option selected value="Czech"><?php echo $lang['lang_cz'] ?></option>                            
                         </select>
                     </li>
                 </ul>
@@ -45,8 +45,7 @@
                         <label for="language"></label>
                         <select name="language" id="language">
                             <option value="English">EN</option>
-                            <option value="Czech">CZ</option>
-                            
+                            <option value="Czech">CZ</option>                            
                         </select>
                     </li>
                 </ul>
