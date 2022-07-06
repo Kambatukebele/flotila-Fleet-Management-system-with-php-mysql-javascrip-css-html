@@ -4,12 +4,12 @@
         // TITLE AND MENU
         "title-page" => "Flotila-Bolt",
         "menu_home" => "Home",
-        "menu-contact" => "Contakt",
+        "menu-contact" => "Contact",
         "menu-registration-driver" => "Register",
         "menu_change-fleet" => "Change fleet",
 
         //HEADER BOX TITLE AND DESCRIPTION AND BUTTONS
-        "home-page-title" => "Join Our Fleet!",
+        "home-page-title" => "Join Our Fleet Team Now!",
         "home-page-description" => "As a courier, you will have a flexible part-time job or extra income. Ride only when you want, where you want and for as long as you want. Just turn on the app on your smartphone and you'll earn! You can register in Prague, Pilsen, Brno, Olomouc, Ostrava, České Budějovice and Hradec Králové.",
         "home-page-button-1" => "Register",
         "home-page-button-2" => "Contact Us",

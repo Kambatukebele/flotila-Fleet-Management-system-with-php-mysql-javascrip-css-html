@@ -18,7 +18,7 @@
                   <h6><a href="registration.php"><?php echo $lang['menu-registration-driver']; ?></a></h6> 
                   <h6><a href="change_fleet.php"><?php echo $lang['menu_change-fleet']; ?></a></h6> 
                   <h6><a href="instruction_material.php"><?php echo $lang['another-menu-title']; ?></a></h6> 
-                  <h6><a href="bonus.php">Bonus ?></a></h6>
+                  <h6><a href="bonus.php">Bonus</a></h6>
                   <h6><a href="login_admin.php">Login</a></h6>        
                 </div>
             </div>
@@ -50,3 +50,4 @@
 
     <!-- ========== JAVASCRIPT ========== -->
     <script src="../model/public/js/index.js"></script>
+    <script src="../model/public/js/onloadlang.js"></script>

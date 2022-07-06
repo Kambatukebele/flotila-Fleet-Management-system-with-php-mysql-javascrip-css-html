@@ -24,6 +24,10 @@ const closeBtn = document.querySelector(".fa-xmark");
             
         })
 
+    
+
+
+
 
 
 

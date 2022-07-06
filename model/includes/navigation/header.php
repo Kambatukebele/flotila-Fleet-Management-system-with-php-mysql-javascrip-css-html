@@ -8,15 +8,10 @@
                 <ul>
                     <li><a href="index.php"><?php echo $lang['menu_home']; ?></a></li>
                     <li><a href="contact.php"><?php echo $lang['menu-contact']; ?></a></li>
-                    <li><button><a href="registration.php"><?php echo $lang['menu-registration-driver']; ?></a></button></li>
-                    <li><button><a href="change_fleet.php"><?php echo $lang['menu_change-fleet']; ?></a></button></li>
-                    <li>
-                        <label for="language"></label>
-                        <select name="language" id="language">
-                            <option value="English"><?php echo $lang['lang_en'] ?></option>
-                            <option selected value="Czech"><?php echo $lang['lang_cz'] ?></option>                            
-                        </select>
-                    </li>
+                    <li><a href="registration.php"><?php echo $lang['menu-registration-driver']; ?></a></li>
+                    <li><a href="change_fleet.php"><?php echo $lang['menu_change-fleet']; ?></a></li>
+                    <li><button><a href="?lang=en"><?php echo $lang['lang_en']; ?></a></button></li>
+                    <li><button><a href="?lang=cz"><?php echo $lang['lang_cz']; ?></a></button></li>
                 </ul>
             </nav>
         </div>
@@ -41,13 +36,8 @@
                     <li><a href="contact.php">Kontakt</a></li>
                     <li><a href="registration.php">Zaregistruj se</a></li>
                     <li><a href="change_fleet.php">Změna flotily</a></li>
-                    <li>
-                        <label for="language"></label>
-                        <select name="language" id="language">
-                            <option value="English">EN</option>
-                            <option value="Czech">CZ</option>                            
-                        </select>
-                    </li>
+                    <li><button><a href="?lang=en"><?php echo $lang['lang_en']; ?></a></button></li>
+                    <li><button><a href="?lang=cz"><?php echo $lang['lang_cz']; ?></a></button></li>
                 </ul>
             </nav>
             <div class="hidden_nagivation_close">

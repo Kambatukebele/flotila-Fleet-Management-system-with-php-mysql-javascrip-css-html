@@ -1,27 +1,27 @@
-const driverList = document.querySelector(".driver_list");
-const extraInfo = document.querySelector(".extra_info");
-const closeBtn = document.querySelector(".material-symbols-sharp");
-const updateBtn = document.getElementsByClassName("upd");
+// const driverList = document.querySelector(".driver_list");
+// const extraInfo = document.querySelector(".extra_info");
+// const closeBtn = document.querySelector(".material-symbols-sharp");
+// const updateBtn = document.getElementsByClassName("upd");
 
-// ON CLICK EVENT LISTENER ON UPDATE BTN
+// // ON CLICK EVENT LISTENER ON UPDATE BTN
 
-// console.log(updateBtn);
+// // console.log(updateBtn);
 
-function openerBtn (){
-        for (let i = 0; i < updateBtn.length; i++){ 
-            updateBtn[i].addEventListener("click", ()=>{
-            driverList.style.display = "none";
-            extraInfo.style.display = "flex";
-        })
-    }
-}
+// function openerBtn (){
+//         for (let i = 0; i < updateBtn.length; i++){ 
+//             updateBtn[i].addEventListener("click", ()=>{
+//             driverList.style.display = "none";
+//             extraInfo.style.display = "flex";
+//         })
+//     }
+// }
 
-openerBtn();
+// openerBtn();
 
-// //CLOSE BTN ICON
+// // //CLOSE BTN ICON
 
-closeBtn.addEventListener("click", ()=>{
-    extraInfo.style.display = "none";
-    driverList.style.display = "flex";
-})
+// closeBtn.addEventListener("click", ()=>{
+//     extraInfo.style.display = "none";
+//     driverList.style.display = "flex";
+// })
 
