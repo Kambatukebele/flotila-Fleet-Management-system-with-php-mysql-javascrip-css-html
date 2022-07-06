@@ -1,6 +1,6 @@
 <?php 
     //LINK THE DATABASE CONNECTION
-    include 'database/database.php';
+    require_once 'database/database.php';
     // include 'security/security.php';
 
     // CONNECT ADMIN VALIDATION
@@ -45,14 +45,5 @@
             $sql->execute();
             header("Location:login_admin.php");
         }
-
-      
-
-      
-       
-
-        
-
-
 
     }

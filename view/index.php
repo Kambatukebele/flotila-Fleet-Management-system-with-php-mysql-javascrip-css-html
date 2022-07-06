@@ -2,12 +2,12 @@
 <html lang="en">
     <?php 
     //include '../controller/controller_choose_lg.php';
-        include '../model/includes/head/head.php';
+        require_once '../model/includes/head/head.php';
      ?>
 <body>
 
     <!-- ========== HEADER NAVIGATION ========== -->
-    <?php include '../model/includes/navigation/header.php' ?>  
+    <?php require_once '../model/includes/navigation/header.php' ?>  
     <!-- ========== END OF HIDDEN HEADER NAVIGATION ========== -->
 
     <!-- ========== MAIN HEARDER HIRO ========== -->
@@ -141,7 +141,7 @@
         </div>
     </section>
     <!-- ========== FOOTER ========== -->
-    <?php include '../model/includes/footer/footer.php'; ?>
+    <?php require_once '../model/includes/footer/footer.php'; ?>
    
 </body>
 </html>

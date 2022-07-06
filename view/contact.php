@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php include '../model/includes/head/head.php'; ?>
+    <?php require_once '../model/includes/head/head.php'; ?>
 <body>
 
     <!-- ========== HEADER NAVIGATION ========== -->
    
-    <?php include '../model/includes/navigation/header.php'; ?>
+    <?php require_once '../model/includes/navigation/header.php'; ?>
     <!-- ========== CONTACT PAGE  ========== -->
     <section class="contact">
        
@@ -79,6 +79,6 @@
     </section>
 
     <!-- ========== FOOTER ========== -->
-    <?php include '../model/includes/footer/footer.php'; ?>
+    <?php require_once '../model/includes/footer/footer.php'; ?>
 </body>
 </html>

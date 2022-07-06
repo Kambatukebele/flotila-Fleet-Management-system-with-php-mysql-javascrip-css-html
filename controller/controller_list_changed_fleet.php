@@ -1,7 +1,7 @@
 <?php 
     //LINK THE DATABASE CONNECTION
-    include 'database/database.php';
-    include 'security/security.php';
+    require_once 'database/database.php';
+    require_once 'security/security.php';
 
     //FETCH DATA FROM change_flotila
 

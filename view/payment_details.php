@@ -1,4 +1,4 @@
-<?php include '../controller/controller_payment_details.php'; ?>
+<?php require_once '../controller/controller_payment_details.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,13 +46,13 @@
                 </tr>
                 <?php
                       foreach($paymentStmtResult as $details){
-                        $detailsId = $details['paymentID'];
-                        $periodDetails = $details['period_of_date'];
-                        $received = $details['received'];
-                        $send = $details['send_to_driver'];
-                        $commission = $details['commission'];
-                        $statusPay = $details['status_payment'];
-                        $comment = $details['comment'];                        
+                        $detailsId = htmlspecialchars($details['paymentID']);
+                        $periodDetails =  htmlspecialchars($details['period_of_date']);
+                        $received =  htmlspecialchars($details['received']);
+                        $send =  htmlspecialchars($details['send_to_driver']);
+                        $commission =  htmlspecialchars($details['commission']);
+                        $statusPay =  htmlspecialchars($details['status_payment']);
+                        $comment =  htmlspecialchars($details['comment']);                        
                         echo   
                         '<tr>'.
                           '<td>'.$periodDetails.'</td>'.

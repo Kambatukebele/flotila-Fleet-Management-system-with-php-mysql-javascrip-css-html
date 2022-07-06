@@ -1,17 +1,13 @@
 <?php 
-    include 'database/database.php';
-    include 'security/security.php';
+    require_once 'database/database.php';
+    require_once 'security/security.php';
 
     $idDriver = $_GET['payId'];
-    echo $idDriver;
+    // echo $idDriver;
 
     $getData = $conn->prepare("SELECT * FROM `registration_new_driver` WHERE id = ?");
     $getData->execute(array($idDriver));
     $data = $getData->fetchAll(PDO::FETCH_ASSOC);
-    // echo "<pre>";
-    // echo print_r($data);
-    // echo "</pre>";
-    
     foreach ($data as $drivers){
            $idDriver = $drivers['id'];
             $first_name = $drivers['first_name'];

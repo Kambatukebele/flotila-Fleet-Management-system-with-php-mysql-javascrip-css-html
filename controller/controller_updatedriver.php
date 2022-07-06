@@ -1,7 +1,7 @@
 <?php 
    //LINK THE DATABASE CONNECTION
-   include 'database/database.php';
-   include 'security/security.php';
+   require_once 'database/database.php';
+   require_once 'security/security.php';
     // GET THE URL
     $id = $_GET['updateid'];
     
@@ -11,22 +11,22 @@
     $stmt = $sql->fetchAll();
     
     foreach($stmt as $all_driver){
-      $all_driver['id'];
-      $first_name = $all_driver['first_name'];
-      $lastName = $all_driver['last_name'];
-      $emailD = $all_driver['email'];
-      $phoneNumber = $all_driver['phone_number'];
-      $transportation = $all_driver['transportation'];
-      $city = $all_driver['city'];
-      $textPlace = $all_driver['textplace'];
-      $kindOfRegistration  = $all_driver['kind-of-registration'];
-      $bankAccount = $_SESSION['bank-account'] = $all_driver['bank-account'];
-      $approved = $all_driver['approved'];
-      $pickTheBag = $all_driver['pick_the_bag'];
-      $signed = $all_driver['signed'];
-      $startingDate = $all_driver['starting_date'];
-      $returnDeposit = $all_driver['return_deposit'];
-      $registeredToBolt = $all_driver['registered_to_bolt'];
+      htmlspecialchars($all_driver['id']);
+      $first_name = htmlspecialchars($all_driver['first_name']);
+      $lastName =htmlspecialchars( $all_driver['last_name']);
+      $emailD = htmlspecialchars($all_driver['email']);
+      $phoneNumber = htmlspecialchars($all_driver['phone_number']);
+      $transportation = htmlspecialchars($all_driver['transportation']);
+      $city = htmlspecialchars($all_driver['city']);
+      $textPlace = htmlspecialchars($all_driver['textplace']);
+      $kindOfRegistration  = htmlspecialchars($all_driver['kind-of-registration']);
+      $bankAccount = $_SESSION['bank-account'] = htmlspecialchars($all_driver['bank-account']);
+      $approved = htmlspecialchars($all_driver['approved']);
+      $pickTheBag = htmlspecialchars($all_driver['pick_the_bag']);
+      $signed = htmlspecialchars($all_driver['signed']);
+      $startingDate = htmlspecialchars($all_driver['starting_date']);
+      $returnDeposit = htmlspecialchars($all_driver['return_deposit']);
+      $registeredToBolt = htmlspecialchars($all_driver['registered_to_bolt']);
 
   }
   if(isset($_POST['upgradeDriver'])){

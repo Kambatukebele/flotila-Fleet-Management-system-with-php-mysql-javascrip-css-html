@@ -1,6 +1,6 @@
 <?php 
-    include 'database/database.php';
-    include 'security/security.php';
+    require_once 'database/database.php';
+    require_once 'security/security.php';
 
        // //GET THE DATA IN THE URL 
     $idDriver = $_GET['detailsId'];
@@ -12,18 +12,18 @@
     $data = $getData->fetchAll(PDO::FETCH_ASSOC);
        
     foreach ($data as $drivers){
-           $idDriver = $drivers['id'];
-            $first_name = $drivers['first_name'];
-            $last_name = $drivers['last_name'];
-            $email = $drivers['email'];
-            $phoneNumber = $drivers['phone_number'];
-            $transportation = $drivers['transportation'];
-            $city = $drivers['city'];
-            $kindOfRregistration = $drivers['kind-of-registration'];
-            $bankAccount = $drivers['bank-account'];
-            $approved = $drivers['approved'];
-            $startingDate = $drivers['starting_date'];
-            $registeredOn = $drivers['date_of_submission'];
+           $idDriver = htmlspecialchars($drivers['id']);
+            $first_name = htmlspecialchars($drivers['first_name']);
+            $last_name = htmlspecialchars($drivers['last_name']);
+            $email = htmlspecialchars($drivers['email']);
+            $phoneNumber = htmlspecialchars($drivers['phone_number']);
+            $transportation = htmlspecialchars( $drivers['transportation']);
+            $city = htmlspecialchars($drivers['city']);
+            $kindOfRregistration = htmlspecialchars($drivers['kind-of-registration']);
+            $bankAccount = htmlspecialchars($drivers['bank-account']);
+            $approved = htmlspecialchars($drivers['approved']);
+            $startingDate = htmlspecialchars($drivers['starting_date']);
+            $registeredOn =htmlspecialchars( $drivers['date_of_submission']);
     }
 
 
@@ -31,9 +31,3 @@
     $paymentStmt = $conn->prepare("SELECT * FROM `payments` WHERE paymentID = ?");
     $paymentStmt->execute(array($idDriver));
     $paymentStmtResult = $paymentStmt->fetchAll(PDO::FETCH_ASSOC);
-  
-
-    // echo "<pre>";
-    // echo print_r($paymentStmtResult);
-    // echo "</pre>";
-    

@@ -1,6 +1,6 @@
 <?php 
     //LINK THE DATABASE CONNECTION
-    include 'database/database.php';
+    require_once 'database/database.php';
 
     // CHECKING THE INPUTS FIELDS
     
@@ -133,27 +133,6 @@
             }            
         }
         
-        //INSERT DATA TO THE DATABASE
-            // $sql = $conn->prepare("INSERT INTO change_flotila (first_name, last_name, email, phone_number, transportation, city, textplace, gppr)VALUES (:first_name, :last_name, :email, :phone_number, :transportation, :city, :textplace, :gppr)");
-        
-            // $sql->bindParam(':first_name', $firstName);
-            // $sql->bindParam(':last_name', $lastName);
-            // $sql->bindParam(':email', $email);
-            // $sql->bindParam(':phone_number', $phone_number);           
-            // $sql->bindParam(':transportation', $transportation);
-            // $sql->bindParam(':city', $city);
-            // $sql->bindParam(':textplace', $textarea);
-            // $sql->bindParam(':gppr', $checkbox);
-            
-    
-            // $sql->execute();
-
-            // $result = $sql->execute();
-            // if ($result == true){
-            //     header("Location:thank_you_page.php");
-            // }
-
-
         $sql = $conn->prepare
         (
             "INSERT INTO `registration_new_driver` 

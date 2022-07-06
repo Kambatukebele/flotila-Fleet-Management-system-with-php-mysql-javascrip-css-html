@@ -1,7 +1,7 @@
 <?php 
      //LINK THE DATABASE CONNECTION
-     include 'database/database.php';
-     include 'security/security.php';
+     require_once 'database/database.php';
+     require_once 'security/security.php';
 
      //SHOWING ACTUAL DATE
 
@@ -27,7 +27,7 @@
    $sumReceived->execute();
    $sumReceivedResult = $sumReceived->setFetchMode(PDO::FETCH_ASSOC);
    foreach($sumReceived->fetchAll() as $reiCe =>$received){
-       $receivedValue = $received['SUM(received)'];
+       $receivedValue = htmlspecialchars($received['SUM(received)']);
    }
   
    //SUM PAYMENT SEND
@@ -37,7 +37,7 @@
    $sumSend->execute();
    $sumSendResult = $sumSend->setFetchMode(PDO::FETCH_ASSOC);
    foreach($sumSend->fetchAll() as $pay =>$send){
-       $sendValue = $send['SUM(send_to_driver)'];
+       $sendValue = htmlspecialchars($send['SUM(send_to_driver)']);
    }
 
      //SUM PAYMENT COMMISSION
@@ -47,7 +47,7 @@
      $sumCommission->execute();
      $sumCommissionResult = $sumCommission->setFetchMode(PDO::FETCH_ASSOC);
      foreach($sumCommission->fetchAll() as $com =>$commission){
-        $commissionValue = $commission['SUM(commission)'];
+        $commissionValue = htmlspecialchars($commission['SUM(commission)']);
      }
   
 

@@ -1,10 +1,10 @@
 <?php
-    include_once '../controller/controller_dashboard.php';
+    require_once '../controller/controller_dashboard.php';
     
 ?>
 <!DOCTYPE html>
 <html lang="en">
-    <?php include '../model/includes/head_dashboard/admin_dashboard.php'; ?>
+    <?php require_once '../model/includes/head_dashboard/admin_dashboard.php'; ?>
 
 <body>
     <div class="container">
@@ -159,20 +159,20 @@
                                   
                         // SELECT DATA
                         foreach($stmt->fetchAll() as $driver=>$row){
-                            $idDriver = $row['id'];
-                            $firstNameD = $row['first_name'];
-                            $lastNameD = $row['last_name'];
-                            $emailD = $row['email'];
-                             $phoneNumberD = $row['phone_number'];
-                            $cityD = $row['city'];
-                             $typeOfD = $row['kind-of-registration'];
-                             $startDrivingD = $row['starting_date'];
-                            $transportationD = $row['transportation'];
-                            $bankAccountD = $row['bank-account'];
-                             $approvedD = $row['approved'];
-                             $pickTheBagD = $row['pick_the_bag'];
-                            $registrationBoltD = $row['registered_to_bolt'];
-                             $dateSubmit = $row['date_of_submission'];
+                            $idDriver = htmlspecialchars($row['id']);
+                            $firstNameD = htmlspecialchars($row['first_name']);
+                            $lastNameD = htmlspecialchars($row['last_name']);
+                            $emailD = htmlspecialchars($row['email']);
+                             $phoneNumberD = htmlspecialchars($row['phone_number']);
+                            $cityD = htmlspecialchars($row['city']);
+                             $typeOfD = htmlspecialchars($row['kind-of-registration']);
+                             $startDrivingD = htmlspecialchars($row['starting_date']);
+                            $transportationD = htmlspecialchars($row['transportation']);
+                            $bankAccountD = htmlspecialchars($row['bank-account']);
+                             $approvedD = htmlspecialchars($row['approved']);
+                             $pickTheBagD = htmlspecialchars($row['pick_the_bag']);
+                            $registrationBoltD = htmlspecialchars($row['registered_to_bolt']);
+                             $dateSubmit = htmlspecialchars($row['date_of_submission']);
                            
                             if(!empty($startDrivingD)){
                                 
@@ -242,10 +242,10 @@
                         $feedBack = $ret->fetchAll();
                         foreach($feedBack as $key=>$value){
                            
-                            $ft = $value['first_name'];
-                            $lt = $value['last_name'];
-                            $tf = $value['kind-of-registration'];
-                            $dateOfSubmission = $value['date_of_submission'];
+                            $ft = htmlspecialchars($value['first_name']);
+                            $lt = htmlspecialchars($value['last_name']);
+                            $tf = htmlspecialchars($value['kind-of-registration']);
+                            $dateOfSubmission = htmlspecialchars($value['date_of_submission']);
 
                            
                             

@@ -1,4 +1,4 @@
-<?php include '../controller/controller_card_payment_driver.php'; ?>
+<?php require_once '../controller/controller_card_payment_driver.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,11 +11,7 @@
     <title>card driver</title>
 </head>
 <body>
-    <?php           
-
-        // $id = $_GET['payId']. "<br>";
-        // echo $id;
-    ?>
+  
     <div class="card_driver">
         <div class="card_driver_all">
             <div class="card_driver_details">

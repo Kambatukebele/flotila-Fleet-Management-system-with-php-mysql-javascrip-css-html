@@ -1,5 +1,5 @@
 <?php
-    include '../controller/controller_updatedriver.php';
+    require_once '../controller/controller_updatedriver.php';
                 
 ?>
 <!DOCTYPE html>

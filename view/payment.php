@@ -1,4 +1,4 @@
-<?php include '../controller/controller_payment.php'; ?>
+<?php require_once '../controller/controller_payment.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,14 +30,14 @@
                 </tr>
                 <?php
                      foreach($stmt->fetchAll() as $driver=>$row){
-                       $idDriver = $row['id'];
-                       $firstNameD = $row['first_name'];
-                       $lastNameD = $row['last_name'];
-                       $emailD = $row['email'];
-                       $phoneNumberD = $row['phone_number'];
-                       $cityD = $row['city'];
-                       $typeOfD = $row['kind-of-registration'];
-                       $startDrivingD = $row['starting_date'];
+                       $idDriver =  htmlspecialchars($row['id']);
+                       $firstNameD =  htmlspecialchars($row['first_name']);
+                       $lastNameD =  htmlspecialchars($row['last_name']);
+                       $emailD =  htmlspecialchars($row['email']);
+                       $phoneNumberD =  htmlspecialchars($row['phone_number']);
+                       $cityD =  htmlspecialchars($row['city']);
+                       $typeOfD =  htmlspecialchars($row['kind-of-registration']);
+                       $startDrivingD =  htmlspecialchars($row['starting_date']);
 
                     echo
                         '<tr>'.

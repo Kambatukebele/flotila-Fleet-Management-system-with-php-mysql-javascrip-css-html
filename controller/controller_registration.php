@@ -1,6 +1,6 @@
 <?php 
     //LINK THE DATABASE CONNECTION
-    include 'database/database.php';
+    require_once 'database/database.php';
 
     // CHECKING THE INPUTS FIELDS
     

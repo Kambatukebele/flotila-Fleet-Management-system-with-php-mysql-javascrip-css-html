@@ -1,7 +1,7 @@
-<?php include '../controller/controller_login_admin.php'; ?>
+<?php require_once '../controller/controller_login_admin.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
-    <?php include '../model/includes/head_login/head_login.php'; ?>
+    <?php require_once '../model/includes/head_login/head_login.php'; ?>
     <body>
         <div class="registration_login">
             <div class="registration_login_all">

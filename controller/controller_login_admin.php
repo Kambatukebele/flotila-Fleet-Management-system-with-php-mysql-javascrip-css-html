@@ -1,6 +1,6 @@
 <?php 
     //LINK THE DATABASE CONNECTION
-    include 'database/database.php';
+    require_once 'database/database.php';
     
 
     // CONNECT ADMIN VALIDATION
@@ -29,9 +29,9 @@
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
         if(isset($result)){
             foreach ($result as $results){
-                $_SESSION['email'] = $emailResult = $results['email'];
-                $_SESSION['password'] = $passwordResult = $results['passwordCheck'];
-                $_SESSION['fullName'] = $results['fullname'];
+                $_SESSION['email'] = $emailResult = htmlspecialchars($results['email']);
+                $_SESSION['password'] = $passwordResult = htmlspecialchars($results['passwordCheck']);
+                $_SESSION['fullName'] = htmlspecialchars($results['fullname']);
             }
         }
 

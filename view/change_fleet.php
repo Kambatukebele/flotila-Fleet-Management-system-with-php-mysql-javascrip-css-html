@@ -1,12 +1,12 @@
-<?php include '../controller/controller_change_fleet.php'; ?>
+<?php require_once '../controller/controller_change_fleet.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
-    <?php include '../model/includes/head/head.php'; ?>
+    <?php require_once '../model/includes/head/head.php'; ?>
 <body>
 
     <!-- ========== HEADER NAVIGATION ========== -->
-    <?php include '../model/includes/navigation/header.php'; ?>
+    <?php require_once '../model/includes/navigation/header.php'; ?>
 
    <!-- ========== REGISTRATION OF DRIVER ========== -->
 
@@ -165,6 +165,6 @@
    </form>
 
     <!-- ========== FOOTER ========== -->
-    <?php include '../model/includes/footer/footer.php'; ?>
+    <?php require_once '../model/includes/footer/footer.php'; ?>
 </body>
 </html>

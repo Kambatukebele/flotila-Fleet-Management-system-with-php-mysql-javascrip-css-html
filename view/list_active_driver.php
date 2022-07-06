@@ -1,11 +1,11 @@
 <?php 
-    include_once '../controller/controller_list_active_driver.php';
+    require_once '../controller/controller_list_active_driver.php';
    
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-    <?php include "../model/includes/head_drivers/head_drivers.php"; ?>
+    <?php require_once "../model/includes/head_drivers/head_drivers.php"; ?>
 <body>
 
     <!-- ========== TABLE USERS========== -->
@@ -33,43 +33,42 @@
                     
                    foreach($stmt as $all_driver){
 
-                         $id = $all_driver['id'];
-                         $first_name = $all_driver['first_name'];
-                         $lastName = $all_driver['last_name'];
-                         $emailD = $all_driver['email'];
-                         $phoneNumber = $all_driver['phone_number'];
-                         $transportation = $all_driver['transportation'];
-                         $all_driver['city'];
-                         $all_driver['textplace'];
-                         $all_driver['kind-of-registration'];
-                         $bankAccount = $all_driver['bank-account'];
-                         $approved = $all_driver['approved'];
-                         $pickTheBag = $all_driver['pick_the_bag'];
-                         $signed = $all_driver['signed'];
-                         $startingDate = $all_driver['starting_date'];
-                         $all_driver['return_deposit'];
-                         $registeredToBolt = $all_driver['registered_to_bolt'];
+                         $id = htmlspecialchars($all_driver['id']);
+                         $first_name = htmlspecialchars($all_driver['first_name']);
+                         $lastName = htmlspecialchars($all_driver['last_name']);
+                         $emailD = htmlspecialchars($all_driver['email']);
+                         $phoneNumber = htmlspecialchars($all_driver['phone_number']);
+                         $transportation = htmlspecialchars($all_driver['transportation']);
+                         htmlspecialchars($all_driver['city']);
+                         htmlspecialchars($all_driver['textplace']);
+                         htmlspecialchars($all_driver['kind-of-registration']);
+                         $bankAccount = htmlspecialchars($all_driver['bank-account']);
+                         $approved = htmlspecialchars($all_driver['approved']);
+                         $pickTheBag = htmlspecialchars($all_driver['pick_the_bag']);
+                         $signed = htmlspecialchars($all_driver['signed']);
+                         $startingDate = htmlspecialchars($all_driver['starting_date']);
+                         htmlspecialchars($all_driver['return_deposit']);
+                         $registeredToBolt = htmlspecialchars($all_driver['registered_to_bolt']);
 
 
                         //  if(!empty($firstNameD) && !empty($lastNameD) && !empty($emailD) && !empty($phoneNumberD) && !empty($cityD) && !empty($startDrivingD) && !empty($bankAccountD) && $approvedD =="YES" || $approvedD =="yes" && $pickTheBagD ==="YES" || $pickTheBagD ==="yes" && !empty($registrationBoltD ==="YES" || $registrationBoltD ==="yes")){
 
                          if (!empty($startingDate) && !empty($first_name) && !empty($lastName) && !empty($emailD) && !empty($phoneNumber) && !empty($transportation) && !empty($bankAccount) && $approved =="YES" || $approved =="yes" && $pickTheBag ==="YES" || $pickTheBag ==="yes" && !empty($registeredToBolt ==="YES" ||$registeredToBolt ==="yes")){
                             echo "<tr>";
-                                echo "<td>".$all_driver['first_name']."</td>";
-                                echo "<td>".$all_driver['last_name']."</td>";
-                                echo "<td>".$all_driver['bank-account']."</td>";
-                                echo "<td>".$all_driver['registered_to_bolt']."</td>";
-                                echo "<td>".$all_driver['approved']."</td>";
-                                echo "<td>".$all_driver['pick_the_bag']."</td>";
-                                echo "<td>".$all_driver['signed']."</td>";
-                                echo "<td>".$all_driver['starting_date']."</td>";
-                                echo "<td>".$all_driver['city']."</td>";
-                                echo  "<td>".$all_driver['kind-of-registration']."</td>";
-                                echo "<td>".$all_driver['date_of_submission']."</td>";                           
+                                echo "<td>".htmlspecialchars($all_driver['first_name'])."</td>";
+                                echo "<td>".htmlspecialchars($all_driver['last_name'])."</td>";
+                                echo "<td>".htmlspecialchars($all_driver['bank-account'])."</td>";
+                                echo "<td>".htmlspecialchars($all_driver['registered_to_bolt'])."</td>";
+                                echo "<td>".htmlspecialchars($all_driver['approved'])."</td>";
+                                echo "<td>".htmlspecialchars($all_driver['pick_the_bag'])."</td>";
+                                echo "<td>".htmlspecialchars($all_driver['signed'])."</td>";
+                                echo "<td>".htmlspecialchars($all_driver['starting_date'])."</td>";
+                                echo "<td>".htmlspecialchars($all_driver['city'])."</td>";
+                                echo  "<td>".htmlspecialchars($all_driver['kind-of-registration'])."</td>";
+                                echo "<td>".htmlspecialchars($all_driver['date_of_submission'])."</td>";                           
                             echo "</tr>";
                           }
-                  
-                       
+
                    }                
                 ?>
               </table>
