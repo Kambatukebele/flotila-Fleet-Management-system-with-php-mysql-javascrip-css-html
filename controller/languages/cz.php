@@ -19,19 +19,19 @@
         "home-page-first-box-in-large-box-title" => "Flexibilní pracovní doba",
         "home-page-first-box-in-large-box-description" => " Žádné plánování směn. Kdy a jak dlouho pracujete záleží jenom na vás. V aplikaci se jedním kliknutím připojíte a můžete rozvážet. Kdykoliv chcete zkončit, z aplikace se zase jedním kliknutím odhlásíte.",
         "home-page-second-box-in-large-box-title" => "Výdělek každý týden",
-        "home-page-second-box-in-large-box-description" => "Na svůj výdělej nečekáte celý měsíc. Vaše výdělek Vám přeposíláme každé úterý Váš bankovní účet.",
+        "home-page-second-box-in-large-box-description" => "Na svůj výdělek nečekáte celý měsíc. Vaše výdělky Vám přeposíláme každé úterý Váš bankovní účet.",
         "home-page-third-box-in-large-box-title" => "Co potřebujete?",
         "home-page-third-box-in-large-box-description" => "
-        Pouze chytrý telefon s internetem a dopravní prostředek. Rozvážet je možné s vlastním vozidlem, motorkou, na kole nebo koloběžce.
-S mobilní aplikací Bolt Courier se můžete kdykoliv spustit v aplikaci a přijímat zakázky. Thermobox na jídlo si vyzvednete při registraci.",
+        Pouze chytrý telefon s internetem a dopravní prostředek. Rozvážet je možné s vlastním vozem, motorkou, na kole nebo koloběžce.
+S mobilní aplikací Bolt Courier se můžete kdykoliv spustit online a přijímat zakázky. Thermobox na jídlo si vyzvednete při registraci.",
         "home-page-fourth-box-in-large-box-title" => "Kde můžete rovážet?",
-        "home-page-fourth-box-in-large-box-description" => "Registrovat se je možné v těchto městech: Praha, Plzeň, Brno, Olomouc, Ostrava, České Budějovice a Hradec Králové.",
+        "home-page-fourth-box-in-large-box-description" => "Registrovat se můžete v těchto městech: Praha, Plzeň, Brno, Olomouc, Ostrava, České Budějovice a Hradec Králové.",
 
         //THIRD LARGE BOX
         "home-page-third-large-box-title" => "Jaký je postup?",
         "home-page-first-third-box-in-large-box-title" => "Vyplňte a pošlete nám svou registraci",
         "home-page-second-third-box-in-large-box-title" => "My se s Vámi obratem spojíme a doladíme detaily.",
-        "home-page-third-third-box-in-large-box-title" => "Vyzvedněte si Termobox a stáhněte si aplikaci Bolt Courier",
+        "home-page-third-third-box-in-large-box-title" => "Vyzvedněte si thermobox a stáhněte si aplikaci Bolt Courier",
         "home-page-fourth-third-box-in-large-box-title" => "Začněte rozvážet a vydělávat",
 
         // FOURTH LARGE BOX BONUS
@@ -113,7 +113,18 @@ S mobilní aplikací Bolt Courier se můžete kdykoliv spustit v aplikaci a při
         Akce není omezena časově, ale počtem nově příchozích partnerských kurýrů, proto neváhejte a zaregistrujte se co nejdříve. Situaci budeme průběžně monitorovat, abychom zajistili, že všichni kurýři dosahují vysokých výdělků a informace o ukončení bonusu bude uvedena v předstihu v hlavičce registračního formuláře a rovněž ji zašleme na flotilové manažery.<br>
         Věříme, že vám bonus udělá radost a budeme se těšit na vzájemnou spolupráci.",
         "lang_en" => "EN",
-        "lang_cz" => "CZ"
+        "lang_cz" => "CZ",
+
+        // EXTRA CHANGE ON FORM
+        
+        "form-age-ss" => "Ano",
+        "form-age-sss" => "Ne",
+
+        "choose-option" => "Vybrat",
+        "trans-car" => "Auto",
+        "trans-bike" => "Kolo",
+        "trans-motorbike" => "Motorka",
+        "trans-electric-bike" => "Elektrická koloběžka"
     );
 
  

@@ -66,7 +66,7 @@ With the Bolt Courier mobile app, you can launch into the app at any time and re
 
         //FORM
         "form-main-title" => "Join our fleet",
-        "form-main-title-two" => "Změna flotily",
+        "form-main-title-two" => "Change fleet",
         "form-first-name" => "First Name",
         "form-last-name" => "Last Name",
         "form-email" => "Email",
@@ -116,8 +116,18 @@ With the Bolt Courier mobile app, you can launch into the app at any time and re
 
         We believe that the bonus will make you happy and we look forward to mutual cooperation.",
         "lang_en" => "EN",
-        "lang_cz" => "CZ"
+        "lang_cz" => "CZ",
 
+        // EXTRA CHANGE ON FORM
+        
+        "form-age-ss" => "Yes",
+        "form-age-sss" => "No",
+
+        "choose-option" => "Choose",
+        "trans-car" => "Car",
+        "trans-bike" => "Bicycle",
+        "trans-motorbike" => "Bike",
+        "trans-electric-bike" => "Electric Bike"
     );
 
 
