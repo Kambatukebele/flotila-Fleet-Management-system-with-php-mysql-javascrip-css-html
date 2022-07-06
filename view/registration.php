@@ -33,7 +33,7 @@
            <div class="inputs_left">
            
                 <label for="firstname"><?php echo $lang['form-first-name'];?>*</label>
-                <input type="text" name="firstname" id="firstname" placeholder="<?php echo $lang['form-first-name'];?>" value="<?php if(isset($firstName)) echo $firstName;?>">
+                <input required type="text" name="firstname" id="firstname" placeholder="<?php echo $lang['form-first-name'];?>" value="<?php if(isset($firstName)) echo $firstName;?>">
                 <?php
                     if (isset($firstNameErrorMsg)){
                         echo $firstNameErrorMsg;
@@ -43,7 +43,7 @@
            <div class="inputs_left">
           
                 <label for="lastname"><?php echo $lang['form-last-name'];?>*</label>
-                <input type="text" name="lastname" id="lastname" placeholder="<?php echo $lang['form-last-name'];?>" value="<?php if(isset($lastName)) echo $lastName;?>">
+                <input required type="text" name="lastname" id="lastname" placeholder="<?php echo $lang['form-last-name'];?>" value="<?php if(isset($lastName)) echo $lastName;?>">
                 <?php
                     if (isset($lastNameErrorMsg)){
                         echo $lastNameErrorMsg;
@@ -56,7 +56,7 @@
             <div class="inputs_left">
            
                 <label for="email"><?php echo $lang['form-email'];?>*</label>
-                <input type="email" name="email" id="email" placeholder="<?php echo $lang['form-email'];?>" value="<?php if(isset($email)) echo $email;?>">
+                <input required type="email" name="email" id="email" placeholder="<?php echo $lang['form-email'];?>" value="<?php if(isset($email)) echo $email;?>">
                 <?php
                     if (isset($emailErrorMsg)){
                         echo $emailErrorMsg;
@@ -71,7 +71,7 @@
                         <option value="+420">+420</option>
                     </select>
 
-                    <input type="text" name="phone_number" id="phone_number" placeholder="<?php echo $lang['form-phone-number'] ;?>" value="<?php if(isset($phone_number)) echo $phone_number;?>">
+                    <input required type="text" name="phone_number" id="phone_number" placeholder="<?php echo $lang['form-phone-number'] ;?>" value="<?php if(isset($phone_number)) echo $phone_number;?>">
                     <?php
                     if (isset($phoneNumberErrorMsg)){
                         echo $phoneNumberErrorMsg;
