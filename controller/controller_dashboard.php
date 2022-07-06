@@ -10,7 +10,7 @@
      //PROFILE ADMIN 
 
      if(!empty($_SESSION['fullName'])){
-        echo $_SESSION['fullName'];
+         $_SESSION['fullName'];
      }
 
       // FOR ACTIVE DRIVERS LIST
