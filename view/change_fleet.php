@@ -81,11 +81,11 @@
             <div class="inputs_left">
                 <label for="transportation"><?php echo $lang['form-transportation']; ?>*</label>
                 <select name="transportation" id="transportation">
-                    <option value="none" hidden>Vybrat</option>
-                    <option value="car">Auto</option>
-                    <option value="bike">Kolo</option>
-                    <option value="bicycle">Motorka</option>
-                    <option value="bicycle">Elektrická koloběžka</option>
+                    <option value="none" hidden><?php echo $lang['choose-option']; ?></option>
+                    <option value="car"><?php echo $lang['trans-car'] ?></option>
+                    <option value="bike"><?php echo $lang['trans-bike'] ?></option>
+                    <option value="bicycle"><?php echo $lang['trans-motorbike'] ?></option>
+                    <option value="bicycle"><?php echo $lang['trans-electric-bike'] ?></option>
                 </select>
                 <?php
                     if (isset($transportationErrorMsg)){
@@ -96,7 +96,7 @@
             <div class="inputs_left">
                 <label for="city"><?php echo $lang['form-city']; ?>*</label>
                 <select name="city" id="city">
-                    <option value="none" hidden>Vybrat</option>
+                    <option value="none" hidden><?php echo $lang['choose-option']; ?></option>
                     <option value="Prague">Praha</option>
                     <option value="Brno">Brno</option>
                     <option value="Ostrava">Ostrava</option>
