@@ -32,7 +32,7 @@
     //LIMIT 10,10 -GET 11TH ENTRY TO 20TH
     $x = ($pageNow - 1) * $perPage;
     $y = $perPage;
-    $sqlSelect = "SELECT * FROM `registration_new_driver` ORDER BY `id` DESC LIMIT $x, $y";
+    $sqlSelect = "SELECT * FROM `registration_new_driver` ORDER BY `id` LIMIT $x, $y";
     $stmt = $conn->prepare($sqlSelect);
     $stmt->execute();
     $drivers = $stmt->fetchAll();
