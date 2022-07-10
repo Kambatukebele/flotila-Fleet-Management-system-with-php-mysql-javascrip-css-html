@@ -31,7 +31,7 @@
                 </tr>
                 <?php
                     
-                   foreach($stmt as $all_driver){
+                   foreach($drivers as $all_driver){
 
                          $id = htmlspecialchars($all_driver['id']);
                          htmlspecialchars($all_driver['first_name']);
