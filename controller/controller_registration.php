@@ -206,7 +206,7 @@
             $sql->bindParam(':returnDeposit', $returnDeposit);
             $sql->bindParam(':registeredToBolt', $registeredToBolt);
 
-            $sql->execute();
+            //$sql->execute();
 
             // $conn->exec($sql);
 
