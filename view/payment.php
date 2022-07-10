@@ -56,7 +56,7 @@ box-shadow: 5px 5px 15px 5px #A8A8A8;">
                           '<td>'.$typeOfD.'</td>'.
                           '<td>'.
                             '<button class="del" style="background-color:red;padding: 3px 7px;margin-right: 9px; border:none;">'.'<a style="color:white;" href="payment_details.php?detailsId='.$idDriver.'">'.'Details'.'</a>'.'</button>'.
-                            '<button class="upd" style="background-color:#27B973;padding: 3px 7px;margin-right: 9px;>'.'<a href="card_payment_driver.php?payId='.$idDriver.'">'.'Payment'.'</a>'.'</button>'.                    
+                            '<button class="upd" style="background-color:#27B973;padding: 3px 7px;margin-right: 9px;">'.'<a href="card_payment_driver.php?payId='.$idDriver.'">'.'Payment'.'</a>'.'</button>'.                    
                           '</td>'.
                         '</tr>';
                    }
