@@ -124,7 +124,39 @@ S mobilní aplikací Bolt Courier se můžete kdykoliv spustit online a přijím
         "trans-car" => "Auto",
         "trans-bike" => "Kolo",
         "trans-motorbike" => "Motorka",
-        "trans-electric-bike" => "Elektrická koloběžka"
+        "trans-electric-bike" => "Elektrická koloběžka",
+
+        //FORM ERRORS
+        //FIRST NAME
+        "firstNameErrorMsgInvalideName" => "Neplatné jméno",
+        "firstNameErrorMsgEmptyName" => "Zadejte jméno",
+
+        //LAST NAME
+        "lastNameErrorMsgInvalideName" => "Neplatné přijmení",
+        "lastNameErrorMsgEmptyName" => "Zadejte přijmení",
+
+        //EMAIL
+        "emailErrorMsgInvalideEmail" => "Neplatný email",
+        "emailErrorMsgEmptyEmail" => "Zadejte svůj email",
+
+        //PHONE NUMBER
+        "phoneErrorMsgDigit" => "Telefonní číslo má mít 9 číslic",
+        "emailErrorMsgInvalide" => "Neplatné číslo",
+        "emailErrorMsgEmptyNumber" => "Zadejte telefonní číslo",
+
+        //AGE
+        "ageErrorMsgInvalideAge" => "Vyberte zda jste 18+",
+        "ageErrorMsgEmptyAge" => "Musíte být 18+",
+
+        //TRANSPORTATION
+        "transportationErrorMsgInvalid" => "Vyberte dopravní prostředek",
+         //CITY
+         "cityErrorMsgInvalid" => "Vyberte město",
+        //TEXTAREA
+        "textareaErrorMsgInvalid" => "Neplatný text",
+        //GDPR
+        "gdprErrorMsgInvalid" => "Vyberte souhlas s podmínkami",
+
     );
 
  
