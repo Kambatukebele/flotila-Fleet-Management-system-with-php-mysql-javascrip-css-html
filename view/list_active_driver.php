@@ -46,7 +46,7 @@
                          $approved = htmlspecialchars($all_driver['approved']);
                          $pickTheBag = htmlspecialchars($all_driver['pick_the_bag']);
                          $signed = htmlspecialchars($all_driver['signed']);
-                         echo $startingDate = htmlspecialchars($all_driver['starting_date'])."<br>";
+                         $startingDate = htmlspecialchars($all_driver['starting_date']);
                          htmlspecialchars($all_driver['return_deposit']);
                          $registeredToBolt = htmlspecialchars($all_driver['registered_to_bolt']);
 
