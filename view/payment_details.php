@@ -69,6 +69,13 @@
               </table>
         </div>
     </div>  
+    <div class="pagination" style="display:flex; justify-content:center; background-color: rgba(128, 128, 128, 0.26);">
+            <?php
+                for($i=1; $i<=$totalPages; $i++){
+                    printf("<a style='padding:5px;' href='payment_details.php?detailsId=$detailsId?page=%u'>%u</a>", $i, $i);
+                }
+            ?>
+    </div>
     
 </body>
 </html>
