@@ -31,10 +31,10 @@
                 </tr>
                 <?php
                     
-                   foreach($stmt as $all_driver){
+                   foreach($drivers as $all_driver){
 
                          $id = htmlspecialchars($all_driver['id']);
-                         $first_name = htmlspecialchars($all_driver['first_name']);
+                        $first_name = htmlspecialchars($all_driver['first_name']);
                          $lastName = htmlspecialchars($all_driver['last_name']);
                          $emailD = htmlspecialchars($all_driver['email']);
                          $phoneNumber = htmlspecialchars($all_driver['phone_number']);
@@ -78,10 +78,11 @@
     <div class="pagination" style="display:flex; justify-content:center; background-color: rgba(128, 128, 128, 0.26);">
             <?php
                 for($i=1; $i<=$totalPages; $i++){
-                    printf("<a style='padding:5px;' href='all-driver.php?page=%u'>%u</a>", $i, $i);
+                    printf("<a style='padding:5px;' href='list_active_driver?page=%u'>%u</a>", $i, $i);
                 }
             ?>
     </div>
+    
    
 </body>
 </html>
