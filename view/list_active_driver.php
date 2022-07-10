@@ -46,7 +46,7 @@
                          $approved = htmlspecialchars($all_driver['approved']);
                          $pickTheBag = htmlspecialchars($all_driver['pick_the_bag']);
                          $signed = htmlspecialchars($all_driver['signed']);
-                         $startingDate = htmlspecialchars($all_driver['starting_date']);
+                         echo $startingDate = htmlspecialchars($all_driver['starting_date'])."<br>";
                          htmlspecialchars($all_driver['return_deposit']);
                          $registeredToBolt = htmlspecialchars($all_driver['registered_to_bolt']);
 
@@ -65,7 +65,7 @@
                                 echo "<td>".htmlspecialchars($all_driver['starting_date'])."</td>";
                                 echo "<td>".htmlspecialchars($all_driver['city'])."</td>";
                                 echo  "<td>".htmlspecialchars($all_driver['kind-of-registration'])."</td>";
-                                echo "<td>".htmlspecialchars($all_driver['date_of_submission'])."</td>";                           
+                                echo "<td>".htmlspecialchars($all_driver['date_of_submission'])."</td>"; 
                             echo "</tr>";
                           }
 
@@ -78,7 +78,7 @@
     <div class="pagination" style="display:flex; justify-content:center; background-color: rgba(128, 128, 128, 0.26);">
             <?php
                 for($i=1; $i<=$totalPages; $i++){
-                    printf("<a style='padding:5px;' href='list_active_driver?page=%u'>%u</a>", $i, $i);
+                    printf("<a style='padding:5px;' href='list_active_driver.php?page=%u'>%u</a>", $i, $i);
                 }
             ?>
     </div>
