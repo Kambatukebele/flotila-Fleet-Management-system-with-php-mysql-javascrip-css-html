@@ -35,13 +35,13 @@
         {
             if(!preg_match("/^[a-zA-Z-' ]*$/", $firstName))
             {
-                $firstNameErrorMsg = "<h6 style = 'color:red;font-size:14px;'> " . "Invalide First Name" . "</h6>";
+                $firstNameErrorMsg = "<h6 style = 'color:red;font-size:14px;'> " . "Neplatné jméno" . "</h6>";
                 return false;              
             }
         }
         else
         {
-            $firstNameErrorMsg = "<h6 style = 'color:red;font-size:14px;'> " . " Please enter your First Name" . "</h6>";
+            $firstNameErrorMsg = "<h6 style = 'color:red;font-size:14px;'> " . " Zadejte jméno" . "</h6>";
             return false;            
         }
 
@@ -50,13 +50,13 @@
         {
             if(!preg_match("/^[a-zA-Z-' ]*$/", $lastName))
             {
-                $lastNameErrorMsg = "<h6 style = 'color:red;font-size:14px;'> " . "Invalide Last Name" . "</h6>";
+                $lastNameErrorMsg = "<h6 style = 'color:red;font-size:14px;'> " . "Neplatné přijmení" . "</h6>";
                 return false;
             }
         }
         else
         {
-            $lastNameErrorMsg = "<h6 style = 'color:red;font-size:14px;'> " . " Please enter your last Name" . "</h6>";
+            $lastNameErrorMsg = "<h6 style = 'color:red;font-size:14px;'> " . " Zadejte přijmení" . "</h6>";
             return false;            
         }
 
@@ -65,13 +65,13 @@
         {
             if(!filter_var($email, FILTER_VALIDATE_EMAIL))
             {
-                $emailErrorMsg = "<h6 style = 'color:red;font-size:14px;'> " . "Invalide Email Adress" . "</h6>";
+                $emailErrorMsg = "<h6 style = 'color:red;font-size:14px;'> " . "Neplatný email" . "</h6>";
                 return false;               
             }
         }
         else
         {
-            $emailErrorMsg = "<h6 style = 'color:red;font-size:14px;'> " . " Please enter your email adress" . "</h6>";
+            $emailErrorMsg = "<h6 style = 'color:red;font-size:14px;'> " . " Zadejte svůj email" . "</h6>";
             return false;            
         }
 
@@ -83,19 +83,19 @@
                 $length = strlen($phone_number);
                 if ( $length < 9 || $length > 9)
                 {
-                    $phoneNumberErrorMsg = "<h6 style = 'color:red;font-size:14px;'> " . " Your number should have 9 digits" . "</h6>";
+                    $phoneNumberErrorMsg = "<h6 style = 'color:red;font-size:14px;'> " . " Telefonní číslo má mít 9 číslic" . "</h6>";
                     return false;                    
                 }
             }
             else
             {
-                $phoneNumberErrorMsg = "<h6 style = 'color:red;font-size:14px;'> " . " Invalide Phone number" . "</h6>";
+                $phoneNumberErrorMsg = "<h6 style = 'color:red;font-size:14px;'> " . " Neplatné číslo" . "</h6>";
                 return false;                
             }
         }
         else
         {
-            $phoneNumberErrorMsg = "<h6 style = 'color:red;font-size:14px;'> " . " Please enter your Phone number" . "</h6>";
+            $phoneNumberErrorMsg = "<h6 style = 'color:red;font-size:14px;'> " . " Zadejte telefonní číslo" . "</h6>";
             return false;            
         }
 
@@ -103,10 +103,10 @@
 
         if (isset($age)){
             if ($age == "none"){
-                $ageErrorMsg = "<h6 style = 'color:red;font-size:14px;'> " . " Please Select if you are more than 18 or not" . "</h6>";
+                $ageErrorMsg = "<h6 style = 'color:red;font-size:14px;'> " . " Vyberte zda jste 18+" . "</h6>";
                 return false;
             }elseif ($age == "no"){
-                $ageErrorMsg = "<h6 style = 'color:red;font-size:14px;'> " . "You should be 18 or above" . "</h6>";
+                $ageErrorMsg = "<h6 style = 'color:red;font-size:14px;'> " . "Musíte být 18+" . "</h6>";
                  return false;
             }           
         }
@@ -114,7 +114,7 @@
         // VALIDATE TRANSPORTATION
         if (isset($transportation)){
             if($transportation == "none"){
-                $transportationErrorMsg = "<h6 style = 'color:red;font-size:14px;'> " . " Please Select your transportation" . "</h6>";
+                $transportationErrorMsg = "<h6 style = 'color:red;font-size:14px;'> " . " Vyberte dopravní prostředek" . "</h6>";
                     return false;
             }
         }
@@ -123,7 +123,7 @@
         if (isset($city))
         {
             if ($city == "none"){
-                $cityErrorMsg = "<h6 style = 'color:red;font-size:14px;'> " . " Please Select your city" . "</h6>";
+                $cityErrorMsg = "<h6 style = 'color:red;font-size:14px;'> " . " Vyberte město" . "</h6>";
                 return false;
             }
         }
@@ -131,7 +131,7 @@
         //VALIDATE TEXTAREA
         if(!preg_match("/^[a-zA-Z0-9 \(\)\n]*$/", $textarea))
         {
-            $textareaErrormsg = "<h6 style = 'color:red;font-size:14px;'> " . " Invalide text" . "</h6>";
+            $textareaErrormsg = "<h6 style = 'color:red;font-size:14px;'> " . " Neplatný text" . "</h6>";
             return false;
         }
 
@@ -139,7 +139,7 @@
         if(isset($checkbox))
         {
             if ( $checkbox === "unchecked"){
-                $checkboxErrorMsg = "<h6 style = 'color:red;font-size:14px;'> " . " You need to accept out conditions" . "</h6>";
+                $checkboxErrorMsg = "<h6 style = 'color:red;font-size:14px;'> " . " Vyberte souhlas s podmínkami" . "</h6>";
                 return false;
             }            
         }
@@ -149,7 +149,7 @@
         if(isset($checkbox_second))
         {
             if ($checkbox_second === "unchecked_second"){
-                $checkboxSecondErrorMsg = "<h6 style = 'color:red;font-size:14px;'> " . " You need to accept out conditions" . "</h6>";
+                $checkboxSecondErrorMsg = "<h6 style = 'color:red;font-size:14px;'> " . " Vyberte souhlas s podmínkami" . "</h6>";
                 return false;
             }            
         }
