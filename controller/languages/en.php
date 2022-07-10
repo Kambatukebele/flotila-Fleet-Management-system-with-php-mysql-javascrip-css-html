@@ -127,7 +127,41 @@ With the Bolt Courier mobile app, you can launch into the app at any time and re
         "trans-car" => "Car",
         "trans-bike" => "Bicycle",
         "trans-motorbike" => "Bike",
-        "trans-electric-bike" => "Electric Bike"
+        "trans-electric-bike" => "Electric Bike",
+
+        //FORM ERRORS
+        //FIRST NAME
+        "firstNameErrorMsgInvalideName" => "Invalide First Name",
+        "firstNameErrorMsgEmptyName" => "Please enter your First Name",
+
+        //LAST NAME
+        "lastNameErrorMsgInvalideName" => "Invalide Last Name",
+        "lastNameErrorMsgEmptyName" => "Please enter your Last Name",
+
+        //EMAIL
+        "emailErrorMsgInvalideEmail" => "Invalide Last Email",
+        "emailErrorMsgEmptyEmail" => "Please enter your Email adress",
+
+        //PHONE NUMBER
+        "phoneErrorMsgDigit" => "Your number should have 9 digits",
+        "emailErrorMsgInvalide" => "Invalide Phone number",
+        "emailErrorMsgEmptyNumber" => "Please enter your Phone Number",
+
+        //AGE
+        "ageErrorMsgInvalideAge" => "Please Select if you are more than 18 or not",
+        "ageErrorMsgEmptyAge" => "You should be 18 or above",
+
+        //TRANSPORTATION
+        "transportationErrorMsgInvalid" => "Please Select your transportation",
+         //CITY
+         "cityErrorMsgInvalid" => "Please Select your city",
+        //TEXTAREA
+        "textareaErrorMsgInvalid" => "Invalide text",
+        //GDPR
+        "gdprErrorMsgInvalid" => "You need to accept out conditions",
+
+    
+        
     );
 
 
