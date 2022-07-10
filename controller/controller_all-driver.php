@@ -15,14 +15,14 @@
     $stmt = $sql->fetchColumn();
     $totalPages = ceil($stmt / $perPage);
 
-    echo "there are $totalPages drivers in total"."<br>";
+    //echo "there are $totalPages drivers in total"."<br>";
 
     //GET ENTRY FOR THE CURRENT PAGE
     //USE $_GET["PAGE"]
 
     $pageNow = isset($_GET['page']) ? $_GET['page'] : 1;
 
-    echo "it is $pageNow now!";
+   // echo "it is $pageNow now!";
 
     //SQL FETCH
     //$x is the offset
