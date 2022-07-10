@@ -60,7 +60,7 @@
     $y = $perPage;
     $sqlSelect = $conn->prepare("SELECT * FROM `payments` WHERE paymentID = ? ORDER BY `id` LIMIT $x, $y ");
     $sqlSelect->execute(array($idDriver));
-    $drivers = $sqlSelect->fetchAll();
+    $paymentStmtResult = $sqlSelect->fetchAll();
    //  $stmt = $conn->prepare($sqlSelect);
    //  $stmt->execute();
    //  $drivers = $stmt->fetchAll();
