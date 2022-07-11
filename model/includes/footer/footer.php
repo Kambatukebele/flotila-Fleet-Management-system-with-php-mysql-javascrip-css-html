@@ -28,7 +28,7 @@
                     <h4>Kontakt</h4>
                 </div>
                 <div class="footer_all_text_conternt">
-                  <h6>KRISTINA & KAMS COMPANY s.r.o</h6>
+                  <h6 style="font-weight: 700;">KRISTINA & KAMS COMPANY s.r.o</h6>
                   <h6>Email: info@kristinakams.com</h6>
                   <h6>Tel: +420 774 966 506</h6>
                   <h6>IČO: 10688226</h6>
