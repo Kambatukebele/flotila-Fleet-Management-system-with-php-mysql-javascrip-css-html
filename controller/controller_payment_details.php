@@ -58,7 +58,7 @@
     //LIMIT 10,10 -GET 11TH ENTRY TO 20TH
     $x = ($pageNow - 1) * $perPage;
     $y = $perPage;
-    $sqlSelect = $conn->prepare("SELECT * FROM `payments` WHERE paymentID = ? ORDER BY `id` LIMIT $x, $y ");
+    $sqlSelect = $conn->prepare("SELECT * FROM `payments` WHERE paymentID = ? ORDER BY `id` DESC LIMIT $x, $y ");
     $sqlSelect->execute(array($idDriver));
     $paymentStmtResult = $sqlSelect->fetchAll();
    //  $stmt = $conn->prepare($sqlSelect);
