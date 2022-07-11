@@ -157,6 +157,34 @@
 
         //INSERT DATA TO THE DATABASE
 
+        // $sql = $conn->prepare("INSERT INTO registration_new_driver VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+        // $sql->bindParam(1, $firstName,  PDO::PARAM_STR, 255);
+        // $sql->bindParam(2, $lastName,  PDO::PARAM_STR, 255);
+        // $sql->bindParam(3, $email,  PDO::PARAM_STR, 255);
+        // $sql->bindParam(4, $phone_number,  PDO::PARAM_STR, 255);
+        // $sql->bindParam(5, $age,  PDO::PARAM_STR, 255);
+        // $sql->bindParam(6, $transportation,  PDO::PARAM_STR, 255);
+        // $sql->bindParam(7, $city,  PDO::PARAM_STR, 255);
+        // $sql->bindParam(8, $textarea,  PDO::PARAM_STR, 255);
+        // $sql->bindParam(9, $checkbox,  PDO::PARAM_STR, 100);
+        // $sql->bindParam(10, $checkbox_second,  PDO::PARAM_STR, 100);
+        // $sql->bindParam(11, $kindOfRegistration,  PDO::PARAM_STR, 255);
+        // $sql->bindParam(12, $bank_account,  PDO::PARAM_STR, 255);
+        // $sql->bindParam(13, $approved,  PDO::PARAM_STR, 255);
+        // $sql->bindParam(14, $pick_the_bag,  PDO::PARAM_STR, 255);
+        // $sql->bindParam(15, $signed,  PDO::PARAM_STR, 255);
+        // $sql->bindParam(16, $startingDate,  PDO::PARAM_STR, 255);
+        // $sql->bindParam(17, $returnDeposit,  PDO::PARAM_STR, 255);
+        // $sql->bindParam(18, $registeredToBolt,  PDO::PARAM_STR, 255);
+
+        // $result = $sql->execute([$firstName, $lastName, $email, $phone_number, $age, $transportation, $city, $textarea, $checkbox, $checkbox_second, $kindOfRegistration, $bank_account, $approved, $pick_the_bag, $signed, $startingDate, $returnDeposit, $registeredToBolt]);
+
+        //     if ($result == true){
+
+        //         header("Location:thank_you_page.php");
+        //         exit;
+        //     }
+
         $sql = $conn->prepare
         (
             "INSERT INTO `registration_new_driver` 
