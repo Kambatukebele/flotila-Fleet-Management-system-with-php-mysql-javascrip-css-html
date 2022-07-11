@@ -219,7 +219,7 @@
                         <?php
                             if($_SESSION['fullName'] == "kristina kabatova"){
                                 echo '<img src="../model/public/admin/images/picture2.jpeg" alt="">';
-                            }else{
+                            }else if ($_SESSION['fullName'] == "kamba tukebele"){
                                echo '<img src="../model/public/admin/images/picture1.jpeg" alt="">';
                             }
 
