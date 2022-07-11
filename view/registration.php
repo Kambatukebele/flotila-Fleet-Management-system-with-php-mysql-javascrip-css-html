@@ -173,7 +173,7 @@
                 <input type="hidden" name="checkbox" id="checkbox" value="unchecked">
                 <input type="checkbox" name="checkbox" id="checkbox" value="checked">
                 <!-- https://static.food.bolt.eu/legalDocument/3d9CrdpqpYFzmj2wQI91vL/V3%20of%20Bolt-Courier%20T%26C%20(ENG)%20CZ%20(1).pdf -->
-                <a style="" href="https://static.food.bolt.eu/legalDocument/3d9CrdpqpYFzmj2wQI91vL/V3%20of%20Bolt-Courier%20T%26C%20(ENG)%20CZ%20(1).pdf "><label for="checkbox"><?php echo $lang['form-gdpr']; ?></label></a>
+                <a href="terms.php"><label style="cursor: pointer;" for="checkbox"><?php echo $lang['form-gdpr']; ?></label></a>
                 <?php
                     if (isset($checkboxErrorMsg)){
                         echo $checkboxErrorMsg;
