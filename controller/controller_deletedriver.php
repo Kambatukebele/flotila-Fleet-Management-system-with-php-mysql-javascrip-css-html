@@ -5,7 +5,10 @@
      $id = $_GET['deleteid'];
 
      $sql = "DELETE FROM registration_new_driver WHERE id = $id";
-     $conn->exec($sql);
+     $result = $conn->exec($sql);
+     if($result == true){
+        header("location:all-driver.php");
+     }
 
 
 ?>
