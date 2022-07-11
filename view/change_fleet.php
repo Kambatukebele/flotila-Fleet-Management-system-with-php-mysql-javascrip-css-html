@@ -146,7 +146,7 @@
             <div>
                 <input type="hidden" name="checkbox" id="checkbox" value="unchecked">
                 <input type="checkbox" name="checkbox" id="checkbox">
-                <label for="checkbox"><?php echo $lang['form-gdpr']; ?></label>
+                <a href="terms.php"><label style="cursor: pointer;" for="checkbox"><?php echo $lang['form-gdpr']; ?></label></a>
                 <?php
                     if (isset($checkboxErrorMsg)){
                         echo $checkboxErrorMsg;
