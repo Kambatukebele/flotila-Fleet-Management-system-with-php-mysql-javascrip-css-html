@@ -5,6 +5,6 @@
    if(isset($_SESSION['fullName'])){
     session_unset();
     session_destroy();
-    header("location:login.php");
+    header("location:../view/login_admin.php");
    }
     
