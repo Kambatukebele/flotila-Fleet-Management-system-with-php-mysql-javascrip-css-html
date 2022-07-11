@@ -57,7 +57,7 @@
                     <span class="material-symbols-sharp">add</span>
                     <h3>Add Driver</h3>
                 </a> 
-                <a href="#">
+                <a href="../controller/controller.logout.php">
                     <span class="material-symbols-sharp">logout</span>
                     <h3>Logout</h3>
                 </a> 
