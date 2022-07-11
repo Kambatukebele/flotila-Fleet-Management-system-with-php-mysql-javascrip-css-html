@@ -2,7 +2,7 @@
     require_once 'database/database.php';
     require_once 'security/security.php';
 
-   if(isset(session_start())){
+   if(isset($_SESSION['fullName'])){
     session_unset();
     session_destroy();
     header("location:login.php");
