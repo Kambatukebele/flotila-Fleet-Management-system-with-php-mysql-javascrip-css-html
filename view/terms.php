@@ -10,11 +10,11 @@
         <div class="instruction_material_all">
             <div class="instruction_material_btn_1">
                 
-                <a href="https://www.docdroid.net/38k7wvS/en-bolt-food-courier-pdf#page=13"><button>ENG</button></a>
+                <a href="https://static.food.bolt.eu/legalDocument/3d9CrdpqpYFzmj2wQI91vL/V3%20of%20Bolt-Courier%20T%26C%20(ENG)%20CZ%20(1).pdf"><button>ENG</button></a>
             </div>
             <div class="instruction_material_btn_2">
                 
-                <a href="https://www.docdroid.net/1CwsWY1/bolt-food-kuryr-pdf"><button>CZ</button></a>
+                <a href="#"><button>CZ</button></a>
 
             </div>
         </div>
