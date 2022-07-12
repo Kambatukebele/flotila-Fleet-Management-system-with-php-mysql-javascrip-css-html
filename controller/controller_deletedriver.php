@@ -7,7 +7,7 @@
      $sql = "DELETE FROM registration_new_driver WHERE id = $id";
      $result = $conn->exec($sql);
      if($result == true){
-        header("location:../view/all-driver.php");
+        header("location:../all-driver.php");
      }
 
 
