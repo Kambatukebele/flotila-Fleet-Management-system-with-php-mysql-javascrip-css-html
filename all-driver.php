@@ -64,7 +64,7 @@
                         echo "<td>".htmlspecialchars($all_driver['date_of_submission'])."</td>";
                         echo "<td>";
                         echo '<button class="upd">'.'<a href="updatedriver.php?updateid='.$id.'">'.'Update'.'</a>'."</button>";
-                         echo  '<button class="del">'.'<a href="../controller/controller_deletedriver.php?deleteid='.$id.'">'.'Delete'.'</a>'."</button>";
+                         echo  '<button class="del">'.'<a href="controller/controller_deletedriver.php?deleteid='.$id.'">'.'Delete'.'</a>'."</button>";
                          echo   "</td>";
                         echo "</tr>";
                    }                
