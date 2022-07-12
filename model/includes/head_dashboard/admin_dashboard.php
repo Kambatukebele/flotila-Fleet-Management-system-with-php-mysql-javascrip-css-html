@@ -8,5 +8,5 @@
      rel="stylesheet"> -->
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp">
      <!-- ========== STYLESHEET ========== -->
-    <link rel="stylesheet" href="../model/public/admin/style.css">
+    <link rel="stylesheet" href="model/public/admin/style.css">
 </head>
