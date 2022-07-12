@@ -29,7 +29,7 @@
             </div>
     
             <div class="main_image">
-                <img src="../model/public/images/driver.jpg" alt="driver_image">
+                <img src="model/public/images/driver.jpg" alt="driver_image">
             </div>
         </div>
     </main>
@@ -136,7 +136,7 @@
                 </div>
             </div>
             <div class="application_img">
-                <img src="../model/public/images/boltimg.jpeg" alt="">
+                <img src="model/public/images/boltimg.jpeg" alt="">
             </div>
         </div>
     </section>
