@@ -1,13 +1,13 @@
-<?php require_once '../controller/controller_login_admin.php'; ?>
+<?php require_once 'controller/controller_login_admin.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
-    <?php require_once '../model/includes/head_login/head_login.php'; ?>
+    <?php require_once 'model/includes/head_login/head_login.php'; ?>
     <body>
         <div class="registration_login">
             <div class="registration_login_all">
                 <div class="registration_login_left">
                     <div class="registration_login_title">
-                        <img src="../model/public/images/logo.png" alt="">
+                        <img src="model/public/images/logo.png" alt="">
                         
                     </div>
                     <!-- ========== THIS IS A FORM REGISTRY -->
