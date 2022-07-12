@@ -1,4 +1,4 @@
-<?php require_once "../controller/controller_choose_lg.php"; ?>
+<?php require_once "controller/controller_choose_lg.php"; ?>
 <header>
         <div class="wrapper">
             <div class="wrapper_logo">
