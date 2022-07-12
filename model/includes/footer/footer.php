@@ -3,7 +3,7 @@
         <div class="footerr">
             <div class="footer_all">
                 <div class="footer_all_img">
-                    <a href="index.php"><img src="../model/public/images/transparentlogo.png" alt="logo"></a>
+                    <a href="index.php"><img src="model/public/images/transparentlogo.png" alt="logo"></a>
                     
                 </div>
             </div>
@@ -49,5 +49,5 @@
     </footer>
 
     <!-- ========== JAVASCRIPT ========== -->
-    <script src="../model/public/js/index.js"></script>
-    <script src="../model/public/js/onloadlang.js"></script>
+    <script src="model/public/js/index.js"></script>
+    <script src="model/public/js/onloadlang.js"></script>
