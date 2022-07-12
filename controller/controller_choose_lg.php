@@ -1,5 +1,5 @@
 <?php 
-    require_once '../controller/database/database.php';
+    require_once 'controller/database/database.php';
     // session_start();
 
     
