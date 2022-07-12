@@ -2,7 +2,7 @@
 <header>
         <div class="wrapper">
             <div class="wrapper_logo">
-                <a href="index.php"><img src="../model/public/images/transparentlogo.png" alt="logo"></a>
+                <a href="index.php"><img src="model/public/images/transparentlogo.png" alt="logo"></a>
             </div>
             <nav>
                 <ul>
@@ -21,7 +21,7 @@
     <header class="hidden_menu">
         <div class="hidden_menu_all">
             <div class="hidden_logo">
-                <a href="index.php"><img src="../model/public/images/transparentlogo.png" alt="logo"></a>
+                <a href="index.php"><img src="model/public/images/transparentlogo.png" alt="logo"></a>
             </div>
 
             <div class="hidden_navigation_hamburger">
