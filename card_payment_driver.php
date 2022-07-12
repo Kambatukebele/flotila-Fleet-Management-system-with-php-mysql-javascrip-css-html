@@ -1,4 +1,4 @@
-<?php require_once '../controller/controller_card_payment_driver.php'; ?>
+<?php require_once 'controller/controller_card_payment_driver.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
