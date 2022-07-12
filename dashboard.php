@@ -1,17 +1,17 @@
 <?php
-    require_once '../controller/controller_dashboard.php';
+    require_once 'controller/controller_dashboard.php';
     
 ?>
 <!DOCTYPE html>
 <html lang="en">
-    <?php require_once '../model/includes/head_dashboard/admin_dashboard.php'; ?>
+    <?php require_once 'model/includes/head_dashboard/admin_dashboard.php'; ?>
 
 <body>
     <div class="container">
         <aside>
             <div class="top">
                 <div class="logo">
-                    <img src="../model/public/admin/images/logo.png" alt="">
+                    <img src="model/public/admin/images/logo.png" alt="">
                     <h2>K& <span class="danger">K</span></h2>
                 </div>
                 <div class="close" id="close-btn">
@@ -57,7 +57,7 @@
                     <span class="material-symbols-sharp">add</span>
                     <h3>Add Driver</h3>
                 </a> 
-                <a href="../controller/controller.logout.php">
+                <a href="controller/controller.logout.php">
                     <span class="material-symbols-sharp">logout</span>
                     <h3>Logout</h3>
                 </a> 
@@ -350,6 +350,6 @@
             </div>
         </div>
     </div>
-    <script src="../model/public/admin/index.js"></script>
+    <script src="model/public/admin/index.js"></script>
 </body>
 </html>
