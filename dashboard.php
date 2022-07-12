@@ -218,9 +218,9 @@
                     <div class="profile-photo">
                         <?php
                             if($_SESSION['fullName'] == "kristina kabatova"){
-                                echo '<img src="../model/public/admin/images/picture2.jpeg" alt="">';
+                                echo '<img src="model/public/admin/images/picture2.jpeg" alt="">';
                             }else if ($_SESSION['fullName'] == "kamba tukebele"){
-                               echo '<img src="../model/public/admin/images/picture1.jpeg" alt="">';
+                               echo '<img src="model/public/admin/images/picture1.jpeg" alt="">';
                             }
 
                             
@@ -252,7 +252,7 @@
                                 echo
                                 '<div class="update">'.
                                     '<div class="profile-photo">'.
-                                        '<img src="../model/public/admin/images/pic2.jpg" alt="">'.
+                                        '<img src="model/public/admin/images/pic2.jpg" alt="">'.
                                     '</div>'.
                                     '<div class="message">'.
                                         '<p>'.'<b>'.$ft.' '.$lt.'</b>'.' Type:  '.'<b>'.$tf.'</p>'.'<small class="text-muted">'.$dateOfSubmission. '
