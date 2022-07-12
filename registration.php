@@ -1,12 +1,12 @@
-<?php require_once '../controller/controller_registration.php'; ?>
+<?php require_once 'controller/controller_registration.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
-    <?php require_once '../model/includes/head/head.php'; ?>
+    <?php require_once 'model/includes/head/head.php'; ?>
 <body>
 
     <!-- ========== HEADER NAVIGATION ========== -->
-    <?php require_once '../model/includes/navigation/header.php' ?>  
+    <?php require_once 'model/includes/navigation/header.php' ?>  
     <!-- ========== END OF HIDDEN HEADER NAVIGATION ========== -->
 
    <!-- ========== REGISTRATION OF DRIVER ========== -->
@@ -201,7 +201,7 @@
         </div>
    </form>
 
-   <?php require_once '../model/includes/footer/footer.php'; ?>
+   <?php require_once 'model/includes/footer/footer.php'; ?>
    
 </body>
 </html>
