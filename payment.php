@@ -1,4 +1,4 @@
-<?php require_once '../controller/controller_payment.php'; ?>
+<?php require_once 'controller/controller_payment.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
