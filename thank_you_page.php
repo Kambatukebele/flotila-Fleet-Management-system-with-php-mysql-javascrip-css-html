@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php require_once '../model/includes/head/head.php';?>
+    <?php require_once 'model/includes/head/head.php';?>
 <body>
 
     <!-- ========== HEADER NAVIGATION ========== -->
-    <?php require_once '../model/includes/navigation/header.php';?>
+    <?php require_once 'model/includes/navigation/header.php';?>
      <!-- ========== END OF HIDDEN HEADER NAVIGATION ========== -->
     
     <div class="register_a_driver">
@@ -15,6 +15,6 @@
 
    
     <!-- ========== FOOTER ========== -->
-    <?php require_once '../model/includes/footer/footer.php';?>
+    <?php require_once 'model/includes/footer/footer.php';?>
 </body>
 </html>
