@@ -1,11 +1,11 @@
 <?php 
-    require_once '../controller/controller_list_active_driver.php';
+    require_once 'controller/controller_list_active_driver.php';
    
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-    <?php require_once "../model/includes/head_drivers/head_drivers.php"; ?>
+    <?php require_once "model/includes/head_drivers/head_drivers.php"; ?>
 <body>
 
     <!-- ========== TABLE USERS========== -->
