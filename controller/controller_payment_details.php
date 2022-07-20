@@ -3,8 +3,8 @@
     require_once 'security/security.php';
 
        // //GET THE DATA IN THE URL 
-    $idDriver = $_GET['detailsId'];
-    echo $idDriver . "<br>";
+    $idDriver = htmlspecialchars($_GET['detailsId']);
+   //  echo $idDriver . "<br>";
 
     //FECTH DATA FROM REGISTER DRIVER
     $getData = $conn->prepare("SELECT * FROM `registration_new_driver` WHERE id = ?");
@@ -36,13 +36,22 @@
    //PAGINATION
 
     //CACULATE TOTAL NUMBER OF PAGES
-    $perPage = 10;
-    $sql = $conn->prepare("SELECT COUNT(*) FROM `payments`");
-    $sql->execute();
-    $stmt = $sql->fetchColumn();
-    $totalPages = ceil($stmt / $perPage);
 
-   //  echo "there are $totalPages drivers in total"."<br>";
+   if (isset($idDriver)){
+      echo $idDriver;
+      $perPage = 10;
+      //  $sql = $conn->prepare("SELECT COUNT(*) FROM `payments`");
+      //  $sql->execute();
+      //  $stmt = $sql->fetchColumn();
+      //  $totalPages = ceil($stmt / $perPage);
+   
+       $sql = $conn->prepare("SELECT COUNT(paymentID) FROM `payments` WHERE paymentID = ?");
+       $sql->execute(array($idDriver));
+       $stmt = $sql->fetchColumn();
+       //echo $stmt;
+       $totalPages = ceil($stmt / $perPage);
+
+         //  echo "there are $totalPages drivers in total"."<br>";
 
     //GET ENTRY FOR THE CURRENT PAGE
     //USE $_GET["PAGE"]
@@ -50,16 +59,20 @@
     $pageNow = isset($_GET['page']) ? $_GET['page'] : 1;
   
 
-   echo "it is " . $pageNow . " now!";
-
-    //SQL FETCH
-    //$x is the offset
-    //$y is the number of rows
-    //E.G. LIMIT 0,10 - GET FIRST ENTRY TO 10TH
-    //LIMIT 10,10 -GET 11TH ENTRY TO 20TH
-    $x = ($pageNow - 1) * $perPage;
-    $y = $perPage;
-    $sqlSelect = $conn->prepare("SELECT * FROM `payments` WHERE paymentID = ? ORDER BY `id` DESC LIMIT $x, $y ");
-    $sqlSelect->execute(array($idDriver));
-    $paymentStmtResult = $sqlSelect->fetchAll();
+    // echo "it is " . $pageNow . " now!";
+ 
+     //SQL FETCH
+     //$x is the offset
+     //$y is the number of rows
+     //E.G. LIMIT 0,10 - GET FIRST ENTRY TO 10TH
+     //LIMIT 10,10 -GET 11TH ENTRY TO 20TH
+     $x = ($pageNow - 1) * $perPage;
+     $y = $perPage;
+     $sqlSelect = $conn->prepare("SELECT * FROM `payments` WHERE paymentID = ? ORDER BY `id` DESC  LIMIT $x, $y ");
+     $sqlSelect->execute(array($idDriver));
+     $paymentStmtResult = $sqlSelect->fetchAll();
+   
+   }
   
+
+ 

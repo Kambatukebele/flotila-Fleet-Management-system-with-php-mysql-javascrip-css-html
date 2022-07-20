@@ -42,6 +42,8 @@
                   <th>Commission</th>
                   <th>Status</th>
                   <th>Comment</th>
+                  <th>Action</th>
+                  
                   <!-- <th>Action</th> -->
                 </tr>
                 <?php
@@ -61,6 +63,7 @@
                           '<td>'.$commission.'</td>'.
                           '<td class="colors">'.$statusPay.'</td>'.
                           '<td>'.$comment.'</td>'.
+                          '<td>'.'<a href="">'.'<button>'.'u'.'</button>'.'</a>'.'</td>'.
                        '</tr>';  
                     }
                 
@@ -72,7 +75,7 @@
     <div class="pagination" style="display:flex; justify-content:center; background-color: rgba(128, 128, 128, 0.26);">
             <?php
                 for($i=1; $i<=$totalPages; $i++){
-                    printf("<a style='padding:5px;' href='payment_details.php?detailsId=$detailsId&page=%u'>%u</a>", $i, $i);
+                    printf("<a style='padding:5px;' href='payment_details.php?detailsId=".$detailsId."&page=%u'>%u</a>", $i, $i);
                 }
             ?>
     </div>
