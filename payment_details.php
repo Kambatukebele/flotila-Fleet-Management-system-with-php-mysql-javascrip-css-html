@@ -36,7 +36,7 @@
             <br><br>
             <table class="drivers">
                 <tr>
-                  <th>Date</th>
+                  <th style="width: 300px;">Date</th>
                   <th>Received</th>
                   <th>Send</th>
                   <th>Commission</th>
