@@ -4,7 +4,7 @@
 
        // //GET THE DATA IN THE URL 
     $idDriver = $_GET['detailsId'];
-    // echo $idDriver;
+    echo $idDriver . "<br>";
 
     //FECTH DATA FROM REGISTER DRIVER
     $getData = $conn->prepare("SELECT * FROM `registration_new_driver` WHERE id = ?");
@@ -42,14 +42,15 @@
     $stmt = $sql->fetchColumn();
     $totalPages = ceil($stmt / $perPage);
 
-    //echo "there are $totalPages drivers in total"."<br>";
+   //  echo "there are $totalPages drivers in total"."<br>";
 
     //GET ENTRY FOR THE CURRENT PAGE
     //USE $_GET["PAGE"]
 
     $pageNow = isset($_GET['page']) ? $_GET['page'] : 1;
+  
 
-   // echo "it is $pageNow now!";
+   echo "it is " . $pageNow . " now!";
 
     //SQL FETCH
     //$x is the offset
@@ -61,6 +62,4 @@
     $sqlSelect = $conn->prepare("SELECT * FROM `payments` WHERE paymentID = ? ORDER BY `id` DESC LIMIT $x, $y ");
     $sqlSelect->execute(array($idDriver));
     $paymentStmtResult = $sqlSelect->fetchAll();
-   //  $stmt = $conn->prepare($sqlSelect);
-   //  $stmt->execute();
-   //  $drivers = $stmt->fetchAll();
+  
