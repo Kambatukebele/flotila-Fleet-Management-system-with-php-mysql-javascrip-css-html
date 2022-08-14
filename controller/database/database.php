@@ -2,7 +2,7 @@
         // CREATING VARIABLES
     $server_host = 'localhost';
     $user_name = 'root';
-    $password = 'Charleskamba11';
+    $password = 'test123455667889';
     $db_name = 'flotila';
 
     //CONNECT TO THE DATABASE USING PD0
