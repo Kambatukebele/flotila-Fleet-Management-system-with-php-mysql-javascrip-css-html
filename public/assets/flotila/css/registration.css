@@ -1,0 +1,598 @@
+/* ========== REGISTRATION OF DRIVER ========== */
+.register_a_driver{
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+/* ========== FORM ========== */
+
+form{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 70%;
+}
+
+.the_inputs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    width: 700px;
+}
+
+.inputs_left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.inputs_left label{
+    margin-top: 10px;
+    margin-left: 10px;
+    
+}
+
+.inputs_left input{
+    width: 300px;
+    padding: 9px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.281);    
+    margin-top: 15px;
+    margin-bottom: 5px;
+    outline: none;
+    background-color: transparent;
+}
+
+.inputs_left select{
+    width: 320px;
+    padding: 9px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.281);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    outline: none;
+    background-color: transparent;
+}
+
+.input_mobile{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} 
+
+.input_mobile label{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.input_mobile .write_number select{
+    
+    padding: 9px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.281);
+    
+}
+
+.input_mobile .write_number input{
+    width: 230px;
+    padding: 9px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.281);    
+    margin-top: 15px;
+    margin-bottom: 5px;
+    outline: none;
+    background-color: transparent;
+}
+
+.important_info{
+    margin: auto;
+    width: 700px;
+}
+
+.important_info h6{
+    margin-top: 30px;
+    font-size: 15px;
+    color: red;
+    
+}
+.inputs_textarea{
+    width: 700px;
+}
+
+ .text_area {
+    max-width: 700px;
+    height: 300px;
+    margin: auto;
+    display: flex;
+   justify-content: center;
+    align-items: center;
+   
+}
+
+.text_area textarea {
+   width: 100%;
+   height: 250px;
+   /* height: 300px; */
+   
+}
+
+button{
+    background-color: var(--button);
+    font-size: 16px;
+    font-weight: 300;
+    list-style: 24px;
+    border: none;
+    padding: 15px 65px;
+    border-radius: 35px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 15px;
+    
+}
+
+small{
+    font-size: 11px;
+}
+
+/* ========== MEDIA QUERIES ON  LAPTOPS ========== */
+
+   
+ /* ========== MEDIA QUERIES ON SMALL LAPTOPS ========== */
+
+   
+ 
+
+  
+ 
+ /* ========== MEDIA QUERIES ON TABLET ========== */
+ @media screen and (max-width:998px){
+
+   
+    .the_inputs{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;    
+        width: 500px;
+    }
+    
+    .inputs_left{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+    
+    .inputs_left label{
+        margin-top: 10px;
+        margin-left: 10px;
+        
+    }
+    
+    .inputs_left input{
+        width: 200px;
+        padding: 9px;
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.281);    
+        margin-top: 15px;
+        margin-bottom: 5px;
+        outline: none;
+        background-color: transparent;
+    }
+    
+    .inputs_left select{
+        width: 220px;
+        padding: 9px;
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.281);
+        margin-top: 15px;
+        margin-bottom: 15px;
+        outline: none;
+        background-color: transparent;
+    }
+    
+    .input_mobile{
+       
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    } 
+    
+    .input_mobile label{
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    
+    .input_mobile .write_number select{
+        
+        padding: 9px;
+        border: none;
+        background-color: transparent;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.281);
+        
+    }
+    
+    .input_mobile .write_number input{
+        width: 130px;
+        padding: 9px;
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.281);    
+        margin-top: 15px;
+        margin-bottom: 5px;
+        outline: none;
+        background-color: transparent;
+    }
+    
+    .important_info{
+        margin: auto;
+        width: 500px;
+    }
+    
+    .important_info h6{
+        margin-top: 30px;
+        font-size: 15px;
+        color: red;
+        
+    }
+    .inputs_textarea{
+        width: 500px;
+    }
+    
+     .text_area {
+        max-width: 700px;
+        height: 300px;
+        margin: auto;
+        display: flex;
+       justify-content: center;
+        align-items: center;
+       
+    }
+    
+    .text_area textarea {
+       width: 100%;
+       height: 250px;
+       /* height: 300px; */
+       
+    }
+    
+    
+    
+    
+    
+    button{
+        background-color: var(--button);
+        font-size: 16px;
+        font-weight: 300;
+        list-style: 24px;
+        border: none;
+        padding: 15px 65px;
+        border-radius: 35px;
+        cursor: pointer;
+        font-family: 'Poppins', sans-serif;
+        margin-top: 15px;
+        
+    }
+    
+    small{
+        font-size: 11px;
+    }
+     /* ========== HOWS IT WORKS CONTENTS ========== */
+ 
+ 
+ 
+ /* ============= MEDIA QUERIES FOR MOBILES */
+ @media screen and (max-width:758px){
+    
+
+
+    .the_inputs{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: start;    
+        width: 300px;
+    }
+    
+    .inputs_left label{
+        margin-top: 10px;
+        margin-left: 10px;
+        
+    }
+    
+    .inputs_left input{
+        width: 100%;
+        padding: 9px;
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.281);    
+        margin-top: 15px;
+        margin-bottom: 5px;
+        outline: none;
+        background-color: transparent;
+    }
+    
+    .inputs_left select{
+        width: 100px;
+        padding: 9px;
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.281);
+        margin-top: 15px;
+        margin-bottom: 15px;
+        outline: none;
+        background-color: transparent;
+    }
+    
+    .input_mobile{
+       
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    } 
+    
+    .input_mobile label{
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    
+    .input_mobile .write_number select{
+        
+        padding: 9px;
+        border: none;
+        background-color: transparent;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.281);
+        
+    }
+    
+    .input_mobile .write_number input{
+        width: 100%;
+        padding: 9px;
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.281);    
+        margin-top: 15px;
+        margin-bottom: 5px;
+        outline: none;
+        background-color: transparent;
+    }
+
+    
+    
+    .important_info{
+        margin: auto;
+        width: 300px;
+    }
+    
+    .important_info h6{
+        margin-top: 30px;
+        font-size: 15px;
+        color: red;
+        
+    }
+    .inputs_textarea{
+        width: 300px;
+       
+    }
+
+    
+     .text_area {
+        max-width: 700px;
+        height: 300px;
+        margin: auto;
+        display: flex;
+       justify-content: center;
+        align-items: center;
+       
+    }
+    
+    .text_area textarea {
+       width: 100%;
+       height: 250px;
+       /* height: 300px; */
+       
+    }
+    
+    
+    
+    
+    
+    button{
+        background-color: var(--button);
+        font-size: 16px;
+        font-weight: 300;
+        list-style: 24px;
+        border: none;
+        padding: 15px 65px;
+        border-radius: 35px;
+        cursor: pointer;
+        font-family: 'Poppins', sans-serif;
+        margin-top: 15px;
+        
+    }
+    
+    small{
+        font-size: 11px;
+    }
+    .footer_all_img img{
+        width: 150px;
+    }
+ 
+ 
+ } 
+ @media screen and (max-width:390px){
+    
+      /* ========== MAIN BUTTON ========= */
+    
+      h1{
+         font-weight: 600;
+         font-size: 34px;
+         line-height: 42px;
+         color: var(--white);
+     }
+     h2{
+         font-weight: 600;
+         font-size: 28px;
+         line-height: 36px;
+         color: var(--color_heading);    
+     }
+     h3{
+         font-weight: 600;
+         font-size: 24px;
+         line-height: 32px;
+         color: var(--color_heading);    
+     }
+     h4{
+         font-weight: 400;
+         font-size: 16px;
+         line-height: 24px;
+         color: var(--white);    
+     }
+     h5{
+         font-weight: 400;
+         font-size: 15px;
+         line-height: 20px;
+         color: var(--color_heading);
+         
+     }
+     h6{
+         font-weight: 400;
+         font-size: 14px;
+         line-height: 22px;
+         color: var(--color_heading);
+         
+     }
+
+     .the_inputs{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: start;    
+        width: 100px;
+    }
+    
+    .inputs_left label{
+        margin-top: 10px;
+        margin-left: 10px;
+        
+    }
+    
+    .inputs_left input{
+        width: 100%;
+        padding: 9px;
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.281);    
+        margin-top: 15px;
+        margin-bottom: 5px;
+        outline: none;
+        background-color: transparent;
+    }
+    
+    .inputs_left select{
+        width: 100px;
+        padding: 9px;
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.281);
+        margin-top: 15px;
+        margin-bottom: 15px;
+        outline: none;
+        background-color: transparent;
+    }
+    
+    .input_mobile{
+       
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    } 
+    
+    .input_mobile label{
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    
+    .input_mobile .write_number select{
+        
+        padding: 9px;
+        border: none;
+        background-color: transparent;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.281);
+        
+    }
+    
+    .input_mobile .write_number input{
+        width: 100%;
+        padding: 9px;
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.281);    
+        margin-top: 15px;
+        margin-bottom: 5px;
+        outline: none;
+        background-color: transparent;
+    }
+
+    
+    
+    .important_info{
+        margin: auto;
+        width: 150px;
+    }
+    
+    .important_info h6{
+        margin-top: 30px;
+        font-size: 15px;
+        color: red;
+        
+    }
+    .inputs_textarea{
+        width: 150px;
+       
+    }
+
+    
+     .text_area {
+        max-width: 700px;
+        height: 300px;
+        margin: auto;
+        display: flex;
+       justify-content: center;
+        align-items: center;
+       
+    }
+    
+    .text_area textarea {
+       width: 100%;
+       height: 200px;
+       /* height: 300px; */
+       
+    }    
+    button{
+        background-color: var(--button);
+        font-size: 14px;
+        font-weight: 300;
+        list-style: 24px;
+        border: none;
+        padding: 15px 35px;
+        border-radius: 35px;
+        cursor: pointer;
+        font-family: 'Poppins', sans-serif;
+        margin-top: 15px;
+        
+    }
+    
+    small{
+        font-size: 11px;
+    }
+    .footer_all_img img{
+        width: 150px;
+    }
+ 
+    
+ 
+   
+ }
+}
+ 
+ 
